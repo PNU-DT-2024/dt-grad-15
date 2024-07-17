@@ -1,29 +1,36 @@
-// firebase의 필수 기능과 firebase의 데이터 베이스와 데이터 베이스 경로 참조를 들고온다.
-import { child, get, push, ref } from "firebase/database";
-import { db, dbRef } from "../firebase";
+import { child, get, push, ref, set } from "firebase/database";
+import { db } from "../firebase";
 
 const guestBookService = {
-  //guestBook 은 방명록 데이터가 저장되는 루트 경로입니다.
-  //guestBook 경로에서 데이터를 가져온다. (읽기)
   getGuestBook: async () => {
-    const res = await get(child(dbRef, "guestBook"));
+    const guestBookRef = ref(db, "guestBook");
     try {
-      return res.val();
-    } catch (err) {
-      throw err;
+      const snapshot = await get(child(guestBookRef, "entries"));
+      const entries = [];
+      snapshot.forEach((childSnapshot) => {
+        entries.push({ id: childSnapshot.key, ...childSnapshot.val() });
+      });
+      return entries;
+    } catch (error) {
+      console.error("Error fetching guestbook entries:", error);
+      throw error;
     }
   },
-  // 새로운 방명록을 추가한다. (쓰기)
-  // guestBook/entries 는 방명록 항목이 저장되는 하위 경로입니다.
   postGuestBook: async (from, comment, to) => {
+    const newEntryRef = push(ref(db, "guestBook/entries"));
     const inputData = {
       from,
       comment,
       to,
       createdTime: new Date().toISOString(),
     };
-    const res = await push(ref(db, "guestBook/entries"), inputData);
-    return res;
+    try {
+      await set(newEntryRef, inputData);
+      return newEntryRef.key;
+    } catch (error) {
+      console.error("Error posting guestbook entry:", error);
+      throw error;
+    }
   },
 };
 
