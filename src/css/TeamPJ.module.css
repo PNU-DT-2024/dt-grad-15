@@ -1,0 +1,27 @@
+.horizontalLine{
+    height: 4px;
+}
+.teamCard {
+    padding: 24px 12px;
+}
+.teamCard .img{
+    flex: 1;
+}
+.img img{
+    width: 100%;
+}
+.teamTitle {
+    flex: 1;
+    position: relative;
+    /* white-space: nowrap; */
+    
+}
+
+.teamTitle p {
+    margin-bottom: 12px;
+}
+
+.moveLink {
+    position: absolute;
+    bottom: 0;
+}

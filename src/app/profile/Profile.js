@@ -1,29 +1,21 @@
-import Menu from "../Menu";
-import {Link} from "react-router-dom";
-import indivData from "../../components/indivPF.json";
-import teamData from "../../components/teamPF.json";
+import Menu from "../common/Menu";
+import { Link } from "react-router-dom";
+import Title from "../common/Title";
+import DualLink from "../common/DualLink";
+import Footer from "../common/Footer";
+
 
 function Profile() {
     return (
         <div>
-            <p>profile</p>
             <Menu />
-            <div>
-                <h1>팀</h1>
-                {teamData.teamPF.map((indiv)=> (
-                    <Link to={`/team-profile/${indiv.name}`}>
-                        <p>{indiv.name}</p>
-                    </Link>
-                ))}
-            </div>
-            <div>
-                <h1>개인</h1>
-                {indivData.indivPF.map((indiv)=> (
-                    <Link to={`/indiv-profile/${indiv.name}`}>
-                        <p>{indiv.name}</p>
-                    </Link>
-                ))}
-            </div>
+            <main className="contentsContainer">
+                <section>
+                    <Title title="프로필" />
+                    <DualLink link="profile" indiv="개인프로필" team="팀프로필" />
+                </section>
+            </main>
+            <Footer />
         </div>
     )
 }

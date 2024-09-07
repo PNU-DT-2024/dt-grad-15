@@ -1,0 +1,24 @@
+.banner, .interBanner{
+    display: flex;
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.interBanner{
+    background-color: aquamarine;
+}
+.banner span{
+    font-size: 7rem;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
+
+}
+.interBtn{
+    padding: 0;
+    margin: 0 24px;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}

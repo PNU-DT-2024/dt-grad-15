@@ -1,0 +1,114 @@
+input, select, textarea {
+    border: 1px solid #a7a7a7;
+    /* border-radius: 0; */
+}
+option{
+    box-shadow: none;
+}
+ 
+.messageWrapper {
+    margin-bottom: 64px;
+}
+
+.sentContainer {
+    margin-right: 96px;
+}
+
+.personalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-bottom: 32px;
+}
+
+.personalInfo label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.personalInfo input, .personalInfo select {
+    font-size: 1.25rem;
+    padding: 8px 12px;
+}
+
+.textContainer {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    font-size: 1.25rem;
+    /* padding: 10px; */
+    padding-block: 0;
+    padding-inline: 0;
+    resize: none;
+}
+
+
+.btnContainer {
+    display: flex;
+    width: 100%;
+}
+
+
+button {
+    background-color: black;
+    color: white;
+    margin-top: 12px;
+    margin-left: auto;
+    padding: 12px 32px;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.optionContainer{
+    display: flex;
+    margin-bottom: 24px;
+}
+.optionContainer select{
+    font-size: 1.25rem;
+    /* margin-left: auto; */
+    padding: 4px 12px;
+}
+
+.messageList {
+    grid-template-rows: masonru;
+    gap: 12px;
+}
+
+.messageBox {
+    background: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 12px;
+}
+
+.messageBox p:last-child,
+.messageBox span {
+    font-weight: 700;
+}
+
+.messageBox p:nth-child(2) {
+    min-height: 64px;
+    margin: 16px 0 32px;
+}
+
+.myMasonryGrid {
+    display: -webkit-box;
+    /* For old Safari browsers */
+    display: -ms-flexbox;
+    /* For IE10 */
+    display: flex;
+    margin-left: -12px;
+    /* gutter size offset */
+    /* width: auto; */
+}
+
+.myMasonryGridColumn {
+    padding-left: 12px;
+    /* gutter size */
+    /* background-clip: padding-box; */
+}
+
+.guestbook-entry {}
