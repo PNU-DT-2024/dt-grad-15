@@ -1,0 +1,10 @@
+.container{
+    margin-bottom: 72px;
+    white-space: nowrap;
+    align-items: center;
+}
+.container h1{
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
+    margin-right: 24px;
+}

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Menu from "../Menu";
+import Masonry from 'react-masonry-css';
+import Menu from "../common/Menu";
+import Footer from "../common/Footer";
 import guestBookService from "../../api/guestBookService";
+import Title from "../common/Title";
+import MessageTxt from "./MessageTxt";
+import styles from "../../css/Guestbook.module.css"
 
 function Guestbook() {
   const [guestBookEntries, setGuestBookEntries] = useState([]);
@@ -10,6 +15,7 @@ function Guestbook() {
   const [filter, setFilter] = useState(""); // 필터 상태 추가
 
   const names = [
+    "모두에게",
     "김경린",
     "김동성",
     "김은선",
@@ -62,64 +68,87 @@ function Guestbook() {
       console.error("Error posting to guestbook:", error);
     }
   };
-
-  const renderGuestBookEntries = () => {
-    return filteredGuestBookEntries.map((entry) => (
-      <div key={entry.id}>
-        <p>From: {entry.from}</p>
-        <p>Comment: {entry.comment}</p>
-        <p>To: {entry.to}</p>
-        <p>Created Time: {entry.createdTime}</p>
-      </div>
-    ));
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1
   };
+  const renderGuestBookEntries = () => {
+    return (
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className={styles.myMasonryGrid}
+        columnClassName={styles.myMasonryGridColumn}
+      >
+        {filteredGuestBookEntries.map((entry) => (
+          <div key={entry.id} className={`${styles.messageBox} column`}>
+            <span>To. {entry.to}</span>
+            <p className="description">{entry.comment}</p>
+            <p>From. {entry.from}</p>
+            {/* <p>Created Time: {entry.createdTime}</p> */}
+          </div>
+        ))}
+      </Masonry>
+    );
+  };
+
 
   return (
     <div>
       <Menu />
-      <h1>Guestbook</h1>
-      <div>
-        <label>From:</label>
-        <input
-          type="text"
-          value={from}
-          onChange={(e) => setFrom(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Comment:</label>
-        <input
-          type="text"
-          value={comment}
-          onChange={(e) => setComment(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>To:</label>
-        <select value={to} onChange={(e) => setTo(e.target.value)}>
-          {names.map((name) => (
-            <option key={name} value={name}>
-              {name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <button onClick={handlePostGuestBook}>Post to Guestbook</button>
-      <div>
-        <div>
-          <h2>Filter by Recipient</h2>
-          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-            <option value="">All</option>
-            {names.map((name) => (
-              <option key={name} value={name}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <h2>Guestbook Entries</h2>
-        {renderGuestBookEntries()}
-      </div>
+      <main className="contentsContainer">
+
+        <Title title="방명록" />
+        < MessageTxt />
+        <section className={`${styles.messageWrapper} row`}>
+          <div className={`${styles.sentContainer} column`}>
+            <div className={styles.personalInfo}>
+              <label>To:</label>
+              <select value={to} onChange={(e) => setTo(e.target.value)}>
+                {names.map((name) => (
+                  <option key={name} value={name}>
+                    {name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className={`${styles.personalInfo} column`}>
+              <label>From:</label>
+              <input
+                type="text"
+                value={from}
+                onChange={(e) => setFrom(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className={`${styles.textContainer} column`}>
+            <div className={styles.comment}>
+              <textarea className={styles.textarea} rows="10"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+              />
+            </div>
+            <div className={styles.btnContainer}>
+              <button onClick={handlePostGuestBook}>보내기</button>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className={styles.optionContainer}>
+            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+              {names.map((name) => (
+                <option key={name} value={name}>
+                  {name}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={styles.messageList}>
+            {renderGuestBookEntries()}
+          </div>
+        </section>
+      </main>
+      <Footer />
     </div>
   );
 }

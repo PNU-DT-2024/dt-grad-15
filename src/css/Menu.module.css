@@ -1,0 +1,28 @@
+.menuWrap {
+    padding: 24px 0;
+}
+
+.menuContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.mainLink p {
+    font-size: 2rem;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav div {
+    margin-left: 40px;
+}
+
+.nav div p {
+    color: white;
+}

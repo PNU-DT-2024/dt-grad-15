@@ -1,0 +1,11 @@
+.interTxt{
+    display: flex;
+    margin-bottom: 72px;
+    word-break: keep-all;
+}
+.interTxt p{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #a7a7a7;
+    line-height: 150%;
+}

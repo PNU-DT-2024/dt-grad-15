@@ -1,0 +1,78 @@
+/* .teamCardClose{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: aquamarine;
+    border: 1px solid rebeccapurple;
+} */
+/* .teamCardClose:hover {
+    background-color: antiquewhite;
+    padding: 24px 32px;
+    width: 100%;
+} */
+.teamCardOpen {
+    background-color: #f3f3f3;
+    border: 1px solid black;
+    padding: 24px 48px;
+}
+
+.teamCardClose>div {
+    position: relative;
+    height: 100%;
+
+}
+
+.columnName {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+}
+
+.columnName span {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.teamTitle {
+    margin-bottom: 32px;
+}
+
+.teamTitle h1 {
+    margin-bottom: 24px;
+}
+.teamMember{
+    margin-bottom: 32px;
+}
+.teamMember>p {
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.memberContainer {
+    margin-bottom: 12px;
+}
+
+.memberContainer>div {
+    margin-right: 24px;
+}
+
+.memberContainer>div:last-child {
+    margin-bottom: 0;
+}
+
+.moveLink {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-weight: 700;
+    /* margin-left: auto; */
+}
