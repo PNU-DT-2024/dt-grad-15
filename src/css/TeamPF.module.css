@@ -1,29 +1,48 @@
-/* .teamCardClose{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.teamCardClose {
     height: 100%;
-    background-color: aquamarine;
-    border: 1px solid rebeccapurple;
-} */
-/* .teamCardClose:hover {
-    background-color: antiquewhite;
-    padding: 24px 32px;
-    width: 100%;
-} */
+    /* background-color: aquamarine; */
+    color: #a7a7a7;
+    /* border: 1px solid rebeccapurple; */
+    max-width: 60px;
+    padding: 24px 0;
+    flex: 1;
+    cursor: pointer;
+    /* transition: flex 2s ease-in-out; */
+    /* background-color: #f3f3f3; */
+}
+
+.teamCardClose:hover {
+    color: black;
+    font-weight: 700;
+}
+
+.teamCardOpen,
+.teamCardClose {
+    min-height: 500px;
+    /* border-left: 6px solid black; */
+    border-right: 6px solid black;
+}
+
+.teamCardOpen:first-child,
+.teamCardClose:first-child {
+    border-left: 6px solid black;
+}
+
 .teamCardOpen {
-    background-color: #f3f3f3;
-    border: 1px solid black;
+    flex: 15;
+    /* transition: all 2s ease-in-out; */
+
     padding: 24px 48px;
 }
 
-.teamCardClose>div {
+.teamCardClose>div,
+.teamCardOpen>div {
     position: relative;
     height: 100%;
 
 }
 
-.columnName {
+.closeTeam {
     display: flex;
     flex: 1;
     justify-content: flex-start;
@@ -33,7 +52,7 @@
     padding: 12px;
 }
 
-.columnName span {
+.closeTeam span {
     width: 100%;
     height: 100%;
     display: inline-block;
@@ -42,23 +61,26 @@
 }
 
 .teamTitle {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .teamTitle h1 {
+    /* color: #EB5B5E; */
     margin-bottom: 24px;
 }
-.teamMember{
+
+.teamMember {
     margin-bottom: 32px;
 }
+
 .teamMember>p {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     font-size: 1.25rem;
     font-weight: 500;
 }
 
 .memberContainer {
-    margin-bottom: 12px;
+    margin-bottom: 64px;
 }
 
 .memberContainer>div {
@@ -69,10 +91,30 @@
     margin-bottom: 0;
 }
 
+.memberImg {
+    background-color: #a7a7a7;
+    width: 100px;
+    height: 130px;
+    margin-bottom: 12px;
+}
+
 .moveLink {
+    /* background-color: #EB5B5E; */
+    border: 2px solid black;
+    /* background: linear-gradient(0.25turn, #F9AE69, #EB5B5E); */
+    padding: 12px 24px;
     position: absolute;
     right: 0;
     bottom: 0;
-    font-weight: 700;
+    cursor: pointer;
+    font-weight: 500;
     /* margin-left: auto; */
+}
+.moveLink:hover{
+    background: linear-gradient(0.25turn, #F9AE69, #EB5B5E);
+    /* background-color: black; */
+    border: none;
+}
+.moveLink:hover span{
+    color: white;
 }
