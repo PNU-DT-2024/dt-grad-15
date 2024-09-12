@@ -1,92 +1,93 @@
 .hScreen {
-    display: flex;
-    position: relative;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .subTitle {
-    position: absolute;
-    left: 24px;
-    top: 64px;
-    color: #a7a7a7;
-    font-size: 0.75rem;
-    white-space: nowrap;
+  position: absolute;
+  left: 24px;
+  top: 64px;
+  color: #a7a7a7;
+  font-size: 0.75rem;
+  white-space: nowrap;
 }
-.imgPoster, .imgMap, .imgMember, .imgDT, .imgProf{
-    background-color: #a7a7a7;
+.imgPoster,
+.imgMap,
+.imgMember,
+.imgDT,
+.imgProf {
+  background-color: #a7a7a7;
 }
-
 
 .title {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 /* ---------------------------------------------------------------------- */
-.mainTitle{
-    font-size: 4rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
+.mainTitle {
+  font-size: 4rem;
+  font-family: "sandoll-jebi2", sans-serif;
+  font-weight: 700;
 }
-.outline div{
-margin-bottom: 48px;
+.outline div {
+  margin-bottom: 48px;
 }
-.outline >p{
-    color: #a7a7a7;
+.outline > p {
+  color: #a7a7a7;
 }
-.imgPoster{
-    margin-right: 64px;
+.imgPoster {
+  margin-right: 64px;
 }
 .txtContainer p {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .video {
-    background-color: antiquewhite;
+  background-color: antiquewhite;
 }
-.imgMember{
-    margin-bottom: 32px;
+.imgMember {
+  margin-bottom: 32px;
 }
 .memberTxt {
-    text-align: center;
+  text-align: center;
 }
 
 .profContainer {
-    justify-content: space-between;
-    gap: 12px;
+  justify-content: space-between;
+  gap: 12px;
 }
-.imgDT{
-    margin-left: 64px;
+.imgDT {
+  margin-left: 64px;
 }
 .prof {
-    flex: 1;
+  flex: 1;
 }
 
 .imgProf img {
-    width: 100%;
+  width: 100%;
 }
 
 .prof p {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
-.imgMap{
-    margin-right: 64px;
+.imgMap {
+  margin-right: 64px;
 }
 
 .locInfo {
-    /* display: block; */
-    white-space: nowrap;
+  /* display: block; */
+  white-space: nowrap;
 }
 
 .locInfo p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.locInfo>p {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
+.locInfo > p {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
 }
