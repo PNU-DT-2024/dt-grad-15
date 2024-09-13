@@ -1,9 +1,10 @@
-.memberList{
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap;
-    height: 100%;
+.memberList {
+  display: flex;
+  gap: 2%;
+  flex-wrap: wrap;
+  height: 100%;
 }
-.memberList>div{
-    width: 32%;
+.memberList > div {
+  width: 32%;
+  /* width: calc(25% - 2%); */
 }
