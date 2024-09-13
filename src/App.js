@@ -17,33 +17,24 @@ import TeamPF from "./app/profile/TeamPF";
 
 function App() {
   return (
-<div>
-    <GlobalStyles/>
-    <Router basename={process.env.PUBLIC_URL}>
-      <Routes>
-        <Route path="/" element={<Main />}></Route>
-        <Route path="/guestbook" element={<Guestbook />}></Route>
-
-
-        <Route path="/profile" element={<Profile />}></Route>
-        
-        <Route path="/profile/indiv" element={<IndivPF />}></Route>
-        <Route path="/profile/indiv/:id" element={<IndivPFDetail />}></Route>
- ,
-        <Route path="/profile/team" element={<TeamPF />}></Route>
-
-
-        <Route path="/project" element={<Project />}></Route>
-
-        <Route path="/project/indiv" element={<IndivPJ />}></Route>
-        <Route path="/project/indiv/:id" element={<IndivPJDetail />}></Route>
-
-        <Route path="/project/team" element={<TeamPJ />}></Route>
-        <Route path="/project/team/:id" element={<TeamPJDetail />}></Route>
-
-        {/* <Route path="/team-profile/:id" element={<TeamPF />}></Route> */}
-      </Routes>
-    </Router>
+    <div>
+      <GlobalStyles />
+      <Router basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<Main />}></Route>
+          <Route path="/guestbook" element={<Guestbook />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/profile/indiv" element={<IndivPF />}></Route>
+          <Route path="/profile/indiv/:id" element={<IndivPFDetail />}></Route>,
+          <Route path="/profile/team" element={<TeamPF />}></Route>
+          <Route path="/project" element={<Project />}></Route>
+          <Route path="/project/indiv" element={<IndivPJ />}></Route>
+          <Route path="/project/indiv/:id" element={<IndivPJDetail />}></Route>
+          <Route path="/project/team" element={<TeamPJ />}></Route>
+          <Route path="/project/team/:id" element={<TeamPJDetail />}></Route>
+          {/* <Route path="/team-profile/:id" element={<TeamPF />}></Route> */}
+        </Routes>
+      </Router>
     </div>
   );
 }
