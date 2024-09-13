@@ -1,72 +1,72 @@
 .profileContainer {
-    margin-bottom: 128px;
+  margin-bottom: 128px;
 }
 
 .profileImg,
 .signImg {
-    background-color: #a7a7a7;
+  background-color: #a7a7a7;
 }
 
 .profileImg {
-    margin-right: 64px;
+  margin-right: 64px;
 }
 
 .signImg {
-    width: 20%;
+  width: 20%;
 }
 
-.infoContainer>div {
-    align-items: center;
-    justify-content: center;
+.infoContainer > div {
+  align-items: center;
+  justify-content: center;
 }
 
 .personalInfo {
-    flex: 1;
-    margin-bottom: 48px;
+  flex: 1;
+  margin-bottom: 48px;
 }
 
 .personalInfo p:first-child {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
-.personalInfo >p:last-child {
-    margin-top: 24px;
+.personalInfo > p:last-child {
+  margin-top: 24px;
 }
 
 .personalInfo h1 {
-    display: inline;
-    margin-right: 12px;
+  display: inline;
+  margin-right: 12px;
 }
 
 .personalInfo span {
-    font-size: 2rem;
-    color: #a7a7a7;
+  font-size: 2rem;
+  color: #a7a7a7;
 }
 
 .signiture {
-    flex: 1;
+  flex: 1;
 }
 
 .moveLinkContainer {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
-.moveLinkContainer>div {
-    width: 48%;
+.moveLinkContainer > div {
+  width: 48%;
 }
 
 .linkMove {
-    background-color: rgb(107, 107, 107);
-    padding: 12px;
-    align-items: center;
-    color: white;
+  background-color: rgb(107, 107, 107);
+  padding: 12px;
+  align-items: center;
+  color: white;
 }
 
-.linkMove p:first-of-type{
-    margin-bottom: 12px;
+.linkMove p:first-of-type {
+  margin-bottom: 12px;
 }
 
 .linkMove p:last-child {
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 }
