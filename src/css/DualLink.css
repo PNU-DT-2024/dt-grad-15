@@ -1,18 +1,66 @@
-.linkContainer{
-    display: flex;
-    flex-direction: column;
+.linkContainer {
+  display: flex;
+  flex-direction: column;
+}
+.linkModule {
+  font-size: 2rem;
+  padding: 64px 32px;
+  text-align: right;
+  transition: all 0.6s ease;
+  position: relative; /* 가상 요소를 기준으로 위치할 수 있도록 설정 */
+  /* overflow: hidden; */
+}
+.linkModule:hover {
+  text-align: left; /* hover 시 텍스트가 왼쪽 정렬 */
+  color: red; /* hover 시 텍스트 색상을 빨간색으로 변경 */
+  transform: translateX(-10px); /* hover 시 왼쪽으로 10px 이동 */
+}
+.linkModule:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* 수직 중앙에 위치 */
+  right: 0; /* 오른쪽 끝에 위치 */
+  transform: translateY(-50%); /* 수직으로 중앙으로 이동 */
+  width: 120px; /* 화살표 이미지의 너비 */
+  height: 50px; /* 화살표 이미지의 높이 */
+  background: url("../components/img/arrow.png") no-repeat center center; /* 화살표 이미지 경로 */
+  background-size: contain; /* 이미지 크기를 요소에 맞게 조절 */
+  transition: all 0.6s ease; /* 애니메이션 부드럽게 전환 */
+}
 
+/* .linkContainer:hover .horizontalLine {
+  background-color: red !important;
+} */
+
+.horizontalLine {
+  height: 1px;
+  background-color: #dbdbdb;
+  border: none;
 }
-.linkModule{
-    font-size: 2rem;
-    padding: 64px 32px;
-    text-align: right;
+.line {
+  border: 1px solid #dbdbdb;
 }
-.horizontalLine{
-    height: 1px;
-    background-color: #dbdbdb;
-    border: none;
-}
-.line{
-    border: 1px solid #dbdbdb;
-}
+
+/* .linkModule:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    right: 0; 
+    transform: translateY(-50%); 
+    width: 10%;
+    height: 3px; 
+    background-color: red; 
+    transition: all 0.6s ease; 
+  }
+  
+  .linkModule:hover::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -1%; 
+    transform: translateY(-50%) rotate(45deg) translateX(-33%); 
+    width: 3%;
+    height: 3px; 
+    background-color: red; 
+    transition: all 0.6s ease; 
+  } */
