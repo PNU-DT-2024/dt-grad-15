@@ -1,9 +1,9 @@
 /* 스크롤 스냅핑 scroll~ 이하 코드 */
-main {
+/* main {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
-}
+} */
 
 .hScreen {
   display: flex;
@@ -15,10 +15,10 @@ main {
 }
 
 /* 스크롤바 숨김 */
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   width: 0;
   height: 0;
-}
+} */
 
 .subTitle {
   position: absolute;
