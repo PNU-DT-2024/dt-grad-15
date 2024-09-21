@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "../../../css/IndivPFLink.module.css";
-// 이미지 파일 import
-import defaultProfileImg from "../../../components/img/profileImg/defaultProfileImg.png";
-import hoverProfileImg from "../../../components/img/profileImg/hoverProfileImg.png";
-import trigger from "../../../components/img/profileImg/trigger.png"; // 트리거 이미지
 
 export default function IndivPJLink({ item }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -28,7 +24,7 @@ export default function IndivPJLink({ item }) {
           <div className={styles.imgContainer}>
             {/* Hover 상태에서 보이는 이미지 */}
             <img
-              src={isHovered ? trigger : ""}
+              src={isHovered ? "/img/profileImg/trigger.png" : ""}
               // alt="Trigger Image"
               className={`${styles.triggerImage} ${
                 isHovered ? styles.show : ""
@@ -36,7 +32,7 @@ export default function IndivPJLink({ item }) {
             />
             {/* 기본 상태에서 보이는 이미지 */}
             <img
-              src={isHovered ? hoverProfileImg : defaultProfileImg}
+              src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/defaultProfileImg.png"}
               alt={item.name}
               className={styles.baseImage}
             />

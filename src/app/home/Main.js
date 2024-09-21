@@ -5,13 +5,6 @@ import InterBanner from "./InterBanner";
 import SubHeading from "../common/SubHeading";
 import Footer from "../common/Footer";
 import styles from "../../css/Main.module.css";
-import prof1 from "../../components/img/prof1.png";
-import prof2 from "../../components/img/prof2.png";
-import prof3 from "../../components/img/prof3.png";
-import prof4 from "../../components/img/prof4.png";
-import building from "../../components/img/building.png";
-import groupPhoto from "../../components/img/groupPhoto.png";
-import mainPoster from "../../components/img/mainPoster.jpg";
 import KakaoMap from "../../kakaoMap";
 import { motion } from "framer-motion";
 
@@ -32,14 +25,14 @@ function Main() {
   return (
     <div>
       <Menu page="main" />
-      <main>
-        <div className={styles.hScreen}>
+      <main className={styles.snappingContainer}>
+        <section className={styles.hScreen}>
           {inter == false ? (
             <InterBanner onBtnClick={startInter} />
           ) : (
             <Banner onBtnClick={startInter} />
           )}
-        </div>
+        </section>
         <section className={`${styles.hScreen}`}>
           <div className={styles.subTitle}>
             <SubHeading title={"전시 개요"} />
@@ -82,7 +75,7 @@ function Main() {
             <article className="contentsContainer row">
               <div className={`${styles.imgPoster} ${styles.imgContainer}`}>
                 <img
-                  src={mainPoster}
+                  src="/img/mainPoster.jpg"
                   alt="#"
                   style={{ width: "400px", height: "600px" }}
                 />
@@ -119,7 +112,7 @@ function Main() {
             <article className="contentsContainer column">
               <div className={styles.imgMember}>
                 <img
-                  src={groupPhoto}
+                  src="/img/groupPhoto.png"
                   alt="#"
                   style={{ width: "800px", height: "500px" }}
                 />
@@ -158,7 +151,7 @@ function Main() {
                 </div>
               </div>
               <div className={`${styles.imgDT}  ${styles.imgContainer}`}>
-                <img src={building} alt="#" />
+                <img src="img/building.png" alt="#" />
               </div>
             </article>
           </motion.div>
@@ -175,25 +168,25 @@ function Main() {
               <div className={`${styles.profContainer} row`}>
                 <div className={styles.prof}>
                   <div className={styles.imgProf}>
-                    <img src={prof1} alt="#" />
+                    <img src="/img/profileImg/김태완교수님.webp" alt="#" />
                   </div>
                   <p>김태완</p>
                 </div>
                 <div className={styles.prof}>
                   <div className={styles.imgProf}>
-                    <img src={prof2} alt="#" />
+                    <img src="/img/profileImg/김철기교수님.webp" alt="#" />
                   </div>
                   <p>김철기</p>
                 </div>
                 <div className={styles.prof}>
                   <div className={styles.imgProf}>
-                    <img src={prof3} alt="#" />
+                    <img src="/img/profileImg/이화세교수님.webp" alt="#" />
                   </div>
                   <p>이화세</p>
                 </div>
                 <div className={styles.prof}>
                   <div className={styles.imgProf}>
-                    <img src={prof4} alt="#" />
+                    <img src="/img/profileImg/이화세교수님.webp" alt="#" />
                   </div>
                   <p>홍동진</p>
                 </div>

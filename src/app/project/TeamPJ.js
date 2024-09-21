@@ -5,7 +5,7 @@ import SubHeading from "../common/SubHeading";
 import Footer from "../common/Footer";
 import data from "../../components/team.json";
 import styles from "../../css/TeamPJ.module.css";
-import videoImg from "../../components/img/video/videoImg.png";
+
 function TeamPJ() {
     const [hover, setHover] = useState('WEB');
     function onClickTeam(team) {
@@ -32,7 +32,7 @@ function TeamPJ() {
                                         </Link>
                                     </div>
                                     <div className={styles.pjImg}>
-                                        <img src={videoImg} alt="프로젝트 이미지" />
+                                        <img src="/img/video/videoImg.png" alt="프로젝트 이미지" />
                                     </div>
                                 </div> :
                                 <div className={styles.closeTeam}>

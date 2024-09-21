@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom";
-import imgPnu from "../../components/img/pnuLogo.png"
-import imgInsta from "../../components/img/instaLogo.png"
-import imgyouTube from "../../components/img/youtubeLogo.png"
 import styles from "../../css/Footer.module.css";
 function Footer() {
     return (
@@ -15,10 +12,10 @@ function Footer() {
                         </div>
                         <div className='row'>
                             <div className={styles.imgLink}>
-                                <Link to="https://www.instagram.com/pnu.dt.14/"><img src={imgInsta} alt="인스타그램" /></Link>
+                                <Link to="https://www.instagram.com/pnu.dt.14/"><img src="/img/instaLogo.png" alt="인스타그램" /></Link>
                             </div>
                             <div className={styles.imgLink}>
-                                <Link to="https://www.youtube.com/@pnudt"><img src={imgyouTube} alt="유튜브" /></Link>
+                                <Link to="https://www.youtube.com/@pnudt"><img src="/img/youtubeLogo.png" alt="유튜브" /></Link>
                             </div>
                         </div>
                     </div>
@@ -28,7 +25,7 @@ function Footer() {
                             <p>ⓒ 2024 Pusan National University Design&Technology all rights reserved.</p>
                         </div>
                         <div>
-                            <Link to="https://www.pusan.ac.kr/kor/Main.do"><img src={imgPnu} alt="부산대학교" /></Link>
+                            <Link to="https://www.pusan.ac.kr/kor/Main.do"><img src="/img/pnuLogo.png" alt="부산대학교" /></Link>
                         </div>
                     </div>
                 </div>

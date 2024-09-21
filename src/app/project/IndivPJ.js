@@ -4,7 +4,6 @@ import Footer from "../common/Footer";
 import data from "../../components/indiv.json";
 import styles from "../../css/IndivPJ.module.css";
 import SubHeading from "../common/SubHeading";
-import posterImg from "../../components/img/posterImg/posterImg.png";
 function IndivPJ() {
     return (
         <div>
@@ -18,7 +17,7 @@ function IndivPJ() {
                                 <Link to={`/project/indiv/${item.name}`}>
                                     <div className={styles.memberCard}>
                                         <div className={styles.imgPj}>
-                                            <img src={posterImg} alt={item.name} />
+                                            <img src="/img/posterImg/posterImg.png" alt={item.name} />
                                         </div>
                                         <div className={styles.memberInfo}>
                                             <h2>{item.mainTitle}</h2>
