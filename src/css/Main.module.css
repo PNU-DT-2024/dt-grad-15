@@ -44,6 +44,7 @@
   text-align: left;
 }
 
+
 /* ---------------------------------------------------------------------- */
 .nav{
   position: absolute;
@@ -63,7 +64,11 @@
   color: #a7a7a7;
 }
 .imgPoster {
+  width: 100%;
   margin-right: 64px;
+}
+.imgPoster img{
+  width: 100%;
 }
 .txtContainer p {
   margin-bottom: 12px;
@@ -73,7 +78,11 @@
   background-color: antiquewhite;
 }
 .imgMember {
+  width: 700px;
   margin-bottom: 32px;
+}
+.imgMember img{
+  width: 100%;
 }
 .memberTxt {
   text-align: center;

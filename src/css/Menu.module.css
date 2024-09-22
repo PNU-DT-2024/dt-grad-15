@@ -1,5 +1,5 @@
 .menuWrap {
-    padding:  24px 200px;
+    padding:  24px var(--margin);
     display: flex;
     align-items: center;
 }

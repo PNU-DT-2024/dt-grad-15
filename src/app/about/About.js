@@ -21,7 +21,7 @@ export default function About() {
                             <SubHeading title={"전공 소개"} />
                         </div>
                         {/* <motion.div {...motionProps}> */}
-                            <article className="contentsContainer row">
+                            <article className="articleContainer row">
                                 <div className={`${styles.captionContainer} cloumn`}>
                                     <h1 className={styles.title}>디자인앤테크놀로지전공</h1>
                                     <div className='description'>
@@ -51,7 +51,7 @@ export default function About() {
                         </div>
                         {/* <motion.div {...motionProps}> */}
                             <article
-                                className={`${styles.itemContainer}  contentsContainer column`}
+                                className={`${styles.itemContainer}  articleContainer column`}
                             >
                                 <h1 className={styles.title}>전임교수 & 지도교수</h1>
                                 <div className={`${styles.profContainer} row`}>

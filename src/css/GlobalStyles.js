@@ -73,7 +73,10 @@ table {
 
 
 .contentsContainer{
-margin: 64px 200px 128px;
+margin: 64px var(--margin) 128px;
+}
+.articleContainer{
+  margin: 0 var(--margin) ;
 }
 .description{
 line-height:150%;
@@ -88,7 +91,8 @@ line-height:150%;
     flex-direction: column;
 }
 :root{
-	--line : #dbdbdb
+	--line : #dbdbdb;
+	--margin : 200px;
 	
 }
 bodu>divt{

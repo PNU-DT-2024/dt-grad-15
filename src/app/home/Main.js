@@ -26,12 +26,12 @@ export default function Main() {
     viewport: { once: false },
     transition: { ease: "easeInOut", duration: 0.8 },
   };
-  
+
   useEffect(() => {
     if (!isInitialized) {
       $('#fullpage').fullpage({
-        autoScrolling: true,
-        scrollHorizontally: true,
+        // autoScrolling: true,
+        // scrollHorizontally: true,
         scrollOverflow: true,
         navigation: true,
         navigationTooltips: ['1', '2', '3', '4', '5', '6', '7', '8'],
@@ -70,7 +70,7 @@ export default function Main() {
                 <SubHeading title={"전시 개요"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="contentsContainer column">
+                <article className="articleContainer column">
                   <div className={`${styles.captionContainer} ${styles.outline} column`}>
                     <h1 className={`${styles.title} ${styles.mainTitle}`}>버릇</h1>
                     <div className={`${styles.txtContainer} description`}>
@@ -107,13 +107,9 @@ export default function Main() {
                 <SubHeading title={"포스터 소개"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="contentsContainer row">
+                <article className="articleContainer row">
                   <div className={`${styles.imgPoster} ${styles.imgContainer}`}>
-                    <img
-                      src="/img/mainPoster.jpg"
-                      alt="#"
-                      style={{ width: "400px", height: "600px" }}
-                    />
+                    <img src="/img/mainPoster.jpg" alt="#" />
                   </div>
 
                   <div className={`${styles.captionContainer} cloumn`}>
@@ -136,7 +132,7 @@ export default function Main() {
             </div>
           </section>
 
-          <section className={`${styles.video} section`}>
+          <section className={`section`}>
             <div className={styles.hScreen}>
               오프닝 영상
             </div>
@@ -148,12 +144,11 @@ export default function Main() {
                 <SubHeading title={"전시 인원"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="contentsContainer column">
+                <article className="articleContainer column">
                   <div className={styles.imgMember}>
                     <img
                       src="/img/groupPhoto.png"
                       alt="#"
-                      style={{ width: "800px", height: "500px" }}
                     />
                   </div>
                   <div
@@ -175,7 +170,7 @@ export default function Main() {
                 <SubHeading title={"전공 소개"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="contentsContainer row">
+                <article className="articleContainer row">
                   <div className={`${styles.captionContainer} cloumn`}>
                     <h1 className={styles.title}>디자인앤테크놀로지전공</h1>
                     <div className={`${styles.txtContainer} description`}>
@@ -207,7 +202,7 @@ export default function Main() {
               </div>
               <motion.div {...motionProps}>
                 <article
-                  className={`${styles.itemContainer}  contentsContainer column`}
+                  className={`${styles.itemContainer}  articleContainer column`}
                 >
                   <h1 className={styles.title}>전임교수 & 지도교수</h1>
                   <div className={`${styles.profContainer} row`}>

@@ -2,7 +2,7 @@
     /* position: absolute; */
     background-color: black;
     color: white;
-    padding: 32px 200px;
+    padding: 32px var(--margin);
     /* margin-top: 128px; */
     /* bottom: 0; */
     /* width: 100%; */
