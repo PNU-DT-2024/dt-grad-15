@@ -40,7 +40,7 @@ export default function IndivPJLink({ item }) {
           {/* Hover 상태일 때 memberInfo 숨김 */}
           <div
             className={styles.memberInfo}
-            style={{ visibility: isHovered ? "hidden" : "visible" }}
+            // style={{ visibility: isHovered ? "hidden" : "visible" }}
           >
             <h2>{item.name}</h2>
             <p>{item.engName}</p>

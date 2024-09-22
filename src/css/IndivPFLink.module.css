@@ -30,7 +30,7 @@
 }
 
 .show {
-  right: 0; /* 애니메이션 종료 위치 */
+  right: -40%; /* 애니메이션 종료 위치 */
   visibility: visible; /* Hover 상태에서 보이도록 설정 */
 }
 

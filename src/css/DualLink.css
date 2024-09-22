@@ -1,7 +1,4 @@
-.linkContainer {
-  display: flex;
-  flex-direction: column;
-}
+
 .linkModule {
   font-size: 2rem;
   padding: 64px 32px;

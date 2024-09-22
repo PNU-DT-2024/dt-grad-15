@@ -19,7 +19,7 @@ function IndivPJ() {
                                         <div className={styles.imgPj}>
                                             <img src="/img/posterImg/posterImg.png" alt={item.name} />
                                         </div>
-                                        <div className={styles.memberInfo}>
+                                        <div className={`${styles.memberInfo} column`}>
                                             <h2>{item.mainTitle}</h2>
                                             <p>{item.name}</p>
                                         </div>

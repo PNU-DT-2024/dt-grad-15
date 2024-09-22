@@ -11,7 +11,6 @@
   height: 100vh;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 /* 스크롤바 숨김 */
@@ -39,9 +38,21 @@
 .title {
   margin-bottom: 32px;
 }
+.captionContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
 
 /* ---------------------------------------------------------------------- */
-.mainTitle {
+.nav{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.mainTitle
+ {
   font-size: 4rem;
   font-family: "sandoll-jebi2", sans-serif;
   font-weight: 700;

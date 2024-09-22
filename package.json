@@ -8,6 +8,9 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^10.13.0",
     "framer-motion": "^11.5.4",
+    "fullpage.js": "^2.9.6",
+    "iscroll": "^5.2.0",
+    "jquery": "^3.7.1",
     "node": "^20.15.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -19,10 +22,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": [
@@ -41,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "react-app-rewired": "^2.2.1"
   }
 }

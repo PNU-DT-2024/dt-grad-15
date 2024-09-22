@@ -84,7 +84,7 @@ line-height:150%;
     display: flex;
     flex-direction: row;
 }
-.cloumn{
+.column{
     display: flex;
     flex-direction: column;
 }
@@ -109,5 +109,8 @@ height:100%;
 // font-family: "sandoll-jebi2", sans-serif;
 // font-weight: 700;
 // font-style: normal;
+// .section{
+//   justify-content: center;
+//   align-items: center;}
 `;
 export default GlobalStyles;
