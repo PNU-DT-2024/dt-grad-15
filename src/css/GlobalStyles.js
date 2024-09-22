@@ -73,9 +73,8 @@ table {
 
 
 .contentsContainer{
-margin: 0 200px;
+margin: 64px 200px 128px;
 }
-
 .description{
 line-height:150%;
 }

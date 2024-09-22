@@ -30,8 +30,10 @@ function IndivPFDetail() {
                                 <Link to={"/profile/team"}>
                                     <p>{data.team}</p>
                                 </Link>
-                                <h1>{data.name}</h1>
-                                <span>{data.engName}</span>
+                                <div className="row">
+                                    <h1>{data.name}</h1>
+                                    <span>{data.engName}</span>
+                                </div>
                                 <p>{data.email}</p>
                             </div>
                             <div className={styles.signImg}>

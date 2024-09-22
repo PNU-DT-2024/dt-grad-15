@@ -4,6 +4,7 @@ import Main from "./app/home/Main";
 import Profile from "./app/profile/Profile";
 import Guestbook from "./app/guestbook/Guestbook";
 import Project from "./app/project/Project";
+import About from "./app/about/About";
 import IndivPFDetail from "./app/profile/IndivPFDetail";
 import TeamPJDetail from "./app/project/TeamPJDetail";
 import IndivPJDetail from "./app/project/IndivPJDetail";
@@ -32,6 +33,7 @@ function App() {
           <Route path="/project/indiv/:id" element={<IndivPJDetail />}></Route>
           <Route path="/project/team" element={<TeamPJ />}></Route>
           <Route path="/project/team/:id" element={<TeamPJDetail />}></Route>
+          <Route path="/about" element={<About />}></Route>
           {/* <Route path="/team-profile/:id" element={<TeamPF />}></Route> */}
         </Routes>
       </Router>
