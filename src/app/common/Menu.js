@@ -29,6 +29,11 @@ function Menu({ page }) {
                             <p style={{ color: color }}>방명록</p>
                         </Link>
                     </div>
+                    <div>
+                        <Link to={'/about'}>
+                            <p style={{ color: color }}>about</p>
+                        </Link>
+                    </div>
                 </div>
 
             </div>

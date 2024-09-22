@@ -23,9 +23,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
     box-sizing: border-box;
 }
-// p ,span{
-// 	line-height:150%
-// }
+h1, h2, h3, h4, h5, h6{
+	cursor:default;
+}
 h1{
 	font-size:3rem;
 	font-weight:700;

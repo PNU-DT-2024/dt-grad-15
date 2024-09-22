@@ -18,7 +18,6 @@ export default function Main() {
   const [isInitialized, setIsInitialized] = useState(false);
 
   function startInter() {
-    // console.log("버튼 클릭 : ", inter);
     setInter(!inter);
   }
   const motionProps = {
@@ -27,11 +26,13 @@ export default function Main() {
     viewport: { once: false },
     transition: { ease: "easeInOut", duration: 0.8 },
   };
+  
   useEffect(() => {
     if (!isInitialized) {
       $('#fullpage').fullpage({
+        autoScrolling: true,
+        scrollHorizontally: true,
         scrollOverflow: true,
-        // sectionsColor: ['#ffffff', '#D6C7ED', '#9FD4EB'],
         navigation: true,
         navigationTooltips: ['1', '2', '3', '4', '5', '6', '7', '8'],
         scrollingSpeed: 1000,
@@ -46,6 +47,7 @@ export default function Main() {
       }
     };
   }, [isInitialized]);
+
   return (
     <div >
       <main className={styles.snappingContainer}>
@@ -167,7 +169,7 @@ export default function Main() {
             </div>
           </section>
 
-          <section className={` section`}>
+          {/* <section className={` section`}>
             <div className={styles.hScreen}>
               <div className={styles.subTitle}>
                 <SubHeading title={"전공 소개"} />
@@ -195,10 +197,10 @@ export default function Main() {
                 </article>
               </motion.div>
             </div>
-          </section>
+          </section> */}
 
 
-          <section className={`section`}>
+          {/* <section className={`section`}>
             <div className={styles.hScreen}>
               <div className={styles.subTitle}>
                 <SubHeading title={"교수진"} />
@@ -237,7 +239,7 @@ export default function Main() {
                 </article>
               </motion.div>
             </div>
-          </section>
+          </section> */}
 
 
           <section className={`section`}>

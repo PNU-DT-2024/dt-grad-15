@@ -29,7 +29,7 @@
   margin-bottom: 12px;
 }
 
-.personalInfo > p:last-child {
+.personalInfo p:last-child {
   margin-top: 24px;
 }
 
@@ -37,8 +37,10 @@
   display: inline;
   margin-right: 12px;
 }
-
-.personalInfo span {
+.personalInfo > div{
+  align-items: center;
+}
+.personalInfo > div span {
   font-size: 2rem;
   color: #a7a7a7;
 }

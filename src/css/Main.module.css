@@ -30,8 +30,7 @@
 .imgPoster,
 .imgMap,
 .imgMember,
-.imgDT,
-.imgProf {
+.imgDT {
   background-color: #a7a7a7;
 }
 
@@ -80,23 +79,9 @@
   text-align: center;
 }
 
-.profContainer {
-  justify-content: space-between;
-  gap: 12px;
-}
+
 .imgDT {
   margin-left: 64px;
-}
-.prof {
-  flex: 1;
-}
-
-.imgProf img {
-  width: 100%;
-}
-
-.prof p {
-  margin-top: 12px;
 }
 
 .imgMap {
