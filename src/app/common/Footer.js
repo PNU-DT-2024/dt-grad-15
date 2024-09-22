@@ -3,7 +3,6 @@ import styles from "../../css/Footer.module.css";
 function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className="contentsContainer">
                 <div className={styles.footerContainer}>
                     <div className={`${styles.topContainer} row`}>
                         <div className={`${styles.exhibitionContainer} description`}>
@@ -29,7 +28,6 @@ function Footer() {
                         </div>
                     </div>
                 </div>
-            </div>
         </footer>
     )
 

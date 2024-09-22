@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import Masonry from 'react-masonry-css';
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
@@ -97,12 +98,14 @@ function Guestbook() {
     <div>
       <Menu />
       <main className="contentsContainer">
-
         <Title title="방명록" />
-        < MessageTxt />
+        <div>
+          < MessageTxt />
+
+        </div>
         <section className={`${styles.messageWrapper} row`}>
           <div className={`${styles.sentContainer} column`}>
-            <div className={styles.personalInfo}>
+            <div className={`${styles.personalInfo} column`}>
               <label>To:</label>
               <select value={to} onChange={(e) => setTo(e.target.value)}>
                 {names.map((name) => (

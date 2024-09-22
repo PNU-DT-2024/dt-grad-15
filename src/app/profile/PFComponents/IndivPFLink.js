@@ -26,13 +26,12 @@ export default function IndivPJLink({ item }) {
             <img
               src={isHovered ? "/img/profileImg/trigger.png" : ""}
               // alt="Trigger Image"
-              className={`${styles.triggerImage} ${
-                isHovered ? styles.show : ""
-              }`}
+              className={`${styles.triggerImage} ${isHovered ? styles.show : ""
+                }`}
             />
             {/* 기본 상태에서 보이는 이미지 */}
             <img
-              src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/defaultProfileImg.png"}
+              src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/박정혜_profile.jpg"}
               alt={item.name}
               className={styles.baseImage}
             />
@@ -40,7 +39,7 @@ export default function IndivPJLink({ item }) {
           {/* Hover 상태일 때 memberInfo 숨김 */}
           <div
             className={styles.memberInfo}
-            style={{ visibility: isHovered ? "hidden" : "visible" }}
+          // style={{ visibility: isHovered ? "hidden" : "visible" }}
           >
             <h2>{item.name}</h2>
             <p>{item.engName}</p>

@@ -1,0 +1,48 @@
+.hScreen {
+    display: flex;
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.subTitle {
+    position: absolute;
+    left: 24px;
+    top: 64px;
+    color: #a7a7a7;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.title {
+    margin-bottom: 32px;
+}
+
+.captionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.imgDT {
+    margin-left: 64px;
+}
+
+
+.profContainer {
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.prof {
+    flex: 1;
+}
+
+.imgProf img {
+    width: 100%;
+}
+
+.prof p {
+    margin-top: 12px;
+}

@@ -15,8 +15,6 @@ option{
 }
 
 .personalInfo {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: left;
     margin-bottom: 32px;
@@ -110,5 +108,3 @@ button {
     /* gutter size */
     /* background-clip: padding-box; */
 }
-
-.guestbook-entry {}

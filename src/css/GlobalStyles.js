@@ -23,9 +23,9 @@ time, mark, audio, video {
 	vertical-align: baseline;
     box-sizing: border-box;
 }
-// p ,span{
-// 	line-height:150%
-// }
+h1, h2, h3, h4, h5, h6{
+	cursor:default;
+}
 h1{
 	font-size:3rem;
 	font-weight:700;
@@ -73,9 +73,11 @@ table {
 
 
 .contentsContainer{
-margin: 0 200px;
+margin: 64px var(--margin) 128px;
 }
-
+.articleContainer{
+  margin: 0 var(--margin) ;
+}
 .description{
 line-height:150%;
 }
@@ -84,12 +86,13 @@ line-height:150%;
     display: flex;
     flex-direction: row;
 }
-.cloumn{
+.column{
     display: flex;
     flex-direction: column;
 }
 :root{
-	--line : #dbdbdb
+	--line : #dbdbdb;
+	--margin : 200px;
 	
 }
 bodu>divt{
@@ -109,5 +112,8 @@ height:100%;
 // font-family: "sandoll-jebi2", sans-serif;
 // font-weight: 700;
 // font-style: normal;
+// .section{
+//   justify-content: center;
+//   align-items: center;}
 `;
 export default GlobalStyles;

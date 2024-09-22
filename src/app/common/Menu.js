@@ -4,10 +4,9 @@ import styles from "../../css/Menu.module.css"
 function Menu({ page }) {
     let background = page === "main" ? "none" : "black";
     let color = page === "main" ? "black" : "white";
-    let margin_bottom = page === "main" ? "0" : "64px";
     return (
-        <nav className={styles.menuWrap} style={{ backgroundColor: background, marginBottom:margin_bottom}}>
-            <div className={`${styles.menuContainer} contentsContainer`}>
+        <nav className={styles.menuWrap} style={{ backgroundColor: background }}>
+            <div className={`${styles.menuContainer}`}>
                 <div className={styles.mainLink}>
                     <Link to={'/'}>
                         <p style={{ color: color }}>버릇</p>
@@ -27,6 +26,11 @@ function Menu({ page }) {
                     <div>
                         <Link to={'/guestbook'}>
                             <p style={{ color: color }}>방명록</p>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link to={'/about'}>
+                            <p style={{ color: color }}>about</p>
                         </Link>
                     </div>
                 </div>
