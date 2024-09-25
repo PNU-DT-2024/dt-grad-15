@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "../../css/Menu.module.css"
 
 function Menu({ page }) {
@@ -8,30 +8,30 @@ function Menu({ page }) {
         <nav className={styles.menuWrap} style={{ backgroundColor: background }}>
             <div className={`${styles.menuContainer}`}>
                 <div className={styles.mainLink}>
-                    <Link to={'/'}>
+                    <NavLink to={'/'} className={({isActive}) => (isActive? styles.active:"")}>
                         <p style={{ color: color }}>버릇</p>
-                    </Link>
+                    </NavLink>
                 </div>
                 <div className={styles.nav} >
                     <div>
-                        <Link to={'/profile'}>
+                        <NavLink to={'/profile'} className={({isActive}) => (isActive? styles.active:"")}>
                             <p style={{ color: color }} >프로필</p>
-                        </Link>
+                        </NavLink>
                     </div>
                     <div>
-                        <Link to={'/project'}>
+                        <NavLink to={'/project'} className={({isActive}) => (isActive? styles.active:"")}>
                             <p style={{ color: color }}>프로젝트</p>
-                        </Link>
+                        </NavLink>
                     </div>
                     <div>
-                        <Link to={'/guestbook'}>
+                        <NavLink to={'/guestbook'} className={({isActive}) => (isActive? styles.active:"")}>
                             <p style={{ color: color }}>방명록</p>
-                        </Link>
+                        </NavLink>
                     </div>
                     <div>
-                        <Link to={'/about'}>
-                            <p style={{ color: color }}>about</p>
-                        </Link>
+                        <NavLink to={'/about'} className={({isActive}) => (isActive? styles.active:"")}>
+                            <p style={{ color: color }}>소개</p>
+                        </NavLink>
                     </div>
                 </div>
 

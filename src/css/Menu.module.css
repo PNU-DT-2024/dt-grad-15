@@ -31,3 +31,9 @@
 .nav div p {
     color: white;
 }
+.nav .active{
+    font-weight: 700;
+}
+.nav p:hover{
+    font-weight: 700;
+}
