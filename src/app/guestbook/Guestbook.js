@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { useMediaQuery } from "react-responsive";
 import Masonry from 'react-masonry-css';
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
@@ -93,6 +93,9 @@ function Guestbook() {
     );
   };
 
+  const isMobile = useMediaQuery({
+    query:"(max-width:767px)"
+  });
 
   return (
     <div>
@@ -103,8 +106,8 @@ function Guestbook() {
           < MessageTxt />
 
         </div>
-        <section className={`${styles.messageWrapper} row`}>
-          <div className={`${styles.sentContainer} column`}>
+        <section className={`${styles.messageWrapper} ${isMobile?'column':'row'}`}>
+          <div className={`${isMobile?styles.m_sentContainer:styles.sentContainer} column`}>
             <div className={`${styles.personalInfo} column`}>
               <label>To:</label>
               <select value={to} onChange={(e) => setTo(e.target.value)}>

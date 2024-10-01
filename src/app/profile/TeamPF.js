@@ -33,7 +33,7 @@ function TeamPF() {
                                             <div>
                                                 <Link to={`/profile/indiv/${member}`}>
                                                     <div className={styles.memberImg}>
-                                                        <img src="#" alt="#" />
+                                                        <img src="/img/profileImg/박정혜_profile.jpg" alt="#" />
                                                     </div>
                                                     <div>{member}</div>
 

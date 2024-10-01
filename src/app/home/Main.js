@@ -3,6 +3,8 @@ import $ from 'jquery';
 import 'fullpage.js/vendors/scrolloverflow';
 import 'fullpage.js';
 import 'fullpage.js/dist/jquery.fullpage.min.js';
+import { useMediaQuery } from "react-responsive";
+
 
 import Menu from "../common/Menu";
 import Banner from "./Banner";
@@ -14,6 +16,10 @@ import KakaoMap from "../../kakaoMap";
 import { motion } from "framer-motion";
 
 export default function Main() {
+  const isMobile = useMediaQuery({
+    query: "(max-width:767px)"
+  });
+
   const [inter, setInter] = useState(true);
   const [isInitialized, setIsInitialized] = useState(false);
 
@@ -52,7 +58,7 @@ export default function Main() {
     <div >
       <main className={styles.snappingContainer}>
         <div id='fullpage'>
-          <section className='section'>
+          <section className={`section`}>
             <div className={styles.hScreen}>
               <div className={styles.nav}>
                 <Menu page="main" />
@@ -64,7 +70,7 @@ export default function Main() {
               )}
             </div>
           </section>
-          <section className={`section`}>
+          <section className='section'>
             <div className={styles.hScreen}>
               <div className={styles.subTitle}>
                 <SubHeading title={"전시 개요"} />
@@ -88,7 +94,7 @@ export default function Main() {
                       </p>
                       <p>
                         우리 삶의 흔적인 '버릇'을 통해 나를 인정하고, 타인을
-                        이해하는 태도를 기르는 기회가 될 것이다.{" "}
+                        이해하는 태도를 기르는 기회가 될 것이다.
                       </p>
                     </div>
                     <p className={styles.endnotes}>
@@ -104,26 +110,47 @@ export default function Main() {
             <div className={styles.hScreen}>
 
               <div className={styles.subTitle}>
-                <SubHeading title={"포스터 소개"} />
+                <SubHeading title={"전시 아이덴티티"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="articleContainer row">
-                  <div className={`${styles.imgPoster} ${styles.imgContainer}`}>
-                    <img src="/img/mainPoster.jpg" alt="#" />
-                  </div>
+                <article className={`articleContainer ${isMobile ? 'column' : 'row'}`}>
 
-                  <div className={`${styles.captionContainer} cloumn`}>
-                    <h1 className={styles.title}>전시 포스터</h1>
+
+                  <div className={`${styles.captionContainer} column`}>
+                    <h1 className={styles.title}>스캐니메이션</h1>
                     <div className={`${styles.txtContainer} description`}>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor incididunt ut labore et dolore magna
-                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit
-                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                        occaecat cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        스캐니메이션은 일정한 간격으로 줄무늬가 적용된 판인 슬릿 마스크를 통해 정적인 이미지를 움직이는 것처럼 보이게하는 시각 기법입니다.
+                        슬릿 마스크를 통과하며 행동이 반복되는 방식은 이번 전시의 주요 주제인 버릇을 효과적으로 보여줍니다.
+                        이러한 스캐니메이션을 아이덴티티의 모티브로 선정하여 개인의 버릇을 인식하고 그 의미를 탐구하는 전시주제를 시각적으로 표현하고자 하였습니다.
+                      </p>
+
+                    </div>
+                  </div>
+                </article>
+              </motion.div>
+            </div>
+          </section>
+          <section className={`section`}>
+            <div className={styles.hScreen}>
+
+              <div className={styles.subTitle}>
+                <SubHeading title={"전시 아이덴티티"} />
+              </div>
+              <motion.div {...motionProps}>
+                <article className={`articleContainer ${isMobile ? 'column' : 'row'}`}>
+
+                  <div className={`${styles.captionContainer} column`}>
+                    <h1 className={styles.title}>스캐니메이션</h1>
+                    <div className={`${styles.txtContainer} description`}>
+                      <p>
+                        슬릿 마스크는 우리가 버릇을 인식하려고 노력하는 과정을 상징합니다.
+                        정적인 이미지는 그 모습을 온전히 인지하기 어려운 형태이지만, 슬릿 마스크를 통해 반복적인 행동이 선명하게 보이면서 그 본질을 이해할 수 있게 됩니다.
+                        이는 우리의 버릇을 직시하고 깨닫는 과정과 맞닿아 있으며, 전시의 주제를 관통하는 중요한 모티브로 작용합니다.
+                      </p>
+                      <p>
+                        이번 전시에서는 가상의 인물 이미지를 만들어내고 간단한 동작을 부여하고 이를 네 개의 프레임으로 나눈 후 스캐니메이션 기법을 적용하여 반복적인 움직임을 시각화했습니다.
+                        이때 생성된 가상의 인물은 특정 인물을 표방하지 않으며 이를 통해 이번 전시가 단지 참여한 학생들만의 이야기가 아닌, 누구에게나 적용될 수 있는 보편적인 주제를 다루고 있음을 나타내고자 했습니다.
                       </p>
                     </div>
                   </div>
@@ -131,10 +158,24 @@ export default function Main() {
               </motion.div>
             </div>
           </section>
+          <section className={`section`}>
+            <div className={styles.hScreen}>
+
+              <div className={styles.subTitle}>
+                <SubHeading title={"전시 포스터"} />
+              </div>
+              <motion.div {...motionProps}>
+
+                <div className={`${ styles.imgPoster} ${styles.imgContainer}`}>
+                  <img src="/img/mainPoster.jpg" alt="#" />
+                </div>
+              </motion.div>
+            </div>
+          </section>
 
           <section className={`section`}>
             <div className={styles.hScreen}>
-              오프닝 영상
+              <iframe src={`https://www.youtube.com/embed/oTEYBxPvTso`} className={styles.opening} />
             </div>
           </section>
 
@@ -144,16 +185,11 @@ export default function Main() {
                 <SubHeading title={"전시 인원"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="articleContainer column">
+                <article className={`articleContainer  ${isMobile ? `column ${styles.m_memberContainer}` : `row ${styles.memberContainer}`}`}>
                   <div className={styles.imgMember}>
-                    <img
-                      src="/img/groupPhoto.png"
-                      alt="#"
-                    />
+                    <img src="/img/profileImg/all_profile.jpg" alt="#" />
                   </div>
-                  <div
-                    className={`${styles.txtContainer} ${styles.memberTxt} description`}
-                  >
+                  <div className={`${styles.txtContainer} ${styles.memberTxt} description`}>
                     <p>이상화 · 박서해 · 왕신웨 · 이지은 · 김경린 · 김은선</p>
                     <p>
                       박정혜 · 최시아 · 김동성 · 박승찬 · 오여슬 · 이민서 · 조성원{" "}
@@ -164,87 +200,14 @@ export default function Main() {
             </div>
           </section>
 
-          {/* <section className={` section`}>
-            <div className={styles.hScreen}>
-              <div className={styles.subTitle}>
-                <SubHeading title={"전공 소개"} />
-              </div>
-              <motion.div {...motionProps}>
-                <article className="articleContainer row">
-                  <div className={`${styles.captionContainer} cloumn`}>
-                    <h1 className={styles.title}>디자인앤테크놀로지전공</h1>
-                    <div className={`${styles.txtContainer} description`}>
-                      <p>
-                        첨단 전자 및 컴퓨터 공학을 포함한 기술적인 요소와 예술적
-                        감성의 조화를 필요로 하는 영상물의 분석, 기획, 제작, 편집
-                        기법 및 첨단 컴퓨터 기술의 실용적인 교육을 통해 영화 및
-                        비디오 영상, 디지털 시네마, 디지털 방송 등에 활용되는
-                        디지털콘텐츠 제작 기술 능력을 배양하고, 우수한
-                        디지털콘텐츠를 개발하여 산업화할 수 있는 디자인, 공학 전문
-                        인력을 양성하여 지역사회와 국가의 디지털콘텐츠 산업 발전 및
-                        경쟁력 제고에 이바지함을 목표로 한다.{" "}
-                      </p>
-                    </div>
-                  </div>
-                  <div className={`${styles.imgDT}  ${styles.imgContainer}`}>
-                    <img src="img/building.png" alt="#" />
-                  </div>
-                </article>
-              </motion.div>
-            </div>
-          </section> */}
-
-
-          {/* <section className={`section`}>
-            <div className={styles.hScreen}>
-              <div className={styles.subTitle}>
-                <SubHeading title={"교수진"} />
-              </div>
-              <motion.div {...motionProps}>
-                <article
-                  className={`${styles.itemContainer}  articleContainer column`}
-                >
-                  <h1 className={styles.title}>전임교수 & 지도교수</h1>
-                  <div className={`${styles.profContainer} row`}>
-                    <div className={styles.prof}>
-                      <div className={styles.imgProf}>
-                        <img src="/img/profileImg/김태완교수님.webp" alt="#" />
-                      </div>
-                      <p>김태완</p>
-                    </div>
-                    <div className={styles.prof}>
-                      <div className={styles.imgProf}>
-                        <img src="/img/profileImg/김철기교수님.webp" alt="#" />
-                      </div>
-                      <p>김철기</p>
-                    </div>
-                    <div className={styles.prof}>
-                      <div className={styles.imgProf}>
-                        <img src="/img/profileImg/이화세교수님.webp" alt="#" />
-                      </div>
-                      <p>이화세</p>
-                    </div>
-                    <div className={styles.prof}>
-                      <div className={styles.imgProf}>
-                        <img src="/img/profileImg/이화세교수님.webp" alt="#" />
-                      </div>
-                      <p>홍동진</p>
-                    </div>
-                  </div>
-                </article>
-              </motion.div>
-            </div>
-          </section> */}
-
-
           <section className={`section`}>
             <div className={styles.hScreen}>
               <div className={styles.subTitle}>
                 <SubHeading title={"위치 및 시간"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="contentsContainer row">
-                  <div className={`${styles.imgMap} ${styles.imgContainer}`}>
+                <article className={`contentsContainer ${isMobile ? 'column' : 'row'}`}>
+                  <div className={`${isMobile ? styles.m_imgMap : styles.imgMap} ${styles.imgContainer}`}>
                     <KakaoMap />
                   </div>
                   <div className={`${styles.captionContainer} cloumn`}>

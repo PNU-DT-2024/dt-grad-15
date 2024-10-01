@@ -1,11 +1,11 @@
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import data from "../../components/indiv.json";
-import { Link } from "react-router-dom";
 import styles from "../../css/IndivPF.module.css";
 import SubHeading from "../common/SubHeading";
 import IndivPFLink from "./PFComponents/IndivPFLink";
 function IndivPF() {
+
     return (
         <div>
             <Menu />

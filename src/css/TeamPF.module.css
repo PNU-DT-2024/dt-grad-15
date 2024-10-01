@@ -96,6 +96,10 @@
     width: 100px;
     height: 130px;
     margin-bottom: 12px;
+    overflow: hidden;
+}
+.memberImg img{
+    width: 100%;
 }
 
 .moveLink {

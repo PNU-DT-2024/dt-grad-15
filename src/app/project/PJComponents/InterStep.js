@@ -1,10 +1,11 @@
+import '../../../css/PJDetail.css';
 export default function InterStep({ imgUrl, step }) {
     return (
-        <div className="column" style={{width:'20%'}}>
-            <div style={{ backgroundColor:'#dbdbdb'}}>
+        <div className="column stepContainer" >
+            <div className='imgStep'>
                 <img src={imgUrl} alt="#" />
             </div>
-            <p style={{ marginTop: 12 }}>{step}</p>
+            <p>{step}</p>
         </div>
     )
 }
