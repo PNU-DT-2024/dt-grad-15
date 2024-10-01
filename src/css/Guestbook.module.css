@@ -68,12 +68,10 @@ button {
 }
 .optionContainer select{
     font-size: 1.25rem;
-    /* margin-left: auto; */
     padding: 4px 12px;
 }
 
 .messageList {
-    grid-template-rows: masonru;
     gap: 12px;
 }
 

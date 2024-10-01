@@ -15,7 +15,7 @@ function TeamPJ() {
         <div>
             <Menu />
             <main className="contentsContainer">
-                <SubHeading title={"팀 프로젝트"} />
+                <SubHeading title={"팀 작품"} />
                 <section className='column'>
                     {/* <hr className={styles.horizontalLine}/> */}
                     {data.team.map((item) => (
@@ -32,7 +32,7 @@ function TeamPJ() {
                                         </Link>
                                     </div>
                                     <div className={styles.pjImg}>
-                                        <img src="/img/video/videoImg.png" alt="프로젝트 이미지" />
+                                        <img src="/img/video/videoImg.png" alt="작품 이미지" />
                                     </div>
                                 </div> :
                                 <div className={styles.closeTeam}>

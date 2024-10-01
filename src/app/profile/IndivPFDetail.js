@@ -25,14 +25,14 @@ function IndivPFDetail() {
             <main className="contentsContainer">
                 <section className={`${styles.profileContainer} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
-                        <img src="/img/profileImg/박정혜_profile.jpg" alt="프로필 사진" />
+                        <img src="/img/profileImg/박정혜_profile.jpg" alt="작가 사진" />
                         {isMobile ?
                             <div className={styles.m_signImg}>
                                 <img className={styles.signiture} src="#" alt="#" />
                             </div>
                             : <></>}
                     </div>
-                    <div className={`${isMobile?styles.m_txtContainer:styles.txtContainer} column`}>
+                    <div className={`${isMobile ? styles.m_txtContainer : styles.txtContainer} column`}>
                         <div className={`${styles.nameContainer} row`}>
                             <div className={isMobile ? `column ${styles.m_name}` : `row ${styles.name}`}>
                                 <span>{data.name}</span>
@@ -60,7 +60,7 @@ function IndivPFDetail() {
                     </div>
                 </section>
                 <section >
-                    <Title title="프로젝트" />
+                    <Title title="작품" />
                     <div className={`${styles.moveLinkContainer} ${isMobile ? 'column' : 'row'}`}>
                         <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>
@@ -68,7 +68,7 @@ function IndivPFDetail() {
                                     <div className={styles.indivPjImg}>
                                         <img src="#" alt="#" />
                                     </div>
-                                    <p>개인 프로젝트</p>
+                                    <p>개인 작품</p>
                                     <p>{data.mainTitle}</p>
                                 </div>
                             </Link>
@@ -79,7 +79,7 @@ function IndivPFDetail() {
                                     <div className={styles.teamPjImg}>
                                         <img src="#" alt="#" />
                                     </div>
-                                    <p>팀 프로젝트</p>
+                                    <p>팀 작품</p>
                                     <p>{data.teamTitle}</p>
                                 </div>
                             </Link>

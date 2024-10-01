@@ -1,4 +1,7 @@
-.banner, .interBanner{
+.banner,
+.m_banner,
+.interBanner,
+.m_interBanner {
     display: flex;
     background-color: rgb(247, 247, 247);
     width: 100%;
@@ -6,19 +9,34 @@
     align-items: center;
     justify-content: center;
 }
-.interBanner{
+
+.interBanner,
+.m_interBanner {
     background-color: aquamarine;
 }
-.banner span{
+
+.banner span {
     font-size: 7rem;
     font-family: "sandoll-jebi2", sans-serif;
     font-weight: 700;
 
 }
-.interBtn{
+
+.interBtn {
     padding: 0;
     margin: 0 24px;
     align-items: center;
     background-color: transparent;
     border: none;
+}
+
+/* 모바일 css----------------------------------- */
+.m_banner span {
+    font-size: 3rem;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
+}
+
+.m_banner .interBtn, .m_interBanner .interBtn {
+    width: 48px;
 }

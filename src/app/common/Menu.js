@@ -7,8 +7,11 @@ import styles from "../../css/Menu.module.css"
 function Menu({ page }) {
     let background = page === "main" ? "none" : "black";
     let color = page === "main" ? "black" : "white";
-    const isMobile = useMediaQuery({
-        query: "(max-width:767px)"
+    // const isMobile = useMediaQuery({
+    //     query: "(max-width:767px)"
+    // });
+    const isTablet = useMediaQuery({
+        query: "(max-width:1023px)"
     });
     const [isMenu, setIsMenu] = useState(false);
     let openMenu = () => {
@@ -16,14 +19,14 @@ function Menu({ page }) {
     }
 
     return (
-        <nav className={`${styles.menuWrap} ${isMobile ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
+        <nav className={`${styles.menuWrap} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
             <div className={`${styles.menuContainer}`}>
                 <div className={styles.mainLink}>
                     <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
                         <p style={{ color: color }}>버릇</p>
                     </NavLink>
                 </div>
-                {isMobile ?
+                {isTablet ?
 
                     <div className={styles.nav} style={{ color: color }}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
@@ -39,12 +42,12 @@ function Menu({ page }) {
                     <div className={`${styles.nav} ${styles.w_font}`} >
                         <div>
                             <NavLink to={'/profile'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }} >프로필</p>
+                                <p style={{ color: color }} >작가</p>
                             </NavLink>
                         </div>
                         <div>
                             <NavLink to={'/project'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }}>프로젝트</p>
+                                <p style={{ color: color }}>작품</p>
                             </NavLink>
                         </div>
                         <div>

@@ -20,7 +20,7 @@ export default function SlideMenu({ onBtnClick }) {
                             to="/profile"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>프로필</p>
+                            <p>작가</p>
                         </NavLink>
                     </li>
                     <li>
@@ -28,7 +28,7 @@ export default function SlideMenu({ onBtnClick }) {
                             to="/project"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>프로젝트</p>
+                            <p>작품</p>
                         </NavLink>
                     </li>
                     <li>

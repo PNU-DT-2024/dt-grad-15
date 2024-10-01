@@ -1,13 +1,13 @@
 import { useMediaQuery } from "react-responsive";
 
 export default function SubHeading({ title }) {
-    const isMobile = useMediaQuery({
-        query: "(max-width: 767px)"
+    const isTablet = useMediaQuery({
+        query: "(max-width:1023px)"
     });
 
     return (
         <>
-            {isMobile ? null : (
+            {isTablet ? null : (
                 <span
                     style={{
                         fontSize: '1rem',

@@ -13,7 +13,7 @@ export default function IndivPJ() {
         <div>
             <Menu />
             <main className="contentsContainer">
-                <SubHeading title="개인 프로젝트" />
+                <SubHeading title="개인 작품" />
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
                         {data.indiv.map((item) => (
