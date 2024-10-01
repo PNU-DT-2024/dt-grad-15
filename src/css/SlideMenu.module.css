@@ -1,0 +1,41 @@
+.menuContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    height:100vh ;
+    width: 70%;
+    padding: 24px 20px;
+    background-color:black;
+    color: white;
+    z-index:4;
+    white-space: nowrap;
+}
+.slideNav{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.menuContainer li:first-child{
+/* margin-top: 320px; */
+}
+.menuContainer li{
+    padding: 24px 0;
+}
+.menuContainer li p{
+    font-size: 24px;
+    color: white;
+    margin: 12px;
+}
+.delMenu{
+    align-self: flex-end;
+}
+.btnNav:not(.m_active) p{
+    color: #a7a7a7;
+}
+.m_active p{
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-position: under;
+}

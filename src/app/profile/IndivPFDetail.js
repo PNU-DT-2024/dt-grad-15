@@ -4,12 +4,15 @@ import indivData from "../../components/indiv.json";
 import Title from "../common/Title";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import styles from "../../css/IndivPFDtail.module.css";
 import { Link } from "react-router-dom";
 
 function IndivPFDetail() {
     let { id } = useParams();
-
+    const isMobile = useMediaQuery({
+        query: "(max-width:767px)"
+    });
     const data = indivData.indiv.find(item => item.name == id);
     useEffect(() => {
         const data = indivData.indiv.find(item => item.name == id);
@@ -20,24 +23,37 @@ function IndivPFDetail() {
         <div>
             <Menu />
             <main className="contentsContainer">
-                <section className={`${styles.profileContainer} row`}>
-                    <div className={styles.profileImg}>
-                        <img src="#" alt="프로필 사진" />
-                    </div>
-                    <div className={`${styles.infoContainer} column`}>
-                        <div className='row'>
-                            <div className={`${styles.personalInfo} column`}>
-                                <Link to={"/profile/team"}>
-                                    <p>{data.team}</p>
-                                </Link>
-                                <div className="row">
-                                    <h1>{data.name}</h1>
-                                    <span>{data.engName}</span>
-                                </div>
-                                <p>{data.email}</p>
-                            </div>
-                            <div className={styles.signImg}>
+                <section className={`${styles.profileContainer} ${isMobile ? 'column ' : 'row'}`}>
+                    <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
+                        <img src="/img/profileImg/박정혜_profile.jpg" alt="프로필 사진" />
+                        {isMobile ?
+                            <div className={styles.m_signImg}>
                                 <img className={styles.signiture} src="#" alt="#" />
+                            </div>
+                            : <></>}
+                    </div>
+                    <div className={`${isMobile?styles.m_txtContainer:styles.txtContainer} column`}>
+                        <div className={`${styles.nameContainer} row`}>
+                            <div className={isMobile ? `column ${styles.m_name}` : `row ${styles.name}`}>
+                                <span>{data.name}</span>
+                                <span>{data.engName}</span>
+                            </div>
+                            {isMobile ? <></> :
+                                <div className={styles.signImg}>
+                                    <img className={styles.signiture} src="#" alt="#" />
+                                </div>
+                            }
+                        </div>
+                        <div className={`${styles.infoContainer} ${isMobile ? 'column' : 'row'}`}>
+                            <div >
+                                <span>팀</span>
+                                <Link to={"/profile/team"}>
+                                    <span>{data.team}</span>
+                                </Link>
+                            </div>
+                            <div >
+                                <span>이메일</span>
+                                <span>{data.email}</span>
                             </div>
                         </div>
                         <div className="description">{data.freeWrite}</div>
@@ -45,8 +61,8 @@ function IndivPFDetail() {
                 </section>
                 <section >
                     <Title title="프로젝트" />
-                    <div className={`${styles.moveLinkContainer} row`}>
-                        <div>
+                    <div className={`${styles.moveLinkContainer} ${isMobile ? 'column' : 'row'}`}>
+                        <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>
                                 <div className={styles.linkMove}>
                                     <div className={styles.indivPjImg}>

@@ -1,21 +1,33 @@
-img{
+img {
     width: 100%;
 }
-.profileImg, .posterImg, .interImg {
-    background-color: #a7a7a7;
+
+.profileImg,
+.posterImg,
+.interImg,
+.imgStep {
+    background-color: #f8f8f8;
+    /* height: 500px; */
 }
+
 .horizontalLine {
     height: 1px;
     border: none;
     background-color: var(--line);
 }
 
-.mainContainer {
+.mainContainer,
+.m_mainContainer {
     margin: 128px 0;
-    align-items: center;
 }
-.mainContainer h1{
- margin-right: 64px;   
+
+.mainContainer {
+    align-items: center;
+
+}
+
+.mainContainer h1 {
+    margin-right: 64px;
 }
 
 .itemContainer {
@@ -25,8 +37,19 @@ img{
 .title {
     margin-bottom: 24px;
 }
-.posterImg{
+
+.posterImg {
+    flex-shrink: 0;
     margin-right: 72px;
+    flex-basis: 40%;
+}
+
+.posterImg video {
+    width: 100%;
+}
+
+.posterContainer {
+    align-items: center;
 }
 
 .videoInfoContainer {
@@ -37,8 +60,8 @@ img{
     margin-bottom: 32px;
 }
 
-.interInfoContainer {
-    margin-right: 32px;
+.interInfo {
+
     flex: 2;
 }
 
@@ -46,9 +69,12 @@ img{
     margin-top: 12px;
     color: #a7a7a7;
 }
-.interImg{
+
+.interContainer .interImg {
     margin-left: 72px;
+    flex: 2;
 }
+
 .interStep {
     gap: 12px;
     margin-bottom: 64px;
@@ -61,22 +87,76 @@ img{
 
 }
 
+.stepContainer p {
+    margin-top: 12px;
+}
+
 .authorContainer,
 .authorTeamContainer {
-    float: right;
+    margin-left: auto;
+    justify-content: flex-end;
     margin: 32px 0;
 }
-.profileImg{
-    margin-left: 12px;
-    width: 10vw;
+
+.authorContainer div:first-child {
+    text-align: right;
+    align-self: flex-end;
 }
+.authorContainer div:first-child span:first-child{
+font-weight: 700;
+    margin-bottom: 12px;
+}
+.authorContainer div:first-child span:nth-child(2){
+    font-size: 0.75rem;
+}
+
+.profileImg {
+    margin-left: 12px;
+    width: 130px;
+    height: 130px;
+    overflow: hidden;
+}
+.profileImg img{
+    width: 100%;
+}
+
 .authorTeamContainer p {
     font-size: 1.5rem;
     font-weight: 700;
+    bottom: 0;
     text-align: right;
     margin-bottom: 12px;
 }
 
+.authorTeamContainer div {
+    align-self: flex-end;
+}
+
 .authorTeamContainer span {
     margin-left: 12px;
+}
+
+/* 모바일 css------------------------------------------------- */
+.m_mainContainer h1 {
+    margin-bottom: 24px;
+}
+
+.m_posterImg {
+    flex-shrink: 0;
+    height: 100vw;
+    margin-bottom: 32px;
+
+}
+
+.m_posterImg video {
+    width: 100%;
+    height: 100%;
+}
+
+.m_interContainer .interInfo {
+    margin-bottom: 32px;
+}
+
+.m_interContainer .interImg {
+    margin-bottom: 24px;
 }

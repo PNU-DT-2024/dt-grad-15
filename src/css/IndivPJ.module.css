@@ -1,14 +1,16 @@
-.listWrap{
+.listWrap {
     /* display: flex; */
     box-sizing: border-box;
 }
-.memberList{    
+
+.memberList {
     display: flex;
     gap: 2%;
     flex-wrap: wrap;
     height: 100%;
 }
-.memberList>article{
+
+.memberContainer {
     width: 32%;
 }
 
@@ -19,7 +21,8 @@
     display: flex;
     margin-bottom: 5%;
 }
-.imgPj{
+
+.imgPj {
     width: 100%;
 }
 
@@ -31,12 +34,15 @@
     height: 100%;
     padding: 0 10%;
     color: white;
+}
+
+.Info {
     opacity: 0;
 }
 
 
 
-.memberCard:hover .memberInfo {
+.memberCard:hover .Info {
     opacity: 1;
 }
 
@@ -51,4 +57,22 @@
 
 .memberInfo p {
     font-size: 1.2vw;
+}
+
+/* 모바일 css---------------------------------------------- */
+.m_memberContainer {
+    position: relative;
+    width: 49%;
+}
+
+.m_memberContainer .imgPj {
+    filter: brightness(0.6);
+
+}
+
+.m_Info h2{
+    font-size: 2rem;
+}
+.m_Info p{
+    font-size: 1rem;
 }

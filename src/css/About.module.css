@@ -1,9 +1,10 @@
 .hScreen {
-    display: flex;
+    /* display: flex;
     position: relative;
     height: 100vh;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    margin-bottom: 128px;
 }
 
 .subTitle {
@@ -25,24 +26,46 @@
     justify-content: center;
     text-align: left;
 }
-.imgDT {
+
+.dtContainer .imgDT {
+    flex-shrink: 0;
     margin-left: 64px;
+    flex-basis: 40%;
+}
+
+.imgDT img {
+    width: 100%;
 }
 
 
 .profContainer {
+    display: flex;
     justify-content: space-between;
     gap: 12px;
 }
-
-.prof {
-    flex: 1;
+.imgProf{
+    /* flex-shrink: 0; */
+    min-width: 180px;
+    flex-wrap: wrap;
 }
-
 .imgProf img {
     width: 100%;
 }
 
 .prof p {
     margin-top: 12px;
+}
+
+/* 모바일 css------------------------------- */
+.m_dtContainer {
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.m_dtContainer .imgDT{
+    width: 60%;
+    margin-bottom: 32px;
+}
+.m_dtContainer .title{
+    /* background-color: red; */
+    word-break: break-all;
 }

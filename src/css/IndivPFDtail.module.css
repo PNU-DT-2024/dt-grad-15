@@ -1,5 +1,6 @@
 .profileContainer {
   margin-bottom: 128px;
+  align-items: center;
 }
 
 .profileImg,
@@ -8,53 +9,84 @@
 }
 
 .profileImg {
+  flex-shrink: 0;
+
+  flex-basis: 30%;
   margin-right: 64px;
+}
+
+.profileImg img {
+  width: 100%;
 }
 
 .signImg {
   width: 20%;
 }
 
-.infoContainer > div {
-  align-items: center;
-  justify-content: center;
+.txtContainer {
+  align-self: self-start;
+  /* align-items: center; */
+  padding: 24px 0;
 }
 
-.personalInfo {
-  flex: 1;
-  margin-bottom: 48px;
+
+.nameContainer {
+  justify-content: space-between;
+  margin-bottom: 64px;
 }
 
-.personalInfo p:first-child {
-  margin-bottom: 12px;
-}
-
-.personalInfo p:last-child {
-  margin-top: 24px;
-}
-
-.personalInfo h1 {
-  display: inline;
-  margin-right: 12px;
-}
-.personalInfo > div{
+.name {
   align-items: center;
 }
-.personalInfo > div span {
-  font-size: 2rem;
+
+.name span:first-child,
+.m_name span:first-child {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-right: 16px;
+}
+
+.name span:nth-child(2),
+.m_name span:nth-child(2) {
+  font-size: 1.25rem;
   color: #a7a7a7;
+
 }
 
 .signiture {
   flex: 1;
 }
 
-.moveLinkContainer {
-  justify-content: space-between;
+.infoContainer {
+  margin-bottom: 64px;
+
 }
 
-.moveLinkContainer > div {
-  width: 48%;
+.txtContainer .infoContainer>div {
+  margin-right: 64px;
+}
+
+.infoContainer div span {
+  display: inline-block;
+  /* font-weight: 500; */
+
+}
+
+.infoContainer>div>span:first-child {
+  color: #a7a7a7;
+  font-weight: 300;
+  margin: 0 12px 8px 0;
+
+}
+
+.moveLinkContainer {
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.moveLinkContainer>div {
+  /* width: 48%; */
+  flex-grow: 1;
 }
 
 .linkMove {
@@ -71,4 +103,56 @@
 .linkMove p:last-child {
   font-size: 2rem;
   font-weight: 700;
+}
+
+/* 모바일 css--------------------------------------- */
+.m_porfileImg {
+  display: flex;
+  position: relative;
+  width: 70%;
+  margin-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.m_porfileImg img {
+  width: 100%;
+}
+
+.m_signImg {
+  position: absolute;
+  width: 100px;
+  background-color: #a7a7a7;
+  right: 0;
+  bottom: 0;
+}
+
+.m_txtContainer {
+  align-items: center;
+}
+.m_txtContainer .infoContainer{
+  width: 70%;
+}
+.m_txtContainer .infoContainer >div {
+  margin-bottom: 24px;
+  /* flex: 1; */
+  /* align-items: center; */
+  /* border: 1px solid red; */
+}
+
+.m_name {
+  align-items: center;
+}
+
+.m_name span {
+  /* white-space: nowrap;
+  font-size: 1.5rem; */
+}
+
+.m_name span:first-child {
+  margin-bottom: 8px;
+}
+
+.m_moveLink {
+  margin-bottom: 24px;
 }

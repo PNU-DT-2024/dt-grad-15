@@ -4,7 +4,3 @@
   flex-wrap: wrap;
   height: 100%;
 }
-.memberList > div {
-  width: 32%;
-  /* width: calc(25% - 2%); */
-}

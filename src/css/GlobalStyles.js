@@ -38,6 +38,7 @@ h2{
 	hr{
     height: 1px;
     width: 100%;
+	border: none;
     background-color: #000;
 	margin:0;
 }
@@ -79,7 +80,8 @@ margin: 64px var(--margin) 128px;
   margin: 0 var(--margin) ;
 }
 .description{
-line-height:150%;
+line-height:170%;
+font-size:1.125rem;
 }
 
 .row{
@@ -93,27 +95,27 @@ line-height:150%;
 :root{
 	--line : #dbdbdb;
 	--margin : 200px;
+	--mainColor : #ea545e;
+	--subColor : #f39a67;
 	
 }
-bodu>divt{
-height:100%;
-	}
+@media all and (max-width:767px){
 	body{
-	min-height:100vh;
-	// background-color:red;
+		// background-color:rgb(248, 248, 248);
 	}
 
-// Sandoll Jebi2 Light
-// font-family: "sandoll-jebi2", sans-serif;
-// font-weight: 300;
-// font-style: normal;
-
-// Sandoll Jebi2 Bold
-// font-family: "sandoll-jebi2", sans-serif;
-// font-weight: 700;
-// font-style: normal;
-// .section{
-//   justify-content: center;
-//   align-items: center;}
+	:root{
+		--margin : 20px;
+	}
+	.contentsContainer{
+		margin: 20px var(--margin) 128px;	
+	}
+	.description{
+		font-size:1rem;
+	}
+	h1{
+		font-size:2.5rem
+	}
+}
 `;
 export default GlobalStyles;

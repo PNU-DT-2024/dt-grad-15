@@ -1,37 +1,85 @@
 .footer {
-    /* position: absolute; */
     background-color: black;
     color: white;
     padding: 32px var(--margin);
-    /* margin-top: 128px; */
-    /* bottom: 0; */
-    /* width: 100%; */
 }
-.topContainer, .bottomContainer{
+
+.footerContainer,
+.gradContainer,
+.imgContainer,
+.m_imgContainer {
     justify-content: space-between;
-    
 }
-.topContainer span,.bottomContainer span{
+
+
+.topContainer,
+.bottomContainer {
+    justify-content: space-between;
+
+}
+
+.topContainer span,
+.bottomContainer span {
     color: white;
 }
-.topContainer>div:last-child{
+
+.topContainer>div:last-child {
     /* width: 3%; */
 }
+
 .exhibitionContainer {
     margin-bottom: 48px;
 }
 
+
+
 .exhibitionContainer p:first-child {
-    /* margin-bottom: 12px; */
     font-size: 1.25rem;
-}
-.imgLink{
-    display: inline;
-    width: 32px;
-    margin-left: 12px;
 }
 
 .graduationContainer {
     font-size: 0.75rem;
+    gap: 4px;
     color: #a7a7a7;
+}
+
+.graduationContainer p:first-child {
+    margin-bottom: 8px;
+}
+
+.imgLink {
+    display: inline;
+    width: 32px;
+    height: 32px;
+}
+
+imgContainer .imgLink {
+    margin-left: 12px;
+
+}
+
+.imgLink a {
+    height: 32px;
+}
+
+.imgLink img {
+    width: 100%;
+}
+
+
+
+.pnuLogo {
+    width: 200px;
+}
+/* 모바일 css---------------------------------------------- */
+.m_imgContainer {
+    margin-top: 48px;
+}
+
+.m_imgContainer .imgLink {
+    margin-right: 32px;
+}
+
+.linkContainer {
+    flex-direction: row-reverse;
 }
