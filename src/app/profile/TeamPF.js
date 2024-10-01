@@ -16,7 +16,7 @@ function TeamPF() {
         <div>
             <Menu />
             <main className="contentsContainer">
-                <SubHeading title={"팀 프로필"} />
+                <SubHeading title={"팀 작가"} />
                 <section className={`${styles.teamList} row`}>
                     {/* <hr /> */}
                     {data.team.map((item) => (
@@ -44,7 +44,7 @@ function TeamPF() {
                                 </div>
                                 <Link to={`/project/team/${item.name}`}>
                                     <div className={styles.moveLink}>
-                                        <span>팀 프로젝트 보러가기</span>
+                                        <span>팀 작품 보러가기</span>
                                     </div>
                                 </Link>
                             </div> : <div className={styles.closeTeam}>

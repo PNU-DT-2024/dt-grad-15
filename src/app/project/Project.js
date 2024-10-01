@@ -10,8 +10,8 @@ function Project() {
             <Menu />
             <main className="contentsContainer">
                 <section>
-                    <Title title="프로젝트" />
-                    <DualLink link="project" indiv="개인프로젝트" team="팀프로젝트" />
+                    <Title title="작품" />
+                    <DualLink link="project" indiv="개인작품" team="팀작품" />
                 </section>
             </main>
             <Footer />

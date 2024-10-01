@@ -12,8 +12,8 @@ import IndivPF from "./app/profile/IndivPF";
 import IndivPJ from "./app/project/IndivPJ";
 import TeamPJ from "./app/project/TeamPJ";
 import TeamPF from "./app/profile/TeamPF";
-//프로필 - 브랜딩, dp, 영상, 웹, 개인
-//프로젝트 - 브랜딩, dp, 영상, 웹, 개인
+//작가 - 브랜딩, dp, 영상, 웹, 개인
+//작품 - 브랜딩, dp, 영상, 웹, 개인
 //방명록
 
 function App() {

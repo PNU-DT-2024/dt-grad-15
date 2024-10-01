@@ -35,7 +35,7 @@ img {
 }
 
 .title {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .posterImg {
@@ -148,7 +148,7 @@ img {
 .m_posterImg {
     flex-shrink: 0;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 32px;
 
 }
 
@@ -159,6 +159,10 @@ img {
 
 .m_interContainer .interInfo {
     margin-bottom: 32px;
+}
+.m_interContainer .interInfo p:last-child{
+    font-size: 0.75rem;
+    margin-top: 8px;
 }
 
 .m_interContainer .interImg {

@@ -11,8 +11,8 @@ function Profile() {
             <Menu />
             <main className="contentsContainer">
                 <section>
-                    <Title title="프로필" />
-                    <DualLink link="profile" indiv="개인프로필" team="팀프로필" />
+                    <Title title="작가" />
+                    <DualLink link="profile" indiv="개인작가" team="팀작가" />
                 </section>
             </main>
             <Footer />

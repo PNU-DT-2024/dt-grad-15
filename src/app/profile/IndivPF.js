@@ -10,7 +10,7 @@ function IndivPF() {
         <div>
             <Menu />
             <main className="contentsContainer">
-                <SubHeading title="개인 프로필" />
+                <SubHeading title="개인 작가" />
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
                         {data.indiv.map((item) => (
