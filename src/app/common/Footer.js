@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer className={styles.footer}>
             <div className={`${styles.footerContainer} ${isMobile ? 'column' : 'row'}`}>
-                <div className={`${styles.gradContainer} column`}>
+                <div className={`${isMobile?styles.m_gradContainer:styles.gradContainer} column`}>
                     <div className={`${styles.exhibitionContainer} description`}>
                         <p>부산대학교 디자인학과 디자인앤테크놀로지 전공 15회 졸업전시 &lt;버릇&gt;</p>
                         <p>Dept. of Design, Design and Technology 15th Graduation Show</p>

@@ -166,8 +166,9 @@ export default function Main() {
               </div>
               <motion.div {...motionProps}>
 
-                <div className={`${ styles.imgPoster} ${styles.imgContainer}`}>
+                <div className={`${styles.imgPoster} ${styles.imgContainer}`}>
                   <img src="/img/mainPoster.jpg" alt="#" />
+                  {/* <p>바꾸기</p> */}
                 </div>
               </motion.div>
             </div>

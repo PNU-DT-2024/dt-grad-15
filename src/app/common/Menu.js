@@ -28,9 +28,9 @@ function Menu({ page }) {
                     <div className={styles.nav} style={{ color: color }}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
                         <div onClick={openMenu} className={`${styles.icMenu} ${isMenu?styles.active:''}`} >
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                            <span style={{ backgroundColor: color }}></span>
+                            <span style={{ backgroundColor: color }}></span>
+                            <span style={{ backgroundColor: color }}></span>
                         </div>
                         {isMenu ? <SlideMenu onBtnClick={openMenu} /> : ""}
                     </div>

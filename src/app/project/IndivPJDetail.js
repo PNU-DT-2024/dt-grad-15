@@ -15,6 +15,7 @@ function IndivPJDetail() {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
+    
     return (
         <div>
             <Menu />
