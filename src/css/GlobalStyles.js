@@ -32,7 +32,7 @@ h1{
 	white-space:nowrap;
 	}
 h2{
-	font-size:2rem;
+	font-size:1.5rem;
 	font-weight:700;		
 }
 	hr{

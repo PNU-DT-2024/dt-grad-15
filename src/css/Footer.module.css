@@ -7,6 +7,7 @@
 .footerContainer,
 .gradContainer,
 .imgContainer,
+.m_gradContainer,
 .m_imgContainer {
     justify-content: space-between;
 }
@@ -34,7 +35,7 @@
 
 
 .exhibitionContainer p:first-child {
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
 }
 
 .graduationContainer {
@@ -53,7 +54,7 @@
     height: 32px;
 }
 
-imgContainer .imgLink {
+.imgContainer .imgLink {
     margin-left: 12px;
 
 }
@@ -68,18 +69,23 @@ imgContainer .imgLink {
 
 
 
-.pnuLogo {
+.imgContainer .pnuLogo {
     width: 200px;
 }
 /* 모바일 css---------------------------------------------- */
+.m_gradContainer p{
+    font-size: 0.75rem;
+}
+.m_gradContainer .exhibitionContainer{
+    margin-bottom: 24px;
+}
 .m_imgContainer {
-    margin-top: 48px;
+    margin-top: 24px;
 }
 
 .m_imgContainer .imgLink {
-    margin-right: 32px;
+    margin-right: 12px;
 }
-
-.linkContainer {
-    flex-direction: row-reverse;
+.m_imgContainer .linkContainer:last-child{
+    width: 100px;
 }

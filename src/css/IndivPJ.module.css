@@ -51,7 +51,7 @@
 }
 
 .memberInfo h2 {
-    font-size: 2vw;
+    /* font-size: 2vw; */
     margin-bottom: 12px;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .m_Info h2{
-    font-size: 2rem;
+    /* font-size: 2rem; */
 }
 .m_Info p{
     font-size: 1rem;
