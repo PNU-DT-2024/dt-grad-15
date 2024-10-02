@@ -13,7 +13,7 @@ function TeamPJ() {
     }
     return (
         <div>
-            <Menu />
+            <Menu page='작품'/>
             <main className="contentsContainer">
                 <SubHeading title={"팀 작품"} />
                 <section className='column'>

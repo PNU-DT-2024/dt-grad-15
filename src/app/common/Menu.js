@@ -7,9 +7,9 @@ import styles from "../../css/Menu.module.css"
 function Menu({ page }) {
     let background = page === "main" ? "none" : "black";
     let color = page === "main" ? "black" : "white";
-    // const isMobile = useMediaQuery({
-    //     query: "(max-width:767px)"
-    // });
+    const isMobile = useMediaQuery({
+        query: "(max-width:767px)"
+    });
     const isTablet = useMediaQuery({
         query: "(max-width:1023px)"
     });
@@ -21,16 +21,18 @@ function Menu({ page }) {
     return (
         <nav className={`${styles.menuWrap} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
             <div className={`${styles.menuContainer}`}>
-                <div className={styles.mainLink}>
-                    <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                        <p style={{ color: color }}>버릇</p>
-                    </NavLink>
-                </div>
+                {isMobile ? <span className={styles.m_loc}>{page}</span> :
+                    <div className={styles.mainLink}>
+                        <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
+                            <p style={{ color: color }}>버릇</p>
+                        </NavLink>
+                    </div>
+                }
                 {isTablet ?
 
                     <div className={styles.nav} style={{ color: color }}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
-                        <div onClick={openMenu} className={`${styles.icMenu} ${isMenu?styles.active:''}`} >
+                        <div onClick={openMenu} className={`${styles.icMenu} ${isMenu ? styles.active : ''}`} >
                             <span style={{ backgroundColor: color }}></span>
                             <span style={{ backgroundColor: color }}></span>
                             <span style={{ backgroundColor: color }}></span>

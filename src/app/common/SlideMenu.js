@@ -12,7 +12,7 @@ export default function SlideMenu({ onBtnClick }) {
                             to="/"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>홈</p>
+                            <p className={styles.mainLInk}>버릇</p>
                         </NavLink>
                     </li>
                     <li>

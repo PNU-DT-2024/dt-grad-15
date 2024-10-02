@@ -117,14 +117,10 @@ font-size:1.125rem;
 		font-size:2.5rem
 	}
 }
-	@media all and (max-width:1023px){
-
+@media all and (max-width: 1023px) and (min-width: 768px) {
 	:root{
 		--margin : 50px;
 	}
-	// .contentsContainer{
-	// 	margin: 20px var(--margin) 128px;	
-	// }
 }
 `;
 export default GlobalStyles;

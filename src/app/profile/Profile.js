@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import { Link } from "react-router-dom";
 import Title from "../common/Title";
@@ -6,12 +7,15 @@ import Footer from "../common/Footer";
 
 
 function Profile() {
+    const isMobile = useMediaQuery({
+        query:"(max-width:767px)"
+      });
     return (
         <div>
-            <Menu />
+            <Menu page='작가'/>
             <main className="contentsContainer">
                 <section>
-                    <Title title="작가" />
+                {isMobile?<></>:<Title title="작가" />}
                     <DualLink link="profile" indiv="개인작가" team="팀작가" />
                 </section>
             </main>

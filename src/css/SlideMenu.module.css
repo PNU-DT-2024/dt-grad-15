@@ -18,8 +18,8 @@
     align-items: center;
     margin-left: 32px;
 }
-.menuContainer li:first-child{
-/* margin-top: 320px; */
+.menuContainer ul{
+width: 100%;
 }
 .menuContainer li{
     padding: 24px 0;
@@ -39,4 +39,10 @@
     font-weight: 700;
     text-decoration: underline;
     text-underline-position: under;
+}
+
+.mainLInk{
+    font-size: 2rem;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
 }
