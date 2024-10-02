@@ -1,4 +1,5 @@
 import Menu from "../common/Menu";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Footer from "../common/Footer";
@@ -15,10 +16,11 @@ function IndivPJDetail() {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    
+    const prev = data.index === 0 ? indivData.indiv[12].name : indivData.indiv[data.index - 1].name
+    const next = data.index === 13 ? indivData.indiv[1].name : indivData.indiv[data.index + 1].name
     return (
         <div>
-            <Menu page='작품'/>
+            <Menu page='작품' />
             <main className="contentsContainer">
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} />
                 <hr className="horizontalLine" />
@@ -48,6 +50,18 @@ function IndivPJDetail() {
                         </div>
                     </div>
                 </Link>
+                <div className='row navLinkContainer'>
+                    <Link to={`/project/indiv/${prev}`} className="navLink">
+                        <div>이전</div>
+                    </Link>
+                    <Link to="/project/indiv" className="navLink">
+                        <div>목록</div>
+                    </Link>
+                    <Link to={`/project/indiv/${next}`} className="navLink">
+                        <div>다음</div>
+                    </Link>
+
+                </div>
             </main>
 
             <Footer />

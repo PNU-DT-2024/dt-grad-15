@@ -1,7 +1,7 @@
 {
     "indiv": [
         {
-            "index" : "0",
+            "index" : 0,
             "name": "김경린",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -23,7 +23,7 @@
             ]
         },
         {
-            "index" : "1",
+            "index" : 1,
             "name": "김동성",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "index" : "2",
+            "index" : 2,
             "name": "김은선",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "index" : "3",
+            "index" : 3,
             "name": "박서해",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -89,7 +89,7 @@
             ]
         },
         {
-            "index" : "4",
+            "index" : 4,
             "name": "박승찬",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -111,7 +111,7 @@
             ]
         },
         {
-            "index" : "5",
+            "index" : 5,
             "name": "박정혜",
             "engName": "Hong Gil Dong",
             "email": "byulnim2002@naver.com",
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "index" : "6",
+            "index" : 6,
             "name": "오여슬",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -155,7 +155,7 @@
             ]
         },
         {
-            "index" : "7",
+            "index" : 7,
             "name": "왕신웨",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -177,7 +177,7 @@
             ]
         },
         {
-            "index" : "8",
+            "index" : 8,
             "name": "이민서",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -199,7 +199,7 @@
             ]
         },
         {
-            "index" : "9",
+            "index" : 9,
             "name": "이상화",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -221,7 +221,7 @@
             ]
         },
         {
-            "index" : "10",
+            "index" : 10,
             "name": "이지은",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -243,7 +243,7 @@
             ]
         },
         {
-            "index" : "11",
+            "index" : 11,
             "name": "조성원",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",
@@ -265,7 +265,7 @@
             ]
         },
         {
-            "index" : "12",
+            "index" : 12,
             "name": "최시아",
             "engName": "Hong Gil Dong",
             "email": "1111@pusan.ac.kr",

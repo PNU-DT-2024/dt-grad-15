@@ -72,12 +72,27 @@ table {
 //------------------------------------------------------------------------------
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
-
+#root>div>div{
+	// background-color : red;
+	min-height : 100vh;
+	display:flex;
+	flex-direction:column;
+}
+nav, main, footer{
+	flex:2;
+	// background-color : blue;
+	// border : 3px solid red;
+}
+	nav, footer{
+	flex-grow : 0;
+	}
 .contentsContainer{
 margin: 64px var(--margin) 128px;
+
 }
 .articleContainer{
   margin: 0 var(--margin) ;
+  
 }
 .description{
 line-height:170%;
