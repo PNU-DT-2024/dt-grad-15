@@ -139,7 +139,11 @@ img {
 .authorTeamContainer span {
     margin-left: 12px;
 }
-
+.navLinkContainer .navLink{
+flex: 1;
+text-align: center;
+margin-top: 32px;
+}
 /* 모바일 css------------------------------------------------- */
 .m_mainContainer h1 {
     margin-bottom: 24px;

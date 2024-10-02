@@ -5,8 +5,8 @@ import SlideMenu from "./SlideMenu";
 import styles from "../../css/Menu.module.css"
 
 function Menu({ page, main }) {
-    let background = main? "none" : "black";
-    let color = main? "black" : "white";
+    let background = main? "none" : "var(--black)";
+    let color = main? "var(--black)" : "white";
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
@@ -21,7 +21,7 @@ function Menu({ page, main }) {
     return (
         <nav className={`${styles.menuWrap} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
             <div className={`${styles.menuContainer}`}>
-                {isMobile ? <span className={styles.m_loc}>{page}</span> :
+                {isMobile ? <span className={styles.m_loc} style={{ color: color }}>{page}</span> :
                     <div className={styles.mainLink}>
                         <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
                             <p style={{ color: color }}>버릇</p>
@@ -30,7 +30,7 @@ function Menu({ page, main }) {
                 }
                 {isTablet ?
 
-                    <div className={styles.nav} style={{ color: color }}>
+                    <div className={styles.nav} style={{ color: {color} }}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
                         <div onClick={openMenu} className={`${styles.icMenu} ${isMenu ? styles.active : ''}`} >
                             <span style={{ backgroundColor: color }}></span>

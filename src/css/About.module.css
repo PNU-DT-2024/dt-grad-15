@@ -41,12 +41,12 @@
 .profContainer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 12px;
 }
 .imgProf{
     /* flex-shrink: 0; */
-    min-width: 180px;
-    flex-wrap: wrap;
+    max-width: 180px;
 }
 .imgProf img {
     width: 100%;

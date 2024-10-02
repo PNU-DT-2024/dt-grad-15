@@ -56,13 +56,14 @@ export default function Main() {
 
   return (
     <div >
+      <div className={styles.nav}>
+        <Menu page='버릇' main='true' />
+      </div>
       <main className={styles.snappingContainer}>
         <div id='fullpage'>
           <section className={`section`}>
             <div className={styles.hScreen}>
-              <div className={styles.nav}>
-                <Menu  main='true'/>
-              </div>
+
               {inter == false ? (
                 <InterBanner onBtnClick={startInter} />
               ) : (
@@ -176,7 +177,8 @@ export default function Main() {
 
           <section className={`section`}>
             <div className={styles.hScreen}>
-              <iframe src={`https://www.youtube.com/embed/oTEYBxPvTso`} className={styles.opening} />
+              <video src="/img/opening/opening.mkv" className={styles.opening} controls/>
+              {/* <iframe src={`https://www.youtube.com/embed/oTEYBxPvTso`} className={styles.opening} /> */}
             </div>
           </section>
 

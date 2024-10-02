@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrolltoTop";
 import GlobalStyles from "./css/GlobalStyles";
 import Main from "./app/home/Main";
 import Profile from "./app/profile/Profile";
@@ -21,6 +22,7 @@ function App() {
     <div>
       <GlobalStyles />
       <Router basename={process.env.PUBLIC_URL}>
+        <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/guestbook" element={<Guestbook />}></Route>
