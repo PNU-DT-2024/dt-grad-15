@@ -61,7 +61,7 @@ export default function Main() {
           <section className={`section`}>
             <div className={styles.hScreen}>
               <div className={styles.nav}>
-                <Menu page="버릇" />
+                <Menu  main='true'/>
               </div>
               {inter == false ? (
                 <InterBanner onBtnClick={startInter} />

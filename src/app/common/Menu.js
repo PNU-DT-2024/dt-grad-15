@@ -4,9 +4,9 @@ import { useState } from "react";
 import SlideMenu from "./SlideMenu";
 import styles from "../../css/Menu.module.css"
 
-function Menu({ page }) {
-    let background = page === "main" ? "none" : "black";
-    let color = page === "main" ? "black" : "white";
+function Menu({ page, main }) {
+    let background = main? "none" : "black";
+    let color = main? "black" : "white";
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
