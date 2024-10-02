@@ -22,7 +22,7 @@ function Footer() {
 
                     <div className={`${styles.linkContainer} row`}>
                         <div className={styles.imgLink}>
-                            <Link to="https://www.instagram.com/pnu.dt.14/"><img src="/img/instaLogo.png" alt="인스타그램" /></Link>
+                            <Link to="https://www.instagram.com/pnu.dt.15/"><img src="/img/instaLogo.png" alt="인스타그램" /></Link>
                         </div>
                         <div className={styles.imgLink}>
                             <Link to="https://www.youtube.com/@pnudt"><img src="/img/youtubeLogo.png" alt="유튜브" /></Link>
