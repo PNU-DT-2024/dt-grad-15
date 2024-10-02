@@ -11,7 +11,7 @@ export default function IndivPJ() {
     });
     return (
         <div>
-            <Menu />
+            <Menu page='작품'/>
             <main className="contentsContainer">
                 <SubHeading title="개인 작품" />
                 <section className={styles.listWrap}>

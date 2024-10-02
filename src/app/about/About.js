@@ -18,9 +18,9 @@ export default function About() {
     });
     return (
         <div>
-            <Menu />
+            <Menu page='소개'/>
             <main className="contentsContainer">
-                <Title title='소개'/>
+            {isMobile?<></>:<Title title='소개'/>}
                 <section className='section'>
                     <div className={styles.hScreen}>
                         {/* <div className={styles.subTitle}>

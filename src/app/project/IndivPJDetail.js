@@ -18,7 +18,7 @@ function IndivPJDetail() {
     
     return (
         <div>
-            <Menu />
+            <Menu page='작품'/>
             <main className="contentsContainer">
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} />
                 <hr className="horizontalLine" />

@@ -51,6 +51,17 @@
     padding: 16px var(--margin);
 }
 
+.m_loc {
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    /* letter-spacing : 1px; */
+    font-size: 1.75rem;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;
+}
+
 .m_porfileImg {
     margin: 0;
 }

@@ -21,7 +21,7 @@ function IndivPFDetail() {
     });
     return (
         <div>
-            <Menu />
+            <Menu page='작가'/>
             <main className="contentsContainer">
                 <section className={`${styles.profileContainer} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
@@ -60,7 +60,7 @@ function IndivPFDetail() {
                     </div>
                 </section>
                 <section >
-                    <Title title="작품" />
+                {isMobile?<></>:<Title title="작품" />}
                     <div className={`${styles.moveLinkContainer} ${isMobile ? 'column' : 'row'}`}>
                         <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>

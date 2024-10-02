@@ -14,7 +14,7 @@ function TeamPF() {
     }
     return (
         <div>
-            <Menu />
+            <Menu page='작가'/>
             <main className="contentsContainer">
                 <SubHeading title={"팀 작가"} />
                 <section className={`${styles.teamList} row`}>

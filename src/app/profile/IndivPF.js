@@ -8,7 +8,7 @@ function IndivPF() {
 
     return (
         <div>
-            <Menu />
+            <Menu page='작가'/>
             <main className="contentsContainer">
                 <SubHeading title="개인 작가" />
                 <section className={styles.listWrap}>
