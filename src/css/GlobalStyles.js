@@ -94,9 +94,10 @@ font-size:1.125rem;
 }
 :root{
 	--line : #dbdbdb;
-	--margin : 200px;
+	--margin : 150px;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;
+	--black: #121212;
 	
 }
 @media all and (max-width:767px){

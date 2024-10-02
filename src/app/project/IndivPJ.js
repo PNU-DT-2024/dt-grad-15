@@ -3,27 +3,27 @@ import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import data from "../../components/indiv.json";
-import styles from "../../css/IndivPJ.module.css";
 import SubHeading from "../common/SubHeading";
+import styles from "../../css/IndivPJ.module.css";
 export default function IndivPJ() {
     const isMobile = useMediaQuery({
-        query:"(max-width : 767px)"
+        query: "(max-width : 767px)"
     });
     return (
         <div>
-            <Menu page='작품'/>
+            <Menu page='작품' />
             <main className="contentsContainer">
                 <SubHeading title="개인 작품" />
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
                         {data.indiv.map((item) => (
-                            <article className={isMobile?styles.m_memberContainer:styles.memberContainer}>
+                            <article className={isMobile ? styles.m_memberContainer : styles.memberContainer}>
                                 <Link to={`/project/indiv/${item.name}`}>
                                     <div className={styles.memberCard}>
                                         <div className={styles.imgPj}>
                                             <img src="/img/posterImg/posterImg.png" alt={item.name} />
                                         </div>
-                                        <div className={`${isMobile?styles.m_Info:styles.Info} ${styles.memberInfo} column`}>
+                                        <div className={`${isMobile ? styles.m_Info : styles.Info} ${styles.memberInfo} column`}>
                                             <h2>{item.mainTitle}</h2>
                                             <p>{item.name}</p>
                                         </div>

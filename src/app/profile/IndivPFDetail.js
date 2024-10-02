@@ -21,7 +21,7 @@ function IndivPFDetail() {
     });
     return (
         <div>
-            <Menu page='작가'/>
+            <Menu page='작가' />
             <main className="contentsContainer">
                 <section className={`${styles.profileContainer} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
@@ -34,9 +34,14 @@ function IndivPFDetail() {
                     </div>
                     <div className={`${isMobile ? styles.m_txtContainer : styles.txtContainer} column`}>
                         <div className={`${styles.nameContainer} row`}>
-                            <div className={isMobile ? `column ${styles.m_name}` : `row ${styles.name}`}>
-                                <span>{data.name}</span>
-                                <span>{data.engName}</span>
+                            <div className={`${isMobile ? styles.m_name : styles.name} column`}>
+                                <Link to={'/profile/team'}>
+                                    <span>{data.team}</span>
+                                </Link>
+                                <div className={isMobile ? `column` : `row`}>
+                                    <span>{data.name}</span>
+                                    <span>{data.engName}</span>
+                                </div>
                             </div>
                             {isMobile ? <></> :
                                 <div className={styles.signImg}>
@@ -46,9 +51,9 @@ function IndivPFDetail() {
                         </div>
                         <div className={`${styles.infoContainer} ${isMobile ? 'column' : 'row'}`}>
                             <div >
-                                <span>팀</span>
-                                <Link to={"/profile/team"}>
-                                    <span>{data.team}</span>
+                                <span>SNS</span>
+                                <Link to={`https://www.instagram.com/${data.insta}`}>
+                                    <span>{data.insta}</span>
                                 </Link>
                             </div>
                             <div >
@@ -60,7 +65,7 @@ function IndivPFDetail() {
                     </div>
                 </section>
                 <section >
-                {isMobile?<></>:<Title title="작품" />}
+                    {isMobile ? <></> : <Title title="작품" />}
                     <div className={`${styles.moveLinkContainer} ${isMobile ? 'column' : 'row'}`}>
                         <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>

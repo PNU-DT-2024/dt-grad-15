@@ -2,6 +2,10 @@ input, select, textarea {
     border: 1px solid #000000;
     /* border-radius: 0; */
 }
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 option{
     box-shadow: none;
 }
@@ -53,7 +57,7 @@ option{
 
 
 button {
-    background-color: black;
+    background-color: var(--black);
     color: white;
     margin-top: 12px;
     margin-left: auto;
