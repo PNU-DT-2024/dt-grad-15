@@ -1,16 +1,34 @@
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import SubHeading from "../../common/SubHeading";
 import "../../../css/PJDetail.css";
-export default function MainTheme({ title, desc }) {
+export default function MainTheme({ title, desc, name, email, member }) {
     const isMobile = useMediaQuery({
-        query:"(max-width:767px)"
+        query: "(max-width:767px)"
     });
     return (
-        <section>
-            <SubHeading title={"메인 주제"} />
-            <div className= {isMobile? 'column m_mainContainer': 'row mainContainer'}>
-                <h1>{title}</h1>
-                <span className="description">{desc}</span>
+        <section className="mainContainer box column">
+            <div className="cloumn">
+                <div className={isMobile ? 'column m_concept' : 'row concept'}>
+                    <h1>{title}</h1>
+                    <span className="description">{desc}</span>
+                </div>
+                <div className="row author">
+                    {member != null ? <Link to={`/profile/team`} className='column'>
+                        <div>
+                            <p>{name}</p>
+                            <div className="row">
+                                {member.map((item, index) => (
+                                    <span key={index}>{item}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </Link> : <Link to={`/profile/indiv/${name}`} className='column'>
+                        <div>
+                            <p>{name}</p>
+                            <p>{email}</p>
+                        </div>
+                    </Link>}
+                </div>
             </div>
         </section>
     )

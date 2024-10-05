@@ -25,6 +25,9 @@
 .imgPj {
     width: 100%;
 }
+.imgPj img{
+    width: 100%;
+}
 
 .memberInfo {
     position: absolute;

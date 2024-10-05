@@ -135,7 +135,7 @@ function Guestbook() {
               />
             </div>
             <div className={styles.btnContainer}>
-              <button onClick={handlePostGuestBook}>보내기</button>
+              <button className={styles.btnMsg} onClick={handlePostGuestBook}>보내기</button>
             </div>
           </div>
         </section>

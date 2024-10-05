@@ -1,6 +1,7 @@
 {
-    "team": [
+    "list": [
         {
+            "index" : 0,
             "name": "WEB",
             "member": [
                 "김경린",
@@ -9,11 +10,11 @@
                 "최시아"
             ],
             "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "팀메인 주제",
+            "mainTitle" : "관계",
             "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "videoTitle" : "팀영상 주제",
+            "videoTitle" : "관계, 흐름",
             "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "팀인터 주제",
+            "interTitle" : "관계, 캔버스",
             "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "interFormat": "processing",
             "interStep": [
@@ -24,6 +25,7 @@
              
         },
         {
+            "index" : 1,
             "name": "BRANDING",
             "member": [
                 "이상화",
@@ -32,11 +34,11 @@
                 "왕신웨"
             ],
             "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "팀메인 주제",
-            "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "videoTitle" : "팀영상 주제",
+            "mainTitle" : "오르골",
+            "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ",
+            "videoTitle" : "행동 작곡 기억 연주",
             "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "팀인터 주제",
+            "interTitle" : "태엽 교향곡",
             "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "interFormat": "processing",
             "interStep": [
@@ -47,6 +49,7 @@
              
         },
         {
+            "index" : 2,
             "name": "DP",
             "member": [
                 "조성원",
@@ -56,11 +59,11 @@
                 "이민서"
             ],
             "role" : "내 모습이 보이지 않아 앞길도 보이지 않아나는 아주 작은 애벌레살이 터져 허물 벗어 한 번 두 번 다시나는 상처 많은 번데기추운 겨울이 다가와 힘겨울지도 몰라봄바람이 불어오면 이제 나의 꿈을 찾아 날아날개를 활짝 펴고 세상을 자유롭게 날거야노래하며 춤추는 나는 아름다운 나비",
-            "mainTitle" : "팀메인 주제",
+            "mainTitle" : "Trace",
             "mainDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "videoTitle" : "팀영상 주제",
+            "videoTitle" : "Biography",
             "videoDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "interTitle" : "팀인터 주제",
+            "interTitle" : "Record",
             "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "interFormat": "processing",
             "interStep": [
