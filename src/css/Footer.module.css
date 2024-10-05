@@ -6,9 +6,9 @@
 
 .footerContainer,
 .gradContainer,
-.imgContainer,
+.siteContainer,
 .m_gradContainer,
-.m_imgContainer {
+.m_siteContainer {
     justify-content: space-between;
 }
 
@@ -48,7 +48,7 @@
     margin-bottom: 8px;
 }
 
-.imgContainer .linkContainer:first-child {
+.siteContainer .linkSite:first-child {
     flex-direction: row-reverse;
 }
 
@@ -58,20 +58,20 @@
     height: 32px;
 }
 
-.imgContainer .imgLink {
+.siteContainer .imgLink {
     margin-left: 12px;
 
 }
 
 
 
-.imgLink img {
+.imgLink img, .linkSite img {
     width: 100%;
 }
 
 
 
-.imgContainer .pnuLogo {
+.siteContainer .pnuLogo {
     width: 150px;
 }
 
@@ -84,15 +84,15 @@
     margin-bottom: 24px;
 }
 
-.m_imgContainer {
+.m_siteContainer {
     margin-top: 24px;
 }
 
-.m_imgContainer .imgLink {
+.m_siteContainer .imgLink {
     width: 24px;
     margin-right: 12px;
 }
 
-.m_imgContainer .linkContainer:last-child {
+.m_siteContainer .linkSite:last-child {
     width: 100px;
 }

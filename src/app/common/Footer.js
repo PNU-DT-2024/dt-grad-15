@@ -18,9 +18,9 @@ function Footer() {
                         <p>ⓒ 2024 Pusan National University Design&Technology all rights reserved.</p>
                     </div>
                 </div>
-                <div className={isMobile ? `row ${styles.m_imgContainer}` : `column ${styles.imgContainer}`}>
+                <div className={isMobile ? `row ${styles.m_siteContainer}` : `column ${styles.siteContainer}`}>
 
-                    <div className={`${styles.linkContainer} row`}>
+                    <div className={`${styles.linkSite} row`}>
                         <div className={styles.imgLink}>
                             <Link to="https://www.instagram.com/pnu.dt.15/"><img src="/img/instaLogo.png" alt="인스타그램" /></Link>
                         </div>
@@ -28,7 +28,7 @@ function Footer() {
                             <Link to="https://www.youtube.com/@pnudt"><img src="/img/youtubeLogo.png" alt="유튜브" /></Link>
                         </div>
                     </div>
-                    <div className={styles.linkContainer}>
+                    <div className={styles.linkSite}>
                         <Link to="https://www.pusan.ac.kr/kor/Main.do"><img src="/img/pnuLogo.png" className={styles.pnuLogo} alt="부산대학교" /></Link>
                     </div>
                 </div>

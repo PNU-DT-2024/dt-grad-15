@@ -9,7 +9,7 @@
 .subTitle {
   position: absolute;
   left: 24px;
-  top: 64px;
+  top: 15%;
   color: #a7a7a7;
   font-size: 0.75rem;
   white-space: nowrap;
@@ -33,9 +33,6 @@
   text-align: left;
 }
 
-/* .imgContainer{
-  align-items: center;
-} */
 /* ---------------------------------------------------------------------- */
 .nav {
   position: absolute;
