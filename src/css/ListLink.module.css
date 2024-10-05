@@ -1,0 +1,12 @@
+.ListLinkContainer {
+    width: 100%;
+    justify-content: space-between;
+    margin: 32px 0 64px 0;
+}
+
+.ListLink {
+    text-align: center;
+}
+.ListLink>div{
+    margin-bottom: 24px;
+}

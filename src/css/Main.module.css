@@ -87,9 +87,10 @@ align-items: center;
 }
 
 .opening {
-  /* width: 90%; */
-  height: 100vh;
-  background-color: antiquewhite;
+  width: calc(100vw - 100px);
+  max-height: calc(100vh - 150px);
+  /* background-color: antiquewhite; */
+  margin-top: 64px;
 }
 
 .memberContainer,

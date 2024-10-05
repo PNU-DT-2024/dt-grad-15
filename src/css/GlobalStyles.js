@@ -80,18 +80,19 @@ table {
 }
 nav, main, footer{
 	flex:2;
-	// background-color : blue;
+	// background-color : red;
 	// border : 3px solid red;
 }
 	nav, footer{
 	flex-grow : 0;
 	}
 .contentsContainer{
-margin: 64px var(--margin) 128px;
+// background-color : blue;
+padding: 64px var(--margin) 128px;
 
 }
-.articleContainer{
-  margin: 0 var(--margin) ;
+.box{
+  padding: 0 var(--margin) ;
   
 }
 .description{
@@ -109,7 +110,7 @@ font-size:1.125rem;
 }
 :root{
 	--line : #dbdbdb;
-	--margin : 150px;
+	--margin : 200px;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;
 	--black: #121212;

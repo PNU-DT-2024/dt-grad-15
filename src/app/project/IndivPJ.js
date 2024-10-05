@@ -16,7 +16,7 @@ export default function IndivPJ() {
                 <SubHeading title="개인 작품" />
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
-                        {data.indiv.map((item) => (
+                        {data.list.map((item) => (
                             <article className={isMobile ? styles.m_memberContainer : styles.memberContainer}>
                                 <Link to={`/project/indiv/${item.name}`}>
                                     <div className={styles.memberCard}>

@@ -1,6 +1,7 @@
 {
-    "team": [
+    "list": [
         {
+            "index" : 0,
             "name": "WEB",
             "member": [
                 "김경린",
@@ -24,6 +25,7 @@
              
         },
         {
+            "index" : 1,
             "name": "BRANDING",
             "member": [
                 "이상화",
@@ -47,6 +49,7 @@
              
         },
         {
+            "index" : 2,
             "name": "DP",
             "member": [
                 "조성원",

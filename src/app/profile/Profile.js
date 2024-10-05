@@ -16,7 +16,7 @@ function Profile() {
             <main className="contentsContainer">
                 <section>
                 {isMobile?<></>:<Title title="작가" />}
-                    <DualLink link="profile" indiv="개인작가" team="팀작가" />
+                    <DualLink link="profile" indiv="개인" team="팀" />
                 </section>
             </main>
             <Footer />

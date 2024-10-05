@@ -1,24 +1,27 @@
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
 import Title from "../common/Title";
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
+import ListLink from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
-import { Link } from "react-router-dom";
 
 function IndivPFDetail() {
     let { id } = useParams();
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    const data = indivData.indiv.find(item => item.name == id);
+    const data = indivData.list.find(item => item.name == id);
     useEffect(() => {
-        const data = indivData.indiv.find(item => item.name == id);
+        const data = indivData.list.find(item => item.name == id);
         console.log(data);
         // console.log("hi")
     });
+    const prev = data.index === 0 ? indivData.list[12] : indivData.list[data.index - 1]
+    const next = data.index === 13 ? indivData.list[1] : indivData.list[data.index + 1]
     return (
         <div>
             <Menu page='작가' />
@@ -91,6 +94,7 @@ function IndivPFDetail() {
                         </div>
                     </div>
                 </section>
+                <ListLink prevName={prev.name} nextName={next.name} prevURL={`/profile/indiv/${prev.name}`} nextURL={`/profile/indiv/${next.name}`} listURL="/profile/indiv" />
             </main>
             <Footer />
         </div>

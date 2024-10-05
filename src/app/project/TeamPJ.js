@@ -18,7 +18,7 @@ function TeamPJ() {
                 <SubHeading title={"팀 작품"} />
                 <section className='column'>
                     {/* <hr className={styles.horizontalLine}/> */}
-                    {data.team.map((item) => (
+                    {data.list.map((item) => (
                         <article onClick={() => { onClickTeam(item.name) }} className={hover === item.name ? styles.teamCardOpen : styles.teamCardClose}>
                             {hover === item.name ?
                                 <Link to={`/project/team/${item.name}`}>

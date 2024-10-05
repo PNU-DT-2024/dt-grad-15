@@ -13,7 +13,7 @@ function IndivPF() {
                 <SubHeading title="개인 작가" />
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
-                        {data.indiv.map((item) => (
+                        {data.list.map((item) => (
                             <IndivPFLink item={item}/>
                         ))}
                     </div>

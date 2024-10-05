@@ -56,7 +56,7 @@ option{
 }
 
 
-button {
+.btnMsg {
     background-color: var(--black);
     color: white;
     margin-top: 12px;

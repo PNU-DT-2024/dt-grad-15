@@ -15,7 +15,7 @@ function Project() {
             <main className="contentsContainer">
                 <section>
                     {isMobile?<></>:<Title title="작품" />}
-                    <DualLink link="project" indiv="개인작품" team="팀작품" />
+                    <DualLink link="project" indiv="개인" team="팀" />
                 </section>
             </main>
             <Footer />

@@ -77,7 +77,7 @@ export default function Main() {
                 <SubHeading title={"전시 개요"} />
               </div>
               <motion.div {...motionProps}>
-                <article className="articleContainer column">
+                <article className="box column">
                   <div className={`${styles.captionContainer} ${styles.outline} column`}>
                     <h1 className={`${styles.title} ${styles.mainTitle}`}>버릇</h1>
                     <div className={`${styles.txtContainer} description`}>
@@ -114,7 +114,7 @@ export default function Main() {
                 <SubHeading title={"전시 아이덴티티"} />
               </div>
               <motion.div {...motionProps}>
-                <article className={`articleContainer ${isMobile ? 'column' : 'row'}`}>
+                <article className={`box ${isMobile ? 'column' : 'row'}`}>
 
 
                   <div className={`${styles.captionContainer} column`}>
@@ -139,7 +139,7 @@ export default function Main() {
                 <SubHeading title={"전시 아이덴티티"} />
               </div>
               <motion.div {...motionProps}>
-                <article className={`articleContainer ${isMobile ? 'column' : 'row'}`}>
+                <article className={`box ${isMobile ? 'column' : 'row'}`}>
 
                   <div className={`${styles.captionContainer} column`}>
                     <h1 className={styles.title}>스캐니메이션</h1>
@@ -188,7 +188,7 @@ export default function Main() {
                 <SubHeading title={"전시 인원"} />
               </div>
               <motion.div {...motionProps}>
-                <article className={`articleContainer  ${isMobile ? `column ${styles.m_memberContainer}` : `row ${styles.memberContainer}`}`}>
+                <article className={`box  ${isMobile ? `column ${styles.m_memberContainer}` : `row ${styles.memberContainer}`}`}>
                   <div className={styles.imgMember}>
                     <img src="/img/profileImg/all_profile.jpg" alt="#" />
                   </div>

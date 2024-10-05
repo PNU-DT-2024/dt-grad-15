@@ -1,57 +1,157 @@
-img {
+.pjContainer .box:not(:first-child, :last-child) {
+    margin: 128px 0;
+}
+
+.profileImg img,
+.imgInter img,
+.imgStep img {
     width: 100%;
 }
 
+
+
 .profileImg,
-.posterImg,
-.interImg,
+.motionPoster,
+.imgInter,
 .imgStep {
     background-color: #f8f8f8;
     /* height: 500px; */
 }
 
-.horizontalLine {
-    height: 1px;
-    border: none;
-    background-color: var(--line);
-}
-
-.mainContainer,
-.m_mainContainer {
-    margin: 128px 0;
-}
-
 .mainContainer {
-    align-items: center;
-
+    display: flex;
+    position: relative;
+    background-color: var(--black);
+    color: white;
+    min-height: calc(100vh - 150px);
+    justify-content: center;
 }
 
-.mainContainer h1 {
+.mainContainer>div {
+    padding: 64px 0;
+}
+
+.concept {
+    align-items: center;
+}
+
+.concept h1 {
     margin-right: 64px;
 }
 
-.itemContainer {
-    margin: 128px 0;
+.concept span {
+    padding-left: 32px;
+    border-left: 1px solid white;
 }
 
-.title {
-    margin-bottom: 16px;
+
+.concept+.author {
+    position: absolute;
+    right: var(--margin);
+    bottom: 64px;
 }
 
-.posterImg {
-    flex-shrink: 0;
-
-    margin-right: 72px;
-    flex-basis: 40%;
+.author {
+    padding-right: 24px;
+    text-align: right;
+    border-right: 1px solid white;
+    justify-content: flex-end;
 }
 
-.posterImg video {
+.author p,
+.author span {
+    color: white;
+}
+
+.author p:first-child {
+    margin-bottom: 12px;
+}
+
+.author span:not(:last-child) {
+    margin-right: 8px;
+}
+
+
+.motionPoster {
+    display: flex;
+    height: calc(100vh - 50px);
     width: 100%;
-}
-
-.posterContainer {
+    justify-content: center;
     align-items: center;
 }
+
+.motionPoster video,
+.motionPoster img {
+    height: calc(100% - 50px);
+}
+
+
+.info {
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.info>h2,
+.m_info>h2 {
+    font-size: 3rem;
+    word-break: keep-all;
+    line-height: 130%;
+
+}
+
+.info h2 {
+    margin-right: 48px;
+}
+
+.info>div,
+.m_info>div {
+    padding-left: 32px;
+    border-left: 8px solid;
+    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.titlePJ {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.btnPoster {
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 24px;
+
+}
+
+.btnPoster p {
+    display: none;
+    background-color: var(--black);
+    color: white;
+    padding: 12px;
+    margin-right: 24px;
+}
+
+.btnPoster button {
+    background-color: var(--black);
+    color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.btnPoster:hover p {
+    display: block;
+}
+
+
+.btnPoster button:hover~p {
+    display: block;
+}
+
+
+
+
 
 .videoInfoContainer {
     margin-bottom: 24px;
@@ -61,17 +161,16 @@ img {
     margin-bottom: 32px;
 }
 
-.interInfo {
 
-    flex: 2;
-}
-
-.interInfo p:last-child {
-    margin-top: 12px;
+.format {
     color: #a7a7a7;
 }
 
-.interContainer .interImg {
+.interContainer .format {
+    margin-top: 12px;
+}
+
+.interContainer .imgInter {
     margin-left: 72px;
     flex: 2;
 }
@@ -81,6 +180,15 @@ img {
     margin-bottom: 64px;
 }
 
+.interStep>div {
+    margin-top: auto;
+}
+
+
+.step p {
+    margin-top: 12px;
+}
+
 .interVideo {
     width: 100%;
     height: 512px;
@@ -88,89 +196,57 @@ img {
 
 }
 
-.stepContainer p {
-    margin-top: 12px;
-}
 
-.authorContainer,
-.authorTeamContainer {
-    margin-left: auto;
-    justify-content: flex-end;
-    margin: 32px 0;
-}
 
-.authorContainer div:first-child {
-    text-align: right;
-    align-self: flex-end;
-}
-
-.authorContainer div:first-child span:first-child {
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.authorContainer div:first-child span:nth-child(2) {
-    font-size: 0.75rem;
-}
-
-.profileImg {
-    margin-left: 12px;
-    width: 130px;
-    height: 130px;
-    overflow: hidden;
-}
-
-.profileImg img {
-    width: 100%;
-}
-
-.authorTeamContainer p {
-    font-size: 1.5rem;
-    font-weight: 700;
-    bottom: 0;
-    text-align: right;
-    margin-bottom: 12px;
-}
-
-.authorTeamContainer div {
-    align-self: flex-end;
-}
-
-.authorTeamContainer span {
-    margin-left: 12px;
-}
-.navLinkContainer .navLink{
-flex: 1;
-text-align: center;
-margin-top: 32px;
-}
 /* 모바일 css------------------------------------------------- */
-.m_mainContainer h1 {
+.m_concept {
+    border-left: 1px solid white;
+    padding: 0 24px;
+}
+
+.m_concept h1 {
     margin-bottom: 24px;
 }
 
-.m_posterImg {
+.m_concept+.author {
+    font-size: 0.75rem;
+    margin-top: 48px;
+    word-break: break-all;
+}
+
+.m_info {
+    margin-bottom: 32px;
+}
+
+.m_info>h2 {
+    margin-bottom: 24px;
+}
+
+.m_info .format {
+    font-size: 0.75rem;
+    margin-top: 8px;
+}
+
+.m_motionPoster {
     flex-shrink: 0;
     width: 100%;
     margin-bottom: 32px;
 
 }
 
-.m_posterImg video {
+.m_motionPoster video {
     width: 100%;
     height: 100%;
 }
 
-.m_interContainer .interInfo {
-    margin-bottom: 32px;
-}
-.m_interContainer .interInfo p:last-child{
-    font-size: 0.75rem;
-    margin-top: 8px;
+.m_motionPoster img {
+    width: 100%;
 }
 
-.m_interContainer .interImg {
+.m_interContainer .imgInter {
     margin-bottom: 24px;
 }
 
-@media all and (max-width:767px) {}
+.m_step {
+    width: 500px;
+}

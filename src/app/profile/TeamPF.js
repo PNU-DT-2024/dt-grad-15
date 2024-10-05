@@ -19,7 +19,7 @@ function TeamPF() {
                 <SubHeading title={"팀 작가"} />
                 <section className={`${styles.teamList} row`}>
                     {/* <hr /> */}
-                    {data.team.map((item) => (
+                    {data.list.map((item) => (
                         <article onClick={() => { onClickTeam(item.name) }} className={`${hover === item.name ? styles.teamCardOpen : styles.teamCardClose} coloumn`}>
                             {hover === item.name ? <div>
                                 <div className={styles.teamTitle}>
