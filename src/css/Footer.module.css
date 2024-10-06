@@ -1,7 +1,7 @@
 .footer {
     background-color: var(--black);
     color: white;
-    padding: 20px var(--margin);
+    padding: 20px var(--padding);
 }
 
 .footerContainer,

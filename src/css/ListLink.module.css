@@ -1,12 +1,32 @@
-.ListLinkContainer {
+.listLinkContainer {
+    align-items: center;
     width: 100%;
     justify-content: space-between;
     margin: 32px 0 64px 0;
 }
 
-.ListLink {
+.listLink, .m_listLink {
     text-align: center;
 }
-.ListLink>div{
+
+.listLink img {
     margin-bottom: 24px;
+}
+
+.listLink p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.listLinkContainer p:first-child {
+    font-size: 2rem;
+}
+/* 모바일 css------------------------------------ */
+.m_listLink img{
+    width: 100px;
+    margin-bottom: 12px;
+
+}
+.listLinkContainer p{
+    font-weight: 500;
 }

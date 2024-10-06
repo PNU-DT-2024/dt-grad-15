@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom"
+import { useMediaQuery } from "react-responsive";
 import styles from "../../css/ListLink.module.css"
 export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL }) {
+    const isMobile = useMediaQuery({
+        query: "(max-width:767px)"
+    });
     return (
-        <div className={`${styles.ListLinkContainer} row`}>
-            <Link to={prevURL} className={styles.ListLink}>
-                <div>&lt;------------</div>
+        <div className={`${styles.listLinkContainer} row`}>
+            <Link to={prevURL} className={isMobile ? styles.m_listLink : styles.listLink}>
+                <img src="/img/icon/arrowL.svg" alt="이전" />
                 <p>{prevName}</p>
             </Link>
-            <Link to={listURL} className={styles.ListLink}>
-                <div>목록</div>
+            <Link to={listURL} className={isMobile ? styles.m_listLink : styles.listLink}>
+                <p>목록</p>
             </Link>
-            <Link to={nextURL} className={styles.ListLink}>
-                <div>------------&gt;</div>
+            <Link to={nextURL} className={isMobile ? styles.m_listLink : styles.listLink}>
+                <img src="/img/icon/arrowR.svg" alt="다음" />
                 <p>{nextName}</p>
             </Link>
 
@@ -19,9 +23,10 @@ export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL
     )
 }
 export function setPrev(type, data) {
-    const prev = data.index === 0 ? type.team[2] : type.team[data.index - 1];
+    const prev = data.index === 0 ? type.list[type.list.length-1] : type.list[data.index - 1];
+    return prev;
 }
-export function setnext(type, data) {
-    const next = data.index === 2 ? type.team[1] : type.team[data.index + 1];
-
+export function setNext(type, data) {
+    const next = data.index === type.list.length-1 ? type.list[0] : type.list[data.index + 1];
+    return next;
 }

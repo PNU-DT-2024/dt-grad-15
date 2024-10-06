@@ -4,7 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import TeamData from "../../components/team.json";
-import ListLink from "../common/ListLink";
+import ListLink, {setPrev, setNext} from "../common/ListLink";
 import MainTheme from "./PJComponents/MainTheme";
 import InterTheme from "./PJComponents/InterTeme";
 import "../../css/PJDetail.css";
@@ -14,8 +14,9 @@ function TeamPJDetail() {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    const prev = data.index === 0 ? TeamData.list[2] : TeamData.list[data.index - 1];
-    const next = data.index === 2 ? TeamData.list[0] : TeamData.list[data.index + 1];
+    const prev =setPrev(TeamData, data);
+    const next =setNext(TeamData, data);
+
     return (
         <div>
             <Menu page='작품' />
@@ -36,10 +37,10 @@ function TeamPJDetail() {
                 </section>
                 <InterTheme title={data.interTitle} desc={data.interDesc} format={data.interFormat} step={data.interStep} />
 
+                <div className="box">
+                    <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/team/${prev.name}`} nextURL={`/project/team/${next.name}`} listURL="/project/team" />
+                </div>
             </main>
-            <div className="box">
-                <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/team/${prev.name}`} nextURL={`/project/team/${next.name}`} listURL="/project/team" />
-            </div>
             <Footer />
         </div >
     )

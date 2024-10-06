@@ -6,7 +6,7 @@ import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
 import Title from "../common/Title";
-import ListLink from "../common/ListLink";
+import ListLink, {setPrev, setNext} from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
 
 function IndivPFDetail() {
@@ -20,8 +20,9 @@ function IndivPFDetail() {
         console.log(data);
         // console.log("hi")
     });
-    const prev = data.index === 0 ? indivData.list[12] : indivData.list[data.index - 1]
-    const next = data.index === 13 ? indivData.list[1] : indivData.list[data.index + 1]
+    const prev =setPrev(indivData, data);
+    const next =setNext(indivData, data);
+
     return (
         <div>
             <Menu page='작가' />

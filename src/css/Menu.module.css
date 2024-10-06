@@ -1,5 +1,5 @@
 .menuWrap {
-    padding: 24px var(--margin);
+    padding: 24px var(--padding);
     display: flex;
     align-items: center;
 }
@@ -48,7 +48,7 @@
     top: 0;
     width: 100%;
     z-index: 999;
-    padding: 16px var(--margin);
+    padding: 16px var(--padding);
 }
 
 .m_loc {

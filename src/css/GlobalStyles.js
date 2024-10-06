@@ -88,11 +88,11 @@ nav, main, footer{
 	}
 .contentsContainer{
 // background-color : blue;
-padding: 64px var(--margin) 128px;
+padding: 64px var(--padding) 128px;
 
 }
 .box{
-  padding: 0 var(--margin) ;
+  padding: 0 var(--padding) ;
   
 }
 .description{
@@ -109,8 +109,8 @@ font-size:1.125rem;
     flex-direction: column;
 }
 :root{
+	--padding : 200px;
 	--line : #dbdbdb;
-	--margin : 200px;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;
 	--black: #121212;
@@ -122,10 +122,10 @@ font-size:1.125rem;
 	}
 
 	:root{
-		--margin : 20px;
+		--padding : 20px;
 	}
 	.contentsContainer{
-		margin: 20px var(--margin) 128px;	
+		padding: 20px var(--padding) 128px;	
 	}
 	.description{
 		font-size:1rem;
@@ -136,7 +136,7 @@ font-size:1.125rem;
 }
 @media all and (max-width: 1023px) and (min-width: 768px) {
 	:root{
-		--margin : 50px;
+		--padding : 50px;
 	}
 }
 `;

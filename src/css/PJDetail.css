@@ -47,7 +47,7 @@
 
 .concept+.author {
     position: absolute;
-    right: var(--margin);
+    right: var(--padding);
     bottom: 64px;
 }
 
@@ -205,12 +205,13 @@
 }
 
 .m_concept h1 {
+    font-size: 2.25rem;
     margin-bottom: 24px;
 }
 
 .m_concept+.author {
     font-size: 0.75rem;
-    margin-top: 48px;
+    margin-top: 64px;
     word-break: break-all;
 }
 
@@ -219,6 +220,7 @@
 }
 
 .m_info>h2 {
+    font-size: 2.25rem;
     margin-bottom: 24px;
 }
 
