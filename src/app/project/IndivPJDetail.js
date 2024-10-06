@@ -5,34 +5,33 @@ import { useMediaQuery } from "react-responsive";
 import { useRef } from "react";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
-import ListLink from "../common/ListLink";
-import "../../css/PJDetail.css";
+import ListLink, {setPrev, setNext} from "../common/ListLink";
 import MainTheme from "./PJComponents/MainTheme";
 import InterTheme from "./PJComponents/InterTeme";
 
 import { Link } from "react-router-dom";
+import "../../css/PJDetail.css";
+
 function IndivPJDetail() {
     let { id } = useParams();
     const data = indivData.list.find(item => item.name == id);
     const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false); // 재생 상태를 관리하는 state
+    const [isPlaying, setIsPlaying] = useState(false);
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    const prev = data.index === 0 ? indivData.list[12] : indivData.list[data.index - 1];
-    const next = data.index === 12 ? indivData.list[1] : indivData.list[data.index + 1];
-    // useRef로 video 요소에 접근할 수 있는 참조 생성
+    const prev =setPrev(indivData, data);
+    const next =setNext(indivData, data);
 
-    // 버튼 클릭 시 동영상을 재생하는 함수
     const togglePlayPause = () => {
         if (videoRef.current) {
             if (isPlaying) {
-                videoRef.current.pause(); // 현재 재생 중이면 멈춤
+                videoRef.current.pause();
             } else {
-                videoRef.current.currentTime = 0; // 동영상의 현재 시간을 0으로 설정
-                videoRef.current.play(); // 동영상 재생
+                videoRef.current.currentTime = 0;
+                videoRef.current.play();
             }
-            setIsPlaying(!isPlaying); // 재생 상태를 반전시킴
+            setIsPlaying(!isPlaying);
         }
     };
     return (
@@ -47,7 +46,7 @@ function IndivPJDetail() {
                             <p className='titlePJ'>{data.posterTitle}</p>
                             <p className='desc description'>{data.posterDesc}</p>
                             <div className="row btnPoster">
-                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? 'stop' : 'playing'}></img></button>
+                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? '/img/icon/stop.svg' : '/img/icon/play.svg'}></img></button>
 
                             </div>
                         </div>

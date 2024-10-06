@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.memberContainer {
+.memberContainer, .t_memberContainer {
     width: 32%;
 }
 
@@ -38,11 +38,12 @@
     padding: 0 10%;
     color: white;
 }
-
+.memberInfo h2{
+    line-height: 150%;
+}
 .Info {
     opacity: 0;
 }
-
 
 
 .memberCard:hover .Info {
@@ -68,13 +69,12 @@
     width: 49%;
 }
 
-.m_memberContainer .imgPj {
+.m_memberContainer .imgPj , .t_memberContainer .imgPj{
     filter: brightness(0.6);
 
 }
-
-.m_Info h2{
-    /* font-size: 2rem; */
+.t_memberContainer .Info {
+    opacity: 1;
 }
 .m_Info p{
     font-size: 1rem;

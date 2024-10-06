@@ -11,9 +11,9 @@ import Banner from "./Banner";
 import InterBanner from "./InterBanner";
 import SubHeading from "../common/SubHeading";
 import Footer from "../common/Footer";
-import styles from "../../css/Main.module.css";
 import KakaoMap from "../../kakaoMap";
 import { motion } from "framer-motion";
+import styles from "../../css/Main.module.css";
 
 export default function Main() {
   const isMobile = useMediaQuery({

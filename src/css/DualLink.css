@@ -1,5 +1,6 @@
 
-.linkModule {
+.linkModule, .t_linkModule {
+  text-align: right;
   font-size: 2rem;
   font-weight: 700;
   padding: 64px 24px;
@@ -9,10 +10,10 @@
 
 
 .linkModule:hover{
-  
+  text-align: left;
 color: var(--mainColor);
 }
-.linkModule::before{
+.linkModule::before, .t_linkModule::before{
   content: "";
   position: absolute;
   top: 50%;
@@ -21,9 +22,9 @@ color: var(--mainColor);
   width: 120px;
   height: 50px;
   opacity: 0;
-  background: url('/public/img/arrow.png') no-repeat center center; /*화살표 이미지 경로 */
+  background: url('/public/img/icon/arrowR.svg') no-repeat center center; /*화살표 이미지 경로 */
   background-size: contain;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
 }
 .linkModule:hover::before {
   opacity: 1;
@@ -42,4 +43,11 @@ color: var(--mainColor);
 
 .line {
   border: 1px solid #dbdbdb;
+}
+/* 모바일 css----------------------------------------- */
+.t_linkModule{
+  text-align: left;
+}
+.t_linkModule::before{
+  opacity: 1;
 }
