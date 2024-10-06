@@ -10,7 +10,7 @@
     height: 100%;
 }
 
-.memberContainer, .t_memberContainer {
+.pjLink, .t_pjLink {
     width: 32%;
 }
 
@@ -64,16 +64,16 @@
 }
 
 /* 모바일 css---------------------------------------------- */
-.m_memberContainer {
+.m_pjLink {
     position: relative;
     width: 49%;
 }
 
-.m_memberContainer .imgPj , .t_memberContainer .imgPj{
+.m_pjLink .imgPj , .t_pjLink .imgPj{
     filter: brightness(0.6);
 
 }
-.t_memberContainer .Info {
+.t_pjLink .Info {
     opacity: 1;
 }
 .m_Info p{

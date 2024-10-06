@@ -19,8 +19,8 @@ function Menu({ page, main }) {
     }
 
     return (
-        <nav className={`${styles.menuWrap} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
-            <div className={`${styles.menuContainer}`}>
+        <nav className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
+            <div className={`${styles.gnbWrap}`}>
                 {isMobile ? <span className={styles.m_loc} style={{ color: color }}>{page}</span> :
                     <div className={styles.mainLink}>
                         <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>

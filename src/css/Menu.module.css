@@ -1,10 +1,10 @@
-.menuWrap {
+.gnb {
     padding: 24px var(--padding);
     display: flex;
     align-items: center;
 }
 
-.menuContainer {
+.gnbWrap {
     display: flex;
     width: 100%;
     align-items: center;

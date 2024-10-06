@@ -10,11 +10,11 @@ option{
     box-shadow: none;
 }
  
-.messageWrapper {
+.messageWrap {
     margin-bottom: 64px;
 }
 
-.sentContainer {
+.sent {
     margin-right: 96px;
 }
 
@@ -36,7 +36,7 @@ option{
     padding: 8px 12px;
 }
 
-.textContainer {
+.write {
     width: 100%;
 }
 
@@ -50,13 +50,13 @@ option{
 }
 
 
-.btnContainer {
+.btnSent {
     display: flex;
     width: 100%;
 }
 
 
-.btnMsg {
+.btnSent > button {
     background-color: var(--black);
     color: white;
     margin-top: 12px;
@@ -66,11 +66,11 @@ option{
     cursor: pointer;
 }
 
-.optionContainer{
+.optionList{
     display: flex;
     margin-bottom: 24px;
 }
-.optionContainer select{
+.optionList select{
     font-size: 1.25rem;
     padding: 4px 12px;
 }
@@ -113,6 +113,6 @@ option{
 }
 
 /* 모바일 css--------------------------------------------- */
-.m_sentContainer{
+.m_sent{
     margin-bottom: 32px;
 }

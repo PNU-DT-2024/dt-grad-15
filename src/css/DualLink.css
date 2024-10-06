@@ -31,10 +31,6 @@ color: var(--mainColor);
   
 }
 
-/* .linkContainer:hover .horizontalLine {
-  background-color: red !important;
-} */
-
 .horizontalLine {
   height: 1px;
   background-color: #dbdbdb;

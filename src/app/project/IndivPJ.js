@@ -20,7 +20,7 @@ export default function IndivPJ() {
                 <section className={styles.listWrap}>
                     <div className={styles.memberList}>
                         {data.list.map((item) => (
-                            <article className={isTablet ? styles.t_memberContainer : isMobile ? styles.m_memberContainer : styles.memberContainer}>
+                            <article className={isTablet ? styles.t_pjLink : isMobile ? styles.m_pjLink : styles.pjLink}>
                                 <Link to={`/project/indiv/${item.name}`}>
                                     <div className={styles.memberCard}>
                                         <div className={styles.imgPj}>

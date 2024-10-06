@@ -1,4 +1,4 @@
-.menuContainer{
+.gnbWrap{
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -18,13 +18,13 @@
     align-items: center;
     margin-left: 32px;
 }
-.menuContainer ul{
+.gnbWrap ul{
 width: 100%;
 }
-.menuContainer li{
+.gnbWrap li{
     padding: 24px 0;
 }
-.menuContainer li p{
+.gnbWrap li p{
     font-size: 24px;
     color: white;
     margin: 12px;

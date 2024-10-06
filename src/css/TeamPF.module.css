@@ -79,15 +79,15 @@
     font-weight: 500;
 }
 
-.memberContainer {
+.member {
     margin-bottom: 64px;
 }
 
-.memberContainer>div {
+.member>div {
     margin-right: 24px;
 }
 
-.memberContainer>div:last-child {
+.member>div:last-child {
     margin-bottom: 0;
 }
 

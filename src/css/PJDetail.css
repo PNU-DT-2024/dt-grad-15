@@ -18,7 +18,7 @@
     /* height: 500px; */
 }
 
-.mainContainer {
+.mainConcept {
     display: flex;
     position: relative;
     background-color: var(--black);
@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.mainContainer>div {
+.mainConcept>div {
     padding: 64px 0;
 }
 
@@ -86,32 +86,33 @@
 }
 
 
-.info {
+.subject {
     align-items: center;
     margin-bottom: 48px;
 }
 
-.info>h2,
-.m_info>h2 {
+.subject>h2,
+.m_subject>h2 {
     font-size: 3rem;
     word-break: keep-all;
     line-height: 130%;
 
 }
 
-.info h2 {
+.subject h2 {
     margin-right: 48px;
 }
 
-.info>div,
-.m_info>div {
+
+.subject>div {
     padding-left: 32px;
     border-left: 8px solid;
     border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+
 }
 
 .titlePJ {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 12px;
 }
@@ -150,40 +151,33 @@
 }
 
 
-
-
-
-.videoInfoContainer {
-    margin-bottom: 24px;
-}
-
-.interContainer {
+.inter {
     margin-bottom: 32px;
 }
 
-
-.format {
+.inter .format {
     color: #a7a7a7;
-}
-
-.interContainer .format {
     margin-top: 12px;
 }
 
-.interContainer .imgInter {
+.inter .imgInter {
     margin-left: 72px;
     flex: 2;
 }
 
-.interStep {
+.interStep,
+.m_interStep {
     gap: 12px;
     margin-bottom: 64px;
 }
 
-.interStep>div {
-    margin-top: auto;
-}
 
+.step {
+    gap: 12px;
+    margin-top: auto;
+
+    /* margin-top: 12px; */
+}
 
 .step p {
     margin-top: 12px;
@@ -215,16 +209,23 @@
     word-break: break-all;
 }
 
-.m_info {
-    margin-bottom: 32px;
-}
-
-.m_info>h2 {
+.m_subject>h2 {
     font-size: 2.25rem;
     margin-bottom: 24px;
 }
 
-.m_info .format {
+.m_subject {
+    margin-bottom: 32px;
+    padding-left: 24px;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.m_subject .titlePJ {
+    font-size: 1.5rem;
+}
+
+.m_subject .format {
     font-size: 0.75rem;
     margin-top: 8px;
 }
@@ -245,10 +246,11 @@
     width: 100%;
 }
 
-.m_interContainer .imgInter {
-    margin-bottom: 24px;
+.m_step {
+    gap: 12px;
 }
 
-.m_step {
-    width: 500px;
+.m_step p {
+    font-size: 0.75rem;
+    margin-top: 8px;
 }

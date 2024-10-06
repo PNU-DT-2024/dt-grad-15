@@ -6,7 +6,7 @@ function Title({ title }) {
         query: "(max-width:767px)"
     });
     return (
-        <div className={`${isMobile?styles.m_container:styles.container} row`}>
+        <div className={`${isMobile?styles.m_loc:styles.loc} row`}>
             <h1>{title}</h1>
             <hr />
         </div>

@@ -6,7 +6,7 @@ export default function MainTheme({ title, desc, name, email, member }) {
         query: "(max-width:767px)"
     });
     return (
-        <section className="mainContainer box column">
+        <section className="mainConcept box column">
             <div className="cloumn">
                 <div className={isMobile ? 'column m_concept' : 'row concept'}>
                     <h1>{title}</h1>

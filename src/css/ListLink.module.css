@@ -1,4 +1,4 @@
-.listLinkContainer {
+.listLinkWrap {
     align-items: center;
     width: 100%;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     font-weight: 500;
 }
 
-.listLinkContainer p:first-child {
+.listLinkWrap p:first-child {
     font-size: 2rem;
 }
 /* 모바일 css------------------------------------ */
@@ -27,6 +27,6 @@
     margin-bottom: 12px;
 
 }
-.listLinkContainer p{
+.listLinkWrap p{
     font-weight: 500;
 }
