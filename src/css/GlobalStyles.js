@@ -69,26 +69,26 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+	button{
+	cursor:pointer;}
 //------------------------------------------------------------------------------
 * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
-
+.eng{font-family: 'Times New Roman', Times, serif; }
+.ko{    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 700;}
 #root>div>div{
-	// background-color : red;
 	min-height : 100vh;
 	display:flex;
 	flex-direction:column;
 }
 nav, main, footer{
 	flex:2;
-	// background-color : red;
-	// border : 3px solid red;
 }
 	nav, footer{
 	flex-grow : 0;
 	}
 .contentsContainer{
-// background-color : blue;
-padding: 64px var(--padding) 128px;
+	padding: 64px var(--padding) 128px;
 
 }
 .box{
@@ -117,10 +117,6 @@ font-size:1.125rem;
 	
 }
 @media all and (max-width:767px){
-	body{
-		// background-color:rgb(248, 248, 248);
-	}
-
 	:root{
 		--padding : 20px;
 	}

@@ -7,7 +7,7 @@ export default function MainTheme({ title, desc, name, email, member }) {
     });
     return (
         <section className="mainConcept box column">
-            <div className="cloumn">
+            <div className="column">
                 <div className={isMobile ? 'column m_concept' : 'row concept'}>
                     <h1>{title}</h1>
                     <span className="description">{desc}</span>

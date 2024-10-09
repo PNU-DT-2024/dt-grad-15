@@ -23,10 +23,10 @@ function TeamPJDetail() {
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} member={data.member} />
                 <section className='box posterContainer'>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>
-                        <h2>영상</h2>
+                        <h2 className="eng">FILM</h2>
                         <div>
                             <p className='titlePJ'>{data.videoTitle}</p>
-                            <p className='desc description'>{data.videoDesc}</p>
+                            <p className='description'>{data.videoDesc}</p>
 
                         </div>
                     </div>

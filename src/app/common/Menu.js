@@ -21,10 +21,10 @@ function Menu({ page, main }) {
     return (
         <nav className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
             <div className={`${styles.gnbWrap}`}>
-                {isMobile ? <span className={styles.m_loc} style={{ color: color }}>{page}</span> :
+                {isMobile ? <span className={`ko ${styles.m_loc}`} style={{ color: color }}>{page}</span> :
                     <div className={styles.mainLink}>
                         <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                            <p style={{ color: color }}>버릇</p>
+                            <p className="ko" style={{ color: color }}>버릇</p>
                         </NavLink>
                     </div>
                 }

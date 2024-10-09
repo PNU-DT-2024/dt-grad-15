@@ -15,8 +15,6 @@
 
 .mainLink p {
     font-size: 1.75rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
 }
 
 .nav {
@@ -56,10 +54,7 @@
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
-    /* letter-spacing : 1px; */
     font-size: 1.75rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
 }
 
 .m_porfileImg {

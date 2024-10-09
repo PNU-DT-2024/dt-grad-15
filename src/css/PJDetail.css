@@ -108,7 +108,6 @@
     padding-left: 32px;
     border-left: 8px solid;
     border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
-
 }
 
 .titlePJ {

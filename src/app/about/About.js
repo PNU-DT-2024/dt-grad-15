@@ -2,8 +2,6 @@ import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu"
 import Title from "../common/Title";
 import Footer from "../common/Footer"
-import SubHeading from "../common/SubHeading"
-import { motion } from "framer-motion";
 import styles from "../../css/About.module.css";
 
 export default function About() {
@@ -28,7 +26,7 @@ export default function About() {
                         </div> */}
                         {/* <motion.div {...motionProps}> */}
                         <article className={` ${isMobile ? `column ${styles.m_dtContainer}` : `row ${styles.dtContainer}`}`}>
-                            <div className={`${styles.captionContainer} cloumn`}>
+                            <div className={`${styles.contentWrap} cloumn`}>
                                 <h1 className={styles.title}>디자인앤테크놀로지전공</h1>
                                 <div className='description'>
                                     <p>

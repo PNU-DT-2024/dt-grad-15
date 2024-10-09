@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
@@ -14,9 +14,9 @@ function IndivPFDetail() {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    const data = indivData.list.find(item => item.name == id);
+    const data = indivData.list.find(item => item.name === id);
     useEffect(() => {
-        const data = indivData.list.find(item => item.name == id);
+        const data = indivData.list.find(item => item.name === id);
         console.log(data);
         // console.log("hi")
     });
