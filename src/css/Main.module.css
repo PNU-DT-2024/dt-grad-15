@@ -1,4 +1,4 @@
-.hScreen {
+/* .hScreen {
   display: flex;
   position: relative;
   height: 100vh;
@@ -19,16 +19,13 @@
 .imgMap,
 .imgMember,
 .imgDT {
-  /* background-color: #a7a7a7; */
+  background-color: #a7a7a7;
 }
 
 .title {
   margin-bottom: 32px;
 }
 
-.title:first-child {
-  /* font-size: 4rem; */
-}
 
 .contentWrap {
   justify-content: center;
@@ -39,7 +36,7 @@
 .contentWrap:first-child>p {
   margin-top: 48px;
   color: #a7a7a7;
-}
+} */
 
 /* ---------------------------------------------------------------------- */
 .nav {
@@ -134,7 +131,7 @@
 }
 
 /* 모바일css------------------------------------------------------ */
-.m_imgPoster {
+/* .m_imgPoster {
   flex-shrink: 0;
   height: 50vw;
   margin-bottom: 32px;
@@ -157,4 +154,4 @@
 
 .m_imgMap {
   margin-bottom: 32px;
-}
+} */

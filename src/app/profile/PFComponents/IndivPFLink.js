@@ -32,7 +32,7 @@ export default function IndivPFLink({ item }) {
             </div> :
             <div className={styles.imgaction}>
               <img src={isHovered ? '/img/profileImg/trigger.png' : ""} className={`${styles.imgTrigger} ${isHovered ? styles.show : ""}`} alt=""/>
-              <img src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/박정혜_profile.jpg"} alt={item.name} className={styles.baseImage} />
+              <img src={isHovered ? "/img/profileImg/hoverProfileImg.png" : "/img/profileImg/박정혜_profile.jpg"} loading="lazy" alt={item.name} className={styles.baseImage} />
             </div>
           }
           <div className={styles.memberInfo} >

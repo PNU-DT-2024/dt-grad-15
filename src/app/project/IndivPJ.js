@@ -7,7 +7,7 @@ import SubHeading from "../common/SubHeading";
 import styles from "../../css/IndivPJ.module.css";
 export default function IndivPJ() {
     const isTablet = useMediaQuery({
-        query: "(max-width: 1023px) and (min-width: 768px)"
+        query: "(max-width: 1080px) and (min-width: 768px)"
     });
     const isMobile = useMediaQuery({
         query: "(max-width : 767px)"

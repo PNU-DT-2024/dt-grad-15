@@ -5,13 +5,13 @@ import SlideMenu from "./SlideMenu";
 import styles from "../../css/Menu.module.css"
 
 function Menu({ page, main }) {
-    let background = main? "none" : "var(--black)";
-    let color = main? "var(--black)" : "white";
+    let background = main ? "none" : "var(--black)";
+    let color = main ? "var(--black)" : "white";
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
     const isTablet = useMediaQuery({
-        query: "(max-width:1023px)"
+        query: "(max-width:1080px)"
     });
     const [isMenu, setIsMenu] = useState(false);
     let openMenu = () => {
@@ -19,7 +19,14 @@ function Menu({ page, main }) {
     }
 
     return (
-        <nav className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`} style={{ backgroundColor: background }}>
+        <nav
+            className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`}
+            style={{
+                backgroundColor: background,
+                ...(main ? { position: 'absolute', top: 0, width: '100%', zIndex: 3 } : {})
+            }}
+        >
+
             <div className={`${styles.gnbWrap}`}>
                 {isMobile ? <span className={`ko ${styles.m_loc}`} style={{ color: color }}>{page}</span> :
                     <div className={styles.mainLink}>
@@ -30,7 +37,7 @@ function Menu({ page, main }) {
                 }
                 {isTablet ?
 
-                    <div className={styles.nav} style={{ color: {color} }}>
+                    <div className={styles.nav} style={{ color: { color } }}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
                         <div onClick={openMenu} className={`${styles.icMenu} ${isMenu ? styles.active : ''}`} >
                             <span style={{ backgroundColor: color }}></span>

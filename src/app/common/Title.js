@@ -7,7 +7,7 @@ function Title({ title }) {
     });
     return (
         <div className={`${isMobile?styles.m_loc:styles.loc} row`}>
-            <h1 className="ko">{title}</h1>
+            <h1>{title}</h1>
             <hr />
         </div>
 

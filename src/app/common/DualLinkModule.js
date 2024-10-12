@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import "../../css/DualLink.css"
 export default function DualLinkModule({ title, link, mode }) {
     const isTablet = useMediaQuery({
-        query: "(max-width:1023px)"
+        query: "(max-width:1080px)"
     });
     
     return (
