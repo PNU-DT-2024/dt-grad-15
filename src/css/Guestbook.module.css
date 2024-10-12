@@ -11,20 +11,25 @@ option{
 }
  
 .messageWrap {
-    margin-bottom: 64px;
+    margin-bottom: 92px;
+    gap: 64px;
 }
 
 .sent {
-    margin-right: 96px;
+    flex: 1;
 }
-
+.write {
+    flex: 2;
+}
 
 .personalInfo {
     justify-content: center;
     align-items: left;
-    margin-bottom: 32px;
+    
 }
-
+.personalInfo:first-child{
+    margin-bottom: 24px;
+}
 .personalInfo label {
     font-size: 1.75rem;
     font-weight: 700;
@@ -36,9 +41,7 @@ option{
     padding: 8px 12px;
 }
 
-.write {
-    width: 100%;
-}
+
 
 .textarea {
     width: 100%;
@@ -113,6 +116,6 @@ option{
 }
 
 /* 모바일 css--------------------------------------------- */
-.m_sent{
+/* .m_sent{
     margin-bottom: 32px;
-}
+} */

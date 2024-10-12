@@ -20,7 +20,7 @@ function TeamPJ({ data }) {
                         <img src="/img/video/videoImg.png" alt="작품 이미지" />
                     </div>
                     <div>
-                        <p>팀 작품 보러가기</p>
+                        <p>작품 보러가기</p>
                     </div>
                 </div>
             </div>

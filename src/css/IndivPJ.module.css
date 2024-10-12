@@ -40,6 +40,10 @@
 }
 .memberInfo h2{
     line-height: 150%;
+    margin-bottom: 12px;
+}
+.memberInfo p {
+    font-size: 1rem;
 }
 .Info {
     opacity: 0;
@@ -54,14 +58,7 @@
     filter: brightness(0.4);
 }
 
-.memberInfo h2 {
-    /* font-size: 2vw; */
-    margin-bottom: 12px;
-}
 
-.memberInfo p {
-    font-size: 1.2vw;
-}
 
 /* 모바일 css---------------------------------------------- */
 .m_pjLink {

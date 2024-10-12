@@ -53,7 +53,7 @@ export default function About() {
                     </article>
                     <article className={isMobile ? 'column' : 'row'}>
                         <div className={styles.title}><p>지도교수 & 전임교수</p></div>
-                        <div className={`${styles.prof} row`}>
+                        <div className={styles.prof}>
                             <div>
                                 <div className={styles.imgProf}>
                                     <img src="/img/profileImg/이화세교수님.webp" alt="이화세 교수님" />
