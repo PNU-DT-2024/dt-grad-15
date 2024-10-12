@@ -1,0 +1,82 @@
+.teamList,
+.m_teamList {
+    display: flex;
+    align-items: stretch;
+}
+
+.teamList .teamCardOpen,
+.teamList .teamCardClose {
+    border-right: 6px solid var(--black);
+}
+
+.teamList .teamCardOpen:first-child,
+.teamList .teamCardClose:first-child {
+    border-left: 6px solid var(--black);
+}
+
+.teamCardOpen {
+    flex: 15;
+}
+
+.teamList .teamCardOpen {
+    padding: 24px 48px;
+
+}
+
+.teamCardClose>div,
+.teamCardOpen>div {
+    position: relative;
+    height: 100%;
+
+}
+
+.teamCardClose {
+    color: #a7a7a7;
+
+
+    flex: 1;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.teamList .teamCardClose {
+    align-items: center;
+    text-align: center;
+    padding: 24px 8px;
+}
+
+.teamCardClose:hover {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.teamList .closeTeam {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.teamList .closeTeam p {
+    font-size: 1.5rem;
+    inline-size: auto;
+    writing-mode: vertical-rl;
+}
+
+/* 모바일 css----------------- */
+.m_teamList .teamCardOpen,
+.m_teamList .teamCardClose {
+    border-top: 6px solid var(--black);
+}
+
+.m_teamList .teamCardOpen:last-child,
+.m_teamList .teamCardClose:last-child {
+    border-bottom: 6px solid var(--black);
+}
+
+.m_teamList .teamCardOpen {
+    /* display: flex; */
+    padding: 24px 24px;
+}
+
+.m_teamList .teamCardClose {
+    padding: 12px 24px;
+}

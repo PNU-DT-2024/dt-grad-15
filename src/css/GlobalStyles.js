@@ -109,7 +109,7 @@ font-size:1.125rem;
     flex-direction: column;
 }
 :root{
-	--padding : 300px;
+	--padding : 250px;
 	--line : #dbdbdb;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;

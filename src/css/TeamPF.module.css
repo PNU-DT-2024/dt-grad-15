@@ -1,63 +1,5 @@
-.teamCardClose {
+.teamCard {
     height: 100%;
-    /* background-color: aquamarine; */
-    color: #a7a7a7;
-    /* border: 1px solid rebeccapurple; */
-    max-width: 60px;
-    padding: 24px 0;
-    flex: 1;
-    cursor: pointer;
-    /* transition: flex 2s ease-in-out; */
-    /* background-color: #f3f3f3; */
-}
-
-.teamCardClose:hover {
-    color: var(--black);
-    font-weight: 700;
-}
-
-.teamCardOpen,
-.teamCardClose {
-    min-height: 500px;
-    /* border-left: 6px solid var(--black); */
-    border-right: 6px solid var(--black) ;
-}
-
-.teamCardOpen:first-child,
-.teamCardClose:first-child {
-    border-left: 6px solid var(--black);
-}
-
-.teamCardOpen {
-    flex: 15;
-    /* transition: all 2s ease-in-out; */
-
-    padding: 24px 48px;
-}
-
-.teamCardClose>div,
-.teamCardOpen>div {
-    position: relative;
-    height: 100%;
-
-}
-
-.closeTeam {
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    text-align: left;
-    padding: 12px;
-}
-
-.closeTeam span {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    transform: rotate(90deg);
-    transform-origin: center;
 }
 
 .teamTitle {
@@ -65,7 +7,6 @@
 }
 
 .teamTitle h1 {
-    /* color: #EB5B5E; */
     margin-bottom: 24px;
 }
 
@@ -80,45 +21,57 @@
 }
 
 .member {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80%;
     margin-bottom: 64px;
+    gap: 12px;
 }
 
-.member>div {
-    margin-right: 24px;
-}
-
-.member>div:last-child {
-    margin-bottom: 0;
+.member>a {
+    /* width: 19%; */
 }
 
 .memberImg {
     background-color: #a7a7a7;
-    width: 100px;
-    height: 130px;
+
+
+    /* height: 60%; */
     margin-bottom: 12px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-.memberImg img{
+
+.memberImg img {
     width: 100%;
 }
 
 .moveLink {
-    /* background-color: #EB5B5E; */
-    border: 2px solid var(--black);
-    /* background: linear-gradient(0.25turn, #F9AE69, #EB5B5E); */
-    padding: 12px 24px;
     position: absolute;
+    border: 2px solid var(--black);
+    padding: 12px 24px;
     right: 0;
     bottom: 0;
     cursor: pointer;
     font-weight: 500;
-    /* margin-left: auto; */
 }
-.moveLink:hover{
+
+.moveLink:hover {
     background: linear-gradient(0.25turn, #F9AE69, #EB5B5E);
-    /* background-color: var(--black); */
     border: none;
 }
-.moveLink:hover span{
+
+.moveLink:hover span {
     color: white;
+}
+
+/* 모바일 css------------------------------ */
+.m_member {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 64px;
+    gap: 12px;
+}
+
+.m_member>a {
+    /* max-width: 25%; */
 }

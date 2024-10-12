@@ -1,63 +1,43 @@
-import Menu from "../common/Menu";
-import React, { useState } from 'react';
-// import { useParams } from "react-router-dom";
-import SubHeading from "../common/SubHeading";
-import Footer from "../common/Footer";
+
 import { Link } from "react-router-dom";
-import data from "../../components/team.json";
+import { useMediaQuery } from "react-responsive";
+import TeamData from "../../components/team.json";
 import styles from "../../css/TeamPF.module.css";
-function TeamPF() {
-    // let { id } = useParams();
-    const [hover, setHover] = useState('WEB');
-    function onClickTeam(team) {
-        setHover(team);
+function TeamPF({ data }) {
+    const team = TeamData.list.find(item => item.name === data)
+    function debugTeam() {
+        console.log(team);
     }
+    const isMobile = useMediaQuery({
+        query: "(max-width:767px)"
+    });
     return (
-        <div>
-            <Menu page='작가'/>
-            <main className="contentsContainer">
-                <SubHeading title={"팀 작가"} />
-                <section className={`${styles.teamList} row`}>
-                    {/* <hr /> */}
-                    {data.list.map((item) => (
-                        <article onClick={() => { onClickTeam(item.name) }} className={`${hover === item.name ? styles.teamCardOpen : styles.teamCardClose} coloumn`}>
-                            {hover === item.name ? <div>
-                                <div className={styles.teamTitle}>
-                                    <h1>{item.name}</h1>
-                                    <p className="description">{item.role}</p>
-                                </div>
-                                <div className={styles.teamMember}>
-                                    <p>구성원</p>
-                                    <div className={`${styles.member} row`}>
-                                        {item.member.map((member) => (
-                                            <div>
-                                                <Link to={`/profile/indiv/${member}`}>
-                                                    <div className={styles.memberImg}>
-                                                        <img src="/img/profileImg/박정혜_profile.jpg" alt="#" />
-                                                    </div>
-                                                    <div>{member}</div>
+        <div onClick={debugTeam} className={styles.teamCard}>
+            <div className={styles.teamTitle}>
+                <h1>{team.name}</h1>
+                <p className="description">{team.role}</p>
+            </div>
+            <div className={styles.teamMember}>
+                <p>구성원</p>
+                <div className={isMobile ? styles.m_member :styles.member}>
 
-                                                </Link>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                                <Link to={`/project/team/${item.name}`}>
-                                    <div className={styles.moveLink}>
-                                        <span>팀 작품 보러가기</span>
-                                    </div>
-                                </Link>
-                            </div> : <div className={styles.closeTeam}>
-                                <span>{item.name}</span>
-                            </div>}
+                    {team.member.map((member) => (
+                        <Link to={`/profile/indiv/${member}`}>
+                            <div className={styles.memberImg}>
+                                <img src="/img/profileImg/박정혜_profile.jpg" alt="#" />
+                            </div>
+                            <div>{member}</div>
 
-                        </article>
-
+                        </Link>
                     ))}
-                </section>
-            </main>
-            <Footer />
-        </div >
+                </div>
+            </div>
+            <Link to={`/project/team/${team.name}`}>
+                <div className={styles.moveLink}>
+                    <span>팀 작품 보러가기</span>
+                </div>
+            </Link>
+        </div>
     )
 }
 export default TeamPF;
