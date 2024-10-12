@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
 import Title from "../common/Title";
-import ListLink, {setPrev, setNext} from "../common/ListLink";
+import ListLink, { setPrev, setNext } from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
 
 function IndivPFDetail() {
@@ -14,20 +14,20 @@ function IndivPFDetail() {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    const data = indivData.list.find(item => item.name == id);
+    const data = indivData.list.find(item => item.name === id);
     useEffect(() => {
-        const data = indivData.list.find(item => item.name == id);
+        const data = indivData.list.find(item => item.name === id);
         console.log(data);
         // console.log("hi")
     });
-    const prev =setPrev(indivData, data);
-    const next =setNext(indivData, data);
+    const prev = setPrev(indivData, data);
+    const next = setNext(indivData, data);
 
     return (
         <div>
             <Menu page='작가' />
-            <main className="contentsContainer">
-                <section className={`${styles.profileContainer} ${isMobile ? 'column ' : 'row'}`}>
+            <main className={styles.pfContainer}>
+                <section className={`box ${styles.content} ${styles.profile} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
                         <img src="/img/profileImg/박정혜_profile.jpg" alt="작가 사진" />
                         {isMobile ?
@@ -36,8 +36,8 @@ function IndivPFDetail() {
                             </div>
                             : <></>}
                     </div>
-                    <div className={`${isMobile ? styles.m_txtContainer : styles.txtContainer} column`}>
-                        <div className={`${styles.nameContainer} row`}>
+                    <div className={`${isMobile ? styles.m_txtWrap : styles.txtWrap} column`}>
+                        <div className={`${styles.nameWrap} row`}>
                             <div className={`${isMobile ? styles.m_name : styles.name} column`}>
                                 <Link to={'/profile/team'}>
                                     <span>{data.team}</span>
@@ -53,7 +53,7 @@ function IndivPFDetail() {
                                 </div>
                             }
                         </div>
-                        <div className={`${styles.infoContainer} ${isMobile ? 'column' : 'row'}`}>
+                        <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
                             <div >
                                 <span>SNS</span>
                                 <Link to={`https://www.instagram.com/${data.insta}`}>
@@ -68,9 +68,9 @@ function IndivPFDetail() {
                         <div className="description">{data.freeWrite}</div>
                     </div>
                 </section>
-                <section >
+                <section className={`box ${styles.content}`}>
                     {isMobile ? <></> : <Title title="작품" />}
-                    <div className={`${styles.moveLinkContainer} ${isMobile ? 'column' : 'row'}`}>
+                    <div className={`${styles.MoveLinkWrap} ${isMobile ? 'column' : 'row'}`}>
                         <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>
                                 <div className={styles.linkMove}>
@@ -95,7 +95,9 @@ function IndivPFDetail() {
                         </div>
                     </div>
                 </section>
-                <ListLink prevName={prev.name} nextName={next.name} prevURL={`/profile/indiv/${prev.name}`} nextURL={`/profile/indiv/${next.name}`} listURL="/profile/indiv" />
+                <div className={`box ${styles.content}`}>
+                    <ListLink prevName={prev.name} nextName={next.name} prevURL={`/profile/indiv/${prev.name}`} nextURL={`/profile/indiv/${next.name}`} listURL="/profile/indiv" />
+                </div>
             </main>
             <Footer />
         </div>

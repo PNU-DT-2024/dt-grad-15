@@ -1,4 +1,4 @@
-.hScreen {
+/* .hScreen {
   display: flex;
   position: relative;
   height: 100vh;
@@ -15,23 +15,28 @@
   white-space: nowrap;
 }
 
-.imgPoster,
+.imgMainPoster,
 .imgMap,
 .imgMember,
 .imgDT {
-  /* background-color: #a7a7a7; */
+  background-color: #a7a7a7;
 }
 
 .title {
   margin-bottom: 32px;
 }
 
-.captionContainer {
-  display: flex;
-  flex-direction: column;
+
+.contentWrap {
   justify-content: center;
   text-align: left;
+  margin-top: 64px;
 }
+
+.contentWrap:first-child>p {
+  margin-top: 48px;
+  color: #a7a7a7;
+} */
 
 /* ---------------------------------------------------------------------- */
 .nav {
@@ -41,33 +46,15 @@
   z-index: 3;
 }
 
-.mainTitle {
-  font-size: 4rem;
-  font-family: "sandoll-jebi2", sans-serif;
-  font-weight: 700;
-}
-
-.outline div {
-  margin-bottom: 48px;
-}
-
-.outline>p {
-  color: #a7a7a7;
-}
-
-.imgPoster {
-  /* flex-shrink: 0;
-  /* flex-basis: 30%; */
-  /* width: 700px; */
-  /* height: calc(100vh - 100px); */
+.imgMainPoster {
   display: flex;
-  height: 100vh;
-align-items: center;
+  margin-top: 64px;
+  align-items: center;
 }
 
-.imgPoster img {
-  /* width: 100%; */
-  height: 80vh;
+.imgMainPoster img {
+  max-height: calc(100vh - 100px);
+  max-width: calc(100vw - 100px);
 }
 
 .imgMember {
@@ -79,9 +66,10 @@ align-items: center;
   width: 100%;
 }
 
-.txtContainer p {
+.textBox p:not(:last-child) {
   margin-bottom: 12px;
 }
+
 
 .opening {
   width: calc(100vw - 100px);
@@ -90,15 +78,22 @@ align-items: center;
   margin-top: 64px;
 }
 
-.memberContainer,
+.memberDT,
 .m_memberContainer {
   align-items: center;
 }
 
-.memberContainer .imgMember {
+/* .memberDT .imgMember {
   width: 50%;
   margin-right: 64px;
-  margin-bottom: 32px;
+} */
+.memberDT {
+  gap: 64px;
+}
+
+.memberDT>div {
+  flex: 1;
+  gap: 64px;
 }
 
 .imgMember img {
@@ -107,6 +102,7 @@ align-items: center;
 }
 
 .memberTxt {
+  text-align: center;
   word-break: keep-all;
 }
 
@@ -114,6 +110,10 @@ align-items: center;
 
 .imgMap {
   margin-right: 64px;
+}
+
+.loc {
+  justify-content: center;
 }
 
 .locInfo {
@@ -131,7 +131,7 @@ align-items: center;
 }
 
 /* 모바일css------------------------------------------------------ */
-.m_imgPoster {
+/* .m_imgPoster {
   flex-shrink: 0;
   height: 50vw;
   margin-bottom: 32px;
@@ -142,15 +142,16 @@ align-items: center;
   height: 100%;
 }
 
-.m_memberContainer .imgMember {
+.m_memberDT {
+  align-items: center;
+}
+
+.m_memberDT .imgMember {
   width: 70%;
   margin-bottom: 24px;
 }
 
-.m_memberContainer .memberTxt {
-  text-align: center;
-}
 
 .m_imgMap {
   margin-bottom: 32px;
-}
+} */

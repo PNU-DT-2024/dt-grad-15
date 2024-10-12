@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Sparkle from "./Sparkle";
 import Confetti from "./Confetti";
 import styles from "../../css/MessageTxt.module.css";
 export default function MessageTxt() {

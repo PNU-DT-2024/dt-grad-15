@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const Sparkle = ({ sparkles = 50 }) => {
     const tiny = useRef([]);
@@ -14,7 +14,6 @@ const Sparkle = ({ sparkles = 50 }) => {
     let y = useRef(0);
     let ox = useRef(400);
     let oy = useRef(300);
-    let swide = useRef(window.innerWidth);
     let shigh = useRef(window.innerHeight);
 
     useEffect(() => {

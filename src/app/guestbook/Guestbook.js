@@ -106,8 +106,8 @@ function Guestbook() {
           < MessageTxt />
 
         </div>
-        <section className={`${styles.messageWrapper} ${isMobile?'column':'row'}`}>
-          <div className={`${isMobile?styles.m_sentContainer:styles.sentContainer} column`}>
+        <section className={`${styles.messageWrap} ${isMobile?'column':'row'}`}>
+          <div className={`${isMobile?styles.m_sent:styles.sent} column`}>
             <div className={`${styles.personalInfo} column`}>
               <label>To:</label>
               <select value={to} onChange={(e) => setTo(e.target.value)}>
@@ -127,20 +127,20 @@ function Guestbook() {
               />
             </div>
           </div>
-          <div className={`${styles.textContainer} column`}>
+          <div className={`${styles.write} column`}>
             <div className={styles.comment}>
               <textarea className={styles.textarea} rows="10"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
               />
             </div>
-            <div className={styles.btnContainer}>
-              <button className={styles.btnMsg} onClick={handlePostGuestBook}>보내기</button>
+            <div className={styles.btnSent}>
+              <button onClick={handlePostGuestBook}>보내기</button>
             </div>
           </div>
         </section>
         <section>
-          <div className={styles.optionContainer}>
+          <div className={styles.optionList}>
             <select value={filter} onChange={(e) => setFilter(e.target.value)}>
               {names.map((name) => (
                 <option key={name} value={name}>

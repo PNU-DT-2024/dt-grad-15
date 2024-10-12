@@ -9,12 +9,11 @@ import ListLink, {setPrev, setNext} from "../common/ListLink";
 import MainTheme from "./PJComponents/MainTheme";
 import InterTheme from "./PJComponents/InterTeme";
 
-import { Link } from "react-router-dom";
 import "../../css/PJDetail.css";
 
 function IndivPJDetail() {
     let { id } = useParams();
-    const data = indivData.list.find(item => item.name == id);
+    const data = indivData.list.find(item => item.name === id);
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const isMobile = useMediaQuery({
@@ -37,23 +36,23 @@ function IndivPJDetail() {
     return (
         <div>
             <Menu page='작품' />
-            <main className="pjContainer">
+            <main className="pjContainer column">
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} email={data.email} />
-                <section className='box posterContainer'>
-                    <div className={isMobile ? 'm_info column' : 'info row'}>
-                        <h2>모션 포스터</h2>
+                <section className='box'>
+                    <div className={isMobile ? 'm_subject column' : 'subject row'}>
+                        <h2 className="eng">MOTION POSTER</h2>
                         <div>
                             <p className='titlePJ'>{data.posterTitle}</p>
-                            <p className='desc description'>{data.posterDesc}</p>
+                            <p className='description'>{data.posterDesc}</p>
                             <div className="row btnPoster">
-                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? '/img/icon/stop.svg' : '/img/icon/play.svg'}></img></button>
+                                <p>{isPlaying ? '중단' : '포스터 재생'}</p><button onClick={togglePlayPause}><img src={isPlaying ? '/img/icon/stop.svg' : '/img/icon/play.svg'} alt=""/></button>
 
                             </div>
                         </div>
                     </div>
                     <div className={isMobile ? 'm_motionPoster' : 'motionPoster'}>
-                        <video src="/img/posterImg/박정혜_poster.mp4" alt="#" ref={videoRef} preload="auto" style={{ display: isPlaying ? 'block' : 'none' }} />
-                        <img src="/img/posterImg/박정혜_poster.png" style={{ display: isPlaying ? 'none' : 'block' }} />
+                        <video src="/img/posterImg/박정혜_poster.mp4" alt="#" ref={videoRef} preload="auto" style={{ display: isPlaying ? 'block' : 'none' }} loop/>
+                        <img src="/img/posterImg/박정혜_poster.png" style={{ display: isPlaying ? 'none' : 'block' }} alt=""/>
                     </div>
                 </section>
 

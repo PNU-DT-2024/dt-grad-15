@@ -6,7 +6,7 @@ export default function ListLink({ prevName, nextName, prevURL, nextURL, listURL
         query: "(max-width:767px)"
     });
     return (
-        <div className={`${styles.listLinkContainer} row`}>
+        <div className={`${styles.listLinkWrap} row`}>
             <Link to={prevURL} className={isMobile ? styles.m_listLink : styles.listLink}>
                 <img src="/img/icon/arrowL.svg" alt="이전" />
                 <p>{prevName}</p>

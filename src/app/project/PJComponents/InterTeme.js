@@ -7,14 +7,14 @@ export default function InterTheme({ title, desc, format, step }) {
         query: "(max-width:767px)"
     });
     return (
-        <section className='box itemContainer'>
+        <section className='box'>
             <div className="colum">
-                <div className={` ${isMobile ? 'column m_interContainer' : 'row interContainer'}`}>
-                    <div className={isMobile ? 'm_info column' : 'info row'}>
-                        <h2>인터랙티브 아트</h2>
+                <div className={` ${isMobile ? 'column m_inter' : 'row inter'}`}>
+                    <div className={isMobile ? 'm_subject column' : 'subject row'}>
+                        <h2 className="eng">INTER ACTIVE ART</h2>
                         <div>
                             <p className='titlePJ'>{title}</p>
-                            <p className='desc description'>{desc}</p>
+                            <p className='description'>{desc}</p>
                             <p className="format">{format}</p>
                         </div>
                     </div>
@@ -22,11 +22,11 @@ export default function InterTheme({ title, desc, format, step }) {
                 </div>
                 <div className={`interStep  ${isMobile ? 'column' : 'row'}`}>
                     <div className='imgInter' >
-                        <img src="/img/project/김나연_map.webp" alt="#" />
+                        <img src="/img/project/web_map.png" alt="#" />
                     </div>
-                    <div className={`{isMobile ? 'm_interStep' : 'interStep'} row`}>
+                    <div className={`${isMobile ? 'm_step' : 'step'} row`}>
                         {step.map((item, idx) => (
-                            <InterStep key={idx} imgUrl={`/img/project/김나연_step${idx + 1}.webp`} step={item} />
+                            <InterStep key={idx} imgUrl={`/img/project/web_step${idx + 1}.png`} step={item} />
                         ))}
                     </div>
                 </div>

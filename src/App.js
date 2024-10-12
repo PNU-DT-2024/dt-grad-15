@@ -20,9 +20,9 @@ import TeamPF from "./app/profile/TeamPF";
 function App() {
   return (
     <div>
-      <GlobalStyles />
       <Router basename={process.env.PUBLIC_URL}>
-        <ScrollToTop/>
+        <GlobalStyles />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/guestbook" element={<Guestbook />}></Route>

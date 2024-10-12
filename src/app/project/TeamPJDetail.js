@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
@@ -10,7 +9,7 @@ import InterTheme from "./PJComponents/InterTeme";
 import "../../css/PJDetail.css";
 function TeamPJDetail() {
     let { id } = useParams();
-    const data = TeamData.list.find(item => item.name == id);
+    const data = TeamData.list.find(item => item.name === id);
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
@@ -23,15 +22,15 @@ function TeamPJDetail() {
             <main className="pjContainer">
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} member={data.member} />
                 <section className='box posterContainer'>
-                    <div className={isMobile ? 'm_info column' : 'info row'}>
-                        <h2>영상</h2>
+                    <div className={isMobile ? 'm_subject column' : 'subject row'}>
+                        <h2 className="eng">FILM</h2>
                         <div>
                             <p className='titlePJ'>{data.videoTitle}</p>
-                            <p className='desc description'>{data.videoDesc}</p>
+                            <p className='description'>{data.videoDesc}</p>
 
                         </div>
                     </div>
-                    <div className='videoContainer'>
+                    <div className='teamFile'>
                         영상 들어갈 자리
                     </div>
                 </section>

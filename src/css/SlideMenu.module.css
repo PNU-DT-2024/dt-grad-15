@@ -1,48 +1,49 @@
-.menuContainer{
+.gnbWrap {
     position: fixed;
     display: flex;
     flex-direction: column;
     right: 0;
     top: 0;
-    height:100vh ;
+    height: 100vh;
     width: 100%;
     padding: 24px 20px;
-    background-color:var(--black);
+    background-color: var(--black);
     color: white;
-    z-index:4;
+    z-index: 4;
     white-space: nowrap;
 }
-.slideNav{
+
+.slideNav {
     display: flex;
     height: 100%;
     align-items: center;
     margin-left: 32px;
 }
-.menuContainer ul{
-width: 100%;
+
+.gnbWrap ul {
+    width: 100%;
 }
-.menuContainer li{
+
+.gnbWrap li {
     padding: 24px 0;
 }
-.menuContainer li p{
+
+.gnbWrap li p {
     font-size: 24px;
     color: white;
     margin: 12px;
 }
-.delMenu{
+
+.delMenu {
     align-self: flex-end;
 }
-.btnNav:not(.m_active) p{
+
+.btnNav:not(.m_active) p {
     color: #a7a7a7;
 }
-.m_active p{
+
+.m_active p {
     font-weight: 700;
     text-decoration: underline;
     text-underline-position: under;
-}
-
-.mainLInk{
-    font-size: 2rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
 }

@@ -1,6 +1,5 @@
 import { useMediaQuery } from "react-responsive";
 import Menu from "../common/Menu";
-import { Link } from "react-router-dom";
 import Title from "../common/Title";
 import DualLink from "../common/DualLink";
 import Footer from "../common/Footer";

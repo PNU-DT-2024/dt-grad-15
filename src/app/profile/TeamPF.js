@@ -28,7 +28,7 @@ function TeamPF() {
                                 </div>
                                 <div className={styles.teamMember}>
                                     <p>구성원</p>
-                                    <div className={`${styles.memberContainer} row`}>
+                                    <div className={`${styles.member} row`}>
                                         {item.member.map((member) => (
                                             <div>
                                                 <Link to={`/profile/indiv/${member}`}>

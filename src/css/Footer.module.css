@@ -4,51 +4,37 @@
     padding: 20px var(--padding);
 }
 
-.footerContainer,
-.gradContainer,
-.siteContainer,
-.m_gradContainer,
-.m_siteContainer {
+.footerWrap,
+.grad,
+.site,
+.m_grad,
+.m_site {
     justify-content: space-between;
 }
 
 
-.topContainer,
-.bottomContainer {
-    justify-content: space-between;
 
-}
-
-.topContainer span,
-.bottomContainer span {
-    color: white;
-}
-
-.topContainer>div:last-child {
-    /* width: 3%; */
-}
-
-.exhibitionContainer {
+.exhibition {
     margin-bottom: 48px;
 }
 
 
 
-.exhibitionContainer p:first-child {
+.exhibition p:first-child {
     /* font-size: 1.25rem; */
 }
 
-.graduationContainer {
+.copyright {
     font-size: 0.75rem;
     gap: 4px;
     color: #a7a7a7;
 }
 
-.graduationContainer p:first-child {
+.copyright p:first-child {
     margin-bottom: 8px;
 }
 
-.siteContainer .linkSite:first-child {
+.site .linkSite:first-child {
     flex-direction: row-reverse;
 }
 
@@ -58,7 +44,7 @@
     height: 32px;
 }
 
-.siteContainer .imgLink {
+.site .imgLink {
     margin-left: 12px;
 
 }
@@ -71,28 +57,28 @@
 
 
 
-.siteContainer .pnuLogo {
+.site .pnuLogo {
     width: 150px;
 }
 
 /* 모바일 css---------------------------------------------- */
-.m_gradContainer p {
+.m_grad p {
     font-size: 0.75rem;
 }
 
-.m_gradContainer .exhibitionContainer {
+.m_grad .exhibition {
     margin-bottom: 24px;
 }
 
-.m_siteContainer {
+.m_site {
     margin-top: 24px;
 }
 
-.m_siteContainer .imgLink {
+.m_site .imgLink {
     width: 24px;
     margin-right: 12px;
 }
 
-.m_siteContainer .linkSite:last-child {
+.m_site .linkSite:last-child {
     width: 100px;
 }

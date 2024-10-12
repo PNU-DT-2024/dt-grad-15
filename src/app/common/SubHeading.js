@@ -2,7 +2,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function SubHeading({ title }) {
     const isTablet = useMediaQuery({
-        query: "(max-width:1023px)"
+        query: "(max-width:1080px)"
     });
 
     return (

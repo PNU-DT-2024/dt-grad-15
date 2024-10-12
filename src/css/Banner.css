@@ -3,23 +3,91 @@
 .interBanner,
 .m_interBanner {
     display: flex;
-    background-color: rgb(247, 247, 247);
+    /* background-color: rgb(247, 247, 247); */
     width: 100%;
-    height: 100%;
+    height: 100vh;
     align-items: center;
     justify-content: center;
 }
 
 .interBanner,
 .m_interBanner {
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 
+.interBanner>div {
+    width: 100%;
+}
+
+.interBanner .imgMain {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    justify-content: space-around;
+    margin-top: 92px;
+    height: 100%;
+}
+
+.imgMain img {
+    height: 90%;
+}
+
+.imgMain span{
+    position: relative;
+    z-index: 999;
+}
+.imgMain span::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-top: 5px solid #000;
+    border-right: 5px solid #000;
+}
+.imgMain span:first-child::before{
+    transform: rotate(225deg);
+    transform-origin: center;
+    
+}
+.imgMain span:last-child::before{
+    transform: rotate(45deg);
+    transform-origin: center;
+    
+}
 .banner span {
     font-size: 7rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
 
+}
+.banner{
+    justify-content: space-between;
+}
+.banner >img{
+    height: calc(100vh - 100px);
+}
+.mainTxtWrap{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mainTxtWrap div{
+    margin-bottom: 32px;
+}
+.mainTxtWrap p{
+    font-size: 0.75rem;
+    line-height: 150%;
+    /* width: 80%; */
+}
+.mask {
+    position: absolute;
+    height: 85vh;
+    cursor: none;
+}
+
+
+.imgMask {
+    height: 100%;
 }
 
 .interBtn {
@@ -30,13 +98,22 @@
     border: none;
 }
 
+.interBtnOff {
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    transform: translateX(50%);
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+}
+
 /* 모바일 css----------------------------------- */
 .m_banner span {
     font-size: 3rem;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 700;
 }
 
-.m_banner .interBtn, .m_interBanner .interBtn {
+.m_banner .interBtn,
+.m_interBanner .interBtn {
     width: 48px;
 }
