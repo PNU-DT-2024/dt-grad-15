@@ -6,6 +6,7 @@ import Profile from "./app/profile/Profile";
 import Guestbook from "./app/guestbook/Guestbook";
 import Project from "./app/project/Project";
 import About from "./app/about/About";
+import Teams from "./app/common/Teams";
 import IndivPFDetail from "./app/profile/IndivPFDetail";
 import TeamPJDetail from "./app/project/TeamPJDetail";
 import IndivPJDetail from "./app/project/IndivPJDetail";
@@ -29,11 +30,11 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/profile/indiv" element={<IndivPF />}></Route>
           <Route path="/profile/indiv/:id" element={<IndivPFDetail />}></Route>,
-          <Route path="/profile/team" element={<TeamPF />}></Route>
+          <Route path="/profile/team" element={<Teams type='profile' />}></Route>
           <Route path="/project" element={<Project />}></Route>
           <Route path="/project/indiv" element={<IndivPJ />}></Route>
           <Route path="/project/indiv/:id" element={<IndivPJDetail />}></Route>
-          <Route path="/project/team" element={<TeamPJ />}></Route>
+          <Route path="/project/team" element={<Teams type='project' />}></Route>
           <Route path="/project/team/:id" element={<TeamPJDetail />}></Route>
           <Route path="/about" element={<About />}></Route>
           {/* <Route path="/team-profile/:id" element={<TeamPF />}></Route> */}
