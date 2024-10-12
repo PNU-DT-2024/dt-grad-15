@@ -34,7 +34,7 @@ function TeamPF({ data }) {
             </div>
             <Link to={`/project/team/${team.name}`}>
                 <div className={styles.moveLink}>
-                    <span>팀 작품 보러가기</span>
+                    <span>작품 보러가기</span>
                 </div>
             </Link>
         </div>

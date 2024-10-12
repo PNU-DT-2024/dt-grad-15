@@ -109,7 +109,7 @@ font-size:1.125rem;
     flex-direction: column;
 }
 :root{
-	--padding : 250px;
+	--padding : 200px;
 	--line : #dbdbdb;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;
@@ -121,7 +121,7 @@ font-size:1.125rem;
 		--padding : 20px;
 	}
 	.contentsContainer{
-		padding: 20px var(--padding) 128px;	
+		padding: 40px var(--padding) 128px;	
 	}
 	.description{
 		font-size:1rem;

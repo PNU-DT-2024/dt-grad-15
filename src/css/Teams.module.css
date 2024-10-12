@@ -78,5 +78,8 @@
 }
 
 .m_teamList .teamCardClose {
-    padding: 12px 24px;
+    padding: 24px 24px;
+}
+.m_teamList .closeTeam p{
+    font-size: 1.5rem;
 }

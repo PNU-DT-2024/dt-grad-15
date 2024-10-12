@@ -109,7 +109,7 @@ function Guestbook() {
         <section className={`${styles.messageWrap} ${isMobile?'column':'row'}`}>
           <div className={`${isMobile?styles.m_sent:styles.sent} column`}>
             <div className={`${styles.personalInfo} column`}>
-              <label>To:</label>
+              <label>To.</label>
               <select value={to} onChange={(e) => setTo(e.target.value)}>
                 {names.map((name) => (
                   <option key={name} value={name}>
@@ -119,11 +119,12 @@ function Guestbook() {
               </select>
             </div>
             <div className={`${styles.personalInfo} column`}>
-              <label>From:</label>
+              <label>From.</label>
               <input
                 type="text"
                 value={from}
                 onChange={(e) => setFrom(e.target.value)}
+                placeholder="보내는 이"
               />
             </div>
           </div>
