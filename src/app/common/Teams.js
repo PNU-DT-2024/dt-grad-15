@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from "react-responsive";
+import { useSelector, useDispatch } from "react-redux";
+import { changeName } from "../../components/store";
 import TeamPF from "../profile/TeamPF";
 import TeamPJ from "../project/TeamPJ";
 
@@ -10,21 +12,26 @@ import styles from "../../css/Teams.module.css";
 
 
 export default function Teams({ type }) {
+    let teamName = useSelector((state) => state.teamName);
     const teams = ['WEB', 'BRANDING', 'DP']
-    const [hover, setHover] = useState(teams[0]);
+    let dispatch = useDispatch();
+    const [hover, setHover] = useState(teamName.name);
     function onClickTeam(team) {
         setHover(team);
+        dispatch(changeName(team))
     }
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
+    useEffect(()=>{
+        console.log(teamName.name);
+    })
     return (
         <div>
             <Menu page={type === 'profile' ? '작가' : '작품'} />
             <main className="contentsContainer">
                 <SubHeading title="팀" />
-                <section className={isMobile?`${styles.m_teamList} column`:`${styles.teamList} row`}>
-                    {/* <hr /> */}
+                <section className={isMobile ? `${styles.m_teamList} column` : `${styles.teamList} row`}>
                     {teams.map((team) => (
                         <article onClick={() => { onClickTeam(team) }} className={`${hover === team ? styles.teamCardOpen : styles.teamCardClose} column`}>
                             {hover === team
