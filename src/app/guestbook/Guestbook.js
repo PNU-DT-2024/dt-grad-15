@@ -94,21 +94,21 @@ function Guestbook() {
   };
 
   const isMobile = useMediaQuery({
-    query:"(max-width:767px)"
+    query: "(max-width:767px)"
   });
 
   return (
     <div>
-      <Menu page='방명록'/>
+      <Menu page='방명록' />
       <main className="contentsContainer">
-      {isMobile?<></>:<Title title="방명록" />}
+        {isMobile ? <></> : <Title title="방명록" />}
         <div>
           < MessageTxt />
 
         </div>
-        <section className={`${styles.messageWrap} ${isMobile?'column':'row'}`}>
-          <div className={`${isMobile?styles.m_sent:styles.sent} column`}>
-            <div className={`${styles.personalInfo} column`}>
+        <section className={`${styles.messageWrap} ${isMobile ? 'column' : 'row'}`}>
+          <div className={`${isMobile ? styles.m_sent : styles.sent} column`}>
+            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
               <label>To.</label>
               <select value={to} onChange={(e) => setTo(e.target.value)}>
                 {names.map((name) => (
@@ -118,7 +118,7 @@ function Guestbook() {
                 ))}
               </select>
             </div>
-            <div className={`${styles.personalInfo} column`}>
+            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
               <label>From.</label>
               <input
                 type="text"
@@ -135,7 +135,7 @@ function Guestbook() {
                 onChange={(e) => setComment(e.target.value)}
               />
             </div>
-            <div className={styles.btnSent}>
+            <div className={`${styles.btnSent} ${isMobile&&styles.m_btnSent}`}>
               <button onClick={handlePostGuestBook}>보내기</button>
             </div>
           </div>

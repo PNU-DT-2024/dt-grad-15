@@ -1,5 +1,9 @@
 .pfContainer .content:not(:last-child) {
-  margin: 64px 0;
+  margin: 32px 0;
+}
+
+.pfContainer .content:nth-child(2) {
+  margin-bottom: 128px;
 }
 
 .profile {
@@ -47,14 +51,12 @@
   gap: 16px;
 }
 
-.name>div span:first-child,
-.m_name>div span:first-child {
+.name>div span:first-child {
   font-size: 2.5rem;
   font-weight: 500;
 }
 
-.name>div span:nth-child(2),
-.m_name>div span:nth-child(2) {
+.name>div span:nth-child(2) {
   font-size: 1.25rem;
   color: #a7a7a7;
 
@@ -65,7 +67,7 @@
 }
 
 .sns {
-  margin-bottom: 48px;
+  margin-bottom: 92px;
 
 }
 
@@ -93,17 +95,15 @@
 .sns>div>span:first-child {
   color: #a7a7a7;
   font-weight: 300;
-  /* margin: 0 12px 8px 0; */
 }
 
 .MoveLinkWrap {
   justify-content: space-between;
-  gap: 4%;
+  gap: 24px;
 }
 
 .MoveLinkWrap>div {
-  /* width: 48%; */
-  flex-grow: 1;
+  flex: 1;
 }
 
 .linkMove {
@@ -149,31 +149,57 @@
 }
 
 .m_txtWrap .nameWrap {
-  margin-bottom: 32px;
+  margin-bottom: 42px;
 }
+
+
 
 .m_txtWrap .sns {
-  width: 70%;
-  text-align: center;
+  width: 100%;
+  font-size: 0.875rem;
 }
 
-.m_txtWrap .sns>div {
+.m_txtWrap .sns div:first-child {
   margin-bottom: 24px;
 }
 
-.m_name,
-.m_name>div {
-  align-items: center;
+.m_txtWrap .sns div>span:first-child {
+  flex: 1;
 }
 
+.m_txtWrap .sns div span:last-child,
+.m_txtWrap .sns div a {
+  flex: 2;
+}
 .m_name>div {
+  align-items: flex-end;
+  gap: 12px;
   margin-top: 8px;
 }
 
 .m_name>div span:first-child {
-  margin-bottom: 8px;
+  font-size: 1.75rem;
+  font-weight: 500;
 }
+
+.m_name>div span:nth-child(2) {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #a7a7a7;
+
+}
+
+
 
 .m_moveLink {
   margin-bottom: 24px;
+}
+
+.m_moveLink .linkMove p:nth-child(2) {
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.m_moveLink .linkMove p:last-child {
+  font-size: 1.25rem;
 }

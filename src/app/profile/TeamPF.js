@@ -16,16 +16,16 @@ function TeamPF({ data }) {
                 <h1>{team.name}</h1>
                 <p className="description">{team.role}</p>
             </div>
-            <div className={styles.teamMember}>
+            <div className={isMobile ? styles.m_teamMember : styles.teamMember}>
                 <p>구성원</p>
-                <div className={isMobile ? styles.m_member : styles.member}>
+                <div className={styles.member}>
 
                     {team.member.map((member) => (
                         <Link to={`/profile/indiv/${member}`}>
                             <div className={styles.imgMember}>
                                 <img src="/img/profileImg/박정혜_profile.jpg" alt="#" />
                             </div>
-                            <div>{member}</div>
+                            <p>{member}</p>
 
                         </Link>
                     ))}
