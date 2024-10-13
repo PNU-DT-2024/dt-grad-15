@@ -18,9 +18,9 @@
             "interDesc" : "팀Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "interFormat": "p5.js, mediapipe",
             "interStep": [
-                "1. 안녕하세요",
-                "2. 반갑습니다",
-                "3. hi, hello"
+                "1. 오마주 카드를 이미지로 다운로드받거나 인쇄해 소장할 수 있다.",
+                "2. 생성된 자신의 모델을 확인한 후, 블루투스 리모콘으로 원하는 순간을 촬영한다.",
+                "3. 부채질이 반복되어 불이 커짐을 확인, 불이 커져도 부채질을 계속한다면 다 타버리고 재만 남아버린 화면을 확인한다"
             ]
              
         },

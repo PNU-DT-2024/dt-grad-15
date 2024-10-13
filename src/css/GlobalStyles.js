@@ -28,12 +28,12 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
 	font-size:3rem;
-	font-weight:700;
+	font-weight:500;
 	white-space:nowrap;
 	}
 h2{
 	font-size:1.5rem;
-	font-weight:700;		
+	font-weight:500;		
 }
 	hr{
     height: 1px;

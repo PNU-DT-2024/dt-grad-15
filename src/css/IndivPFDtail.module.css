@@ -1,6 +1,7 @@
-.pfContainer .content:not(:last-child){
+.pfContainer .content:not(:last-child) {
   margin: 64px 0;
 }
+
 .profile {
   margin-bottom: 128px;
   align-items: center;
@@ -13,7 +14,6 @@
 
 .profileImg {
   flex-shrink: 0;
-
   flex-basis: 30%;
   margin-right: 64px;
 }
@@ -26,7 +26,7 @@
   width: 20%;
 }
 
-.txtWrap{
+.txtWrap {
   align-self: self-start;
   /* align-items: center; */
   padding: 24px 0;
@@ -35,15 +35,15 @@
 
 .nameWrap {
   justify-content: space-between;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
-.name >div{
+.name>div {
   align-items: center;
 }
 
-.name>div  {
-margin-top: 8px;
+.name>div {
+  margin-top: 8px;
   gap: 16px;
 }
 
@@ -65,7 +65,7 @@ margin-top: 8px;
 }
 
 .sns {
-  margin-bottom: 64px;
+  margin-bottom: 48px;
 
 }
 
@@ -78,15 +78,22 @@ margin-top: 8px;
   /* font-weight: 500; */
 
 }
-.sns div:first-child span:last-child{
+
+.sns div:first-child span:last-child {
   text-decoration: underline;
   text-underline-position: under;
 }
+
+.sns>div {
+  display: flex;
+  gap: 8px;
+
+}
+
 .sns>div>span:first-child {
   color: #a7a7a7;
   font-weight: 300;
-  margin: 0 12px 8px 0;
-
+  /* margin: 0 12px 8px 0; */
 }
 
 .MoveLinkWrap {
@@ -111,8 +118,8 @@ margin-top: 8px;
 }
 
 .linkMove p:last-child {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 500;
 }
 
 /* 모바일 css--------------------------------------- */
@@ -134,22 +141,24 @@ margin-top: 8px;
   width: 100px;
   background-color: #a7a7a7;
   right: 0;
-  bottom: 0;
+  top: 0;
 }
 
 .m_txtWrap {
   align-items: center;
 }
 
+.m_txtWrap .nameWrap {
+  margin-bottom: 32px;
+}
+
 .m_txtWrap .sns {
   width: 70%;
+  text-align: center;
 }
 
 .m_txtWrap .sns>div {
   margin-bottom: 24px;
-  /* flex: 1; */
-  /* align-items: center; */
-  /* border: 1px solid red; */
 }
 
 .m_name,
@@ -157,8 +166,8 @@ margin-top: 8px;
   align-items: center;
 }
 
-.m_name>span {
-margin-bottom: 4px;
+.m_name>div {
+  margin-top: 8px;
 }
 
 .m_name>div span:first-child {

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useDispatch } from "react-redux";
+import { changeName } from "../../components/store";
 import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import indivData from "../../components/indiv.json";
@@ -10,16 +12,12 @@ import ListLink, { setPrev, setNext } from "../common/ListLink";
 import styles from "../../css/IndivPFDtail.module.css";
 
 function IndivPFDetail() {
+    let dispatch = useDispatch();
     let { id } = useParams();
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
     const data = indivData.list.find(item => item.name === id);
-    useEffect(() => {
-        const data = indivData.list.find(item => item.name === id);
-        console.log(data);
-        // console.log("hi")
-    });
     const prev = setPrev(indivData, data);
     const next = setNext(indivData, data);
 
@@ -30,16 +28,15 @@ function IndivPFDetail() {
                 <section className={`box ${styles.content} ${styles.profile} ${isMobile ? 'column ' : 'row'}`}>
                     <div className={isMobile ? styles.m_porfileImg : styles.profileImg}>
                         <img src="/img/profileImg/박정혜_profile.jpg" alt="작가 사진" />
-                        {isMobile ?
+                        {isMobile &&
                             <div className={styles.m_signImg}>
                                 <img className={styles.signiture} src="#" alt="#" />
-                            </div>
-                            : <></>}
+                            </div>}
                     </div>
                     <div className={`${isMobile ? styles.m_txtWrap : styles.txtWrap} column`}>
                         <div className={`${styles.nameWrap} row`}>
                             <div className={`${isMobile ? styles.m_name : styles.name} column`}>
-                                <Link to={'/profile/team'}>
+                                <Link to={'/profile/team'} onClick={() => dispatch(changeName(data.team))}>
                                     <span>{data.team}</span>
                                 </Link>
                                 <div className={isMobile ? `column` : `row`}>
@@ -54,13 +51,13 @@ function IndivPFDetail() {
                             }
                         </div>
                         <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
-                            <div >
+                            <div className={isMobile?'column':''}>
                                 <span>SNS</span>
-                                <Link to={`https://www.instagram.com/${data.insta}`}>
+                                <Link to={`https://www.instagram.com/${data.insta}`} target='_blank'>
                                     <span>{data.insta}</span>
                                 </Link>
                             </div>
-                            <div >
+                            <div className={isMobile?'column':''}>
                                 <span>이메일</span>
                                 <span>{data.email}</span>
                             </div>

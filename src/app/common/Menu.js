@@ -1,10 +1,12 @@
+import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { useState } from "react";
 import SlideMenu from "./SlideMenu";
 import styles from "../../css/Menu.module.css"
 
 function Menu({ page, main }) {
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     let background = main ? "none" : "var(--black)";
     let color = main ? "var(--black)" : "white";
     const isMobile = useMediaQuery({
@@ -13,17 +15,34 @@ function Menu({ page, main }) {
     const isTablet = useMediaQuery({
         query: "(max-width:1080px)"
     });
+
     const [isMenu, setIsMenu] = useState(false);
     let openMenu = () => {
         setIsMenu(!isMenu);
     }
 
+    const handleScroll = () => {
+        if (window.scrollY > lastScrollY) {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+        setLastScrollY(window.scrollY);
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [lastScrollY, isMobile, isTablet]);
     return (
         <nav
             className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`}
             style={{
                 backgroundColor: background,
-                ...(main ? { position: 'absolute', top: 0, width: '100%', zIndex: 3 } : {})
+                ...(main ? { position: 'absolute', top: 0, width: '100%', zIndex: 3 } : {}),
+                transition: 'transform 0.3s',
+                transform: isMobile||isTablet? isVisible?'translateY(0)' : 'translateY(-100%)':''
             }}
         >
 

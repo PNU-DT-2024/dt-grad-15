@@ -18,6 +18,12 @@
 .teamTitle{
     flex: 1;
 }
+.teamTitle p {
+    font-size: 1.125rem;
+}
+.teamTitle h1{
+    font-weight: 500;
+}
 .teamTitle p, .m_teamTitle p {
     margin-bottom: 12px;
 }
@@ -25,7 +31,10 @@
 .imgPj {
     display: flex;
     position: relative;
+    justify-content: center;
     flex: 3;
+    background-color: #f0f0f0;
+    padding: 8px;
 
 }
 .imgPj div:first-child{
@@ -47,6 +56,7 @@
     height: 100%;
     visibility: hidden;
     color: white;
+    font-size: 1.5rem;
     font-size: 1.25;
 }
 .teamCard.column{
@@ -58,6 +68,13 @@
 }
 .m_card .teamTitle{
     margin-bottom: 32px;
+}
+.m_card .teamTitle p{
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+.m_card .teamTitle h1{
+    font-size: 2rem;
 }
 /* .moveLink {
     border: 2px solid var(--black);
