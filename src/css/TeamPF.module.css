@@ -1,6 +1,7 @@
 .teamCard {
     gap: 64px;
 }
+
 .teamTitle h1 {
     margin-bottom: 24px;
 }
@@ -11,7 +12,9 @@
     font-size: 1.25rem;
     font-weight: 500;
 }
-
+.teamMember p:last-child, .m_teamMember p:last-child{
+    text-align: right;
+}
 .member {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -51,14 +54,30 @@
 }
 
 /* 모바일 css------------------------------ */
-.m_teamCard{
+.m_teamCard {
     gap: 48px;
 }
-.m_member {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+.m_teamCard .teamTitle h1{
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+.m_teamMember .imgMember{
+    margin-bottom: 4px;
+}
+.m_teamMember p{
+    font-size: 0.75rem;
+}
+.m_teamMember>p {
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+    font-weight: 500;
 }
 
-.m_member>a {
+.m_teamMember .member {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap:12px;
 }
+
+.m_teamMember .member>a {}

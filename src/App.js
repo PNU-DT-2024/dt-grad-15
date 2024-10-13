@@ -7,7 +7,7 @@ import Guestbook from "./app/guestbook/Guestbook";
 import Project from "./app/project/Project";
 import About from "./app/about/About";
 import Teams from "./app/common/Teams";
-import IndivSelect from "./app/common/IindivSelect";
+import IndivSelect from "./app/common/IndivSelect";
 import IndivPFDetail from "./app/profile/IndivPFDetail";
 import TeamPJDetail from "./app/project/TeamPJDetail";
 import IndivPJDetail from "./app/project/IndivPJDetail";

@@ -25,6 +25,7 @@ time, mark, audio, video {
 }
 h1, h2, h3, h4, h5, h6{
 	cursor:default;
+	line-height:100%;
 }
 h1{
 	font-size:3rem;
@@ -96,8 +97,8 @@ nav, main, footer{
   
 }
 .description{
-line-height:170%;
-font-size:1.125rem;
+	line-height:170%;
+	font-size:1.125rem;
 }
 
 .row{
@@ -119,6 +120,9 @@ font-size:1.125rem;
 @media all and (max-width:767px){
 	:root{
 		--padding : 20px;
+	}
+	h2{
+		font-size:1.25rem;		
 	}
 	.contentsContainer{
 		padding: 40px var(--padding) 128px;	

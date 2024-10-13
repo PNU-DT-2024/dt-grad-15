@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import Menu from "../common/Menu";
-import Footer from "../common/Footer";
+import Menu from "./Menu";
+import Footer from "./Footer";
 import styles from "../../css/IndivSelect.module.css";
-import SubHeading from "../common/SubHeading";
+import SubHeading from "./SubHeading";
 import IndivPJ from "../project/IndivPJ";
 import IndivPF from "../profile/IndivPF"
 import indivData from "../../components/indiv.json";
@@ -22,7 +22,7 @@ export default function IndivSelect({ type }) {
                 <section className={isMobile || isTablet?styles.m_listWrap:styles.listWrap}>
                         {indivData.list.map((item) => (
                             <article className={styles.listMember}>
-                                <Link to={`/project/indiv/${item.name}`}>
+                                <Link to={`/${type}/indiv/${item.name}`}>
                                     {type === 'project' ? (<IndivPJ indiv={item} mobile={isMobile} tablet={isTablet} />)
                                         : type === 'profile' && (<IndivPF indiv={item} />)}
                                 </Link>

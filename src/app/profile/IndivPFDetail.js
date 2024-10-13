@@ -39,7 +39,7 @@ function IndivPFDetail() {
                                 <Link to={'/profile/team'} onClick={() => dispatch(changeName(data.team))}>
                                     <span>{data.team}</span>
                                 </Link>
-                                <div className={isMobile ? `column` : `row`}>
+                                <div className='row'>
                                     <span>{data.name}</span>
                                     <span>{data.engName}</span>
                                 </div>
@@ -51,14 +51,14 @@ function IndivPFDetail() {
                             }
                         </div>
                         <div className={`${styles.sns} ${isMobile ? 'column' : 'row'}`}>
-                            <div className={isMobile?'column':''}>
+                            <div className={isMobile?'row':''}>
                                 <span>SNS</span>
                                 <Link to={`https://www.instagram.com/${data.insta}`} target='_blank'>
                                     <span>{data.insta}</span>
                                 </Link>
                             </div>
-                            <div className={isMobile?'column':''}>
-                                <span>이메일</span>
+                            <div className={isMobile?'row':''}>
+                                <span>e-mail</span>
                                 <span>{data.email}</span>
                             </div>
                         </div>
@@ -66,7 +66,6 @@ function IndivPFDetail() {
                     </div>
                 </section>
                 <section className={`box ${styles.content}`}>
-                    {isMobile ? <></> : <Title title="작품" />}
                     <div className={`${styles.MoveLinkWrap} ${isMobile ? 'column' : 'row'}`}>
                         <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/indiv/${data.name}`}>
@@ -79,7 +78,7 @@ function IndivPFDetail() {
                                 </div>
                             </Link>
                         </div>
-                        <div>
+                        <div className={isMobile ? styles.m_moveLink : ''}>
                             <Link to={`/project/team/${data.team}`}>
                                 <div className={styles.linkMove}>
                                     <div className={styles.teamPjImg}>

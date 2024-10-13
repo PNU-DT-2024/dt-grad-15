@@ -20,7 +20,7 @@
     color: white;
 }
 .memberInfo h2{
-    line-height: 150%;
+    line-height: 130%;
     margin-bottom: 12px;
 }
 .memberInfo p {
@@ -50,6 +50,9 @@
 .m_card .Info {
     opacity: 1;
 }
+.m_Info h2{
+    margin-bottom: 4px;
+}
 .m_Info p{
-    font-size: 1rem;
+    font-size: 0.875rem;
 } 
