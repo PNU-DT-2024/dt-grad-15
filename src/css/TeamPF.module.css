@@ -1,18 +1,10 @@
 .teamCard {
-    height: 100%;
+    gap: 64px;
 }
-
-.teamTitle {
-    margin-bottom: 48px;
-}
-
 .teamTitle h1 {
     margin-bottom: 24px;
 }
 
-.teamMember {
-    margin-bottom: 32px;
-}
 
 .teamMember>p {
     margin-bottom: 24px;
@@ -24,54 +16,49 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 80%;
-    margin-bottom: 64px;
     gap: 12px;
 }
 
-.member>a {
-    /* width: 19%; */
-}
-
-.memberImg {
-    /* background-color: #a7a7a7; */
-
-
-    /* height: 60%; */
+.imgMember {
     margin-bottom: 12px;
-    /* overflow: hidden; */
+    min-height: 100px;
+    overflow: hidden;
 }
 
-.memberImg img {
+.imgMember img {
     width: 100%;
+    height: 60%;
+    object-fit: cover;
 }
 
-.moveLink {
-    position: absolute;
+.btnMove {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
     border: 2px solid var(--black);
     padding: 12px 24px;
-    right: 0;
-    bottom: 0;
     cursor: pointer;
     font-weight: 500;
 }
 
-.moveLink:hover {
+.btnMove:hover {
     background: linear-gradient(0.25turn, #F9AE69, #EB5B5E);
     border: none;
 }
 
-.moveLink:hover span {
+.btnMove:hover span {
     color: white;
 }
 
 /* 모바일 css------------------------------ */
+.m_teamCard{
+    gap: 48px;
+}
 .m_member {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 64px;
     gap: 12px;
 }
 
 .m_member>a {
-    /* max-width: 25%; */
 }

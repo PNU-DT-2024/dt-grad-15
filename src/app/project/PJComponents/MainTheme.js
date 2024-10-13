@@ -5,17 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { changeName } from "../../../components/store";
 import "../../../css/PJDetail.css";
 export default function MainTheme({ title, desc, name, email, member }) {
-    // let teamName = useSelector((state) => state.teamName);
     let dispatch = useDispatch();
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    // useEffect(()=>{
-    //     console.log(teamName)
-    // })
-    // function click(){
-    //     console.log(teamName);
-    // }
     return (
         <section className="mainConcept box column">
             <div className="column">

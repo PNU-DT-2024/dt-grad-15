@@ -6,7 +6,6 @@ let teamName = createSlice({
     },
     reducers: {
         changeName: (state, action) => {
-            console.log(action.payload);
             state.name = action.payload;
         }
     }

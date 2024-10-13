@@ -11,7 +11,7 @@ export default function InterTheme({ title, desc, format, step }) {
             <div className="colum">
                 <div className={` ${isMobile ? 'column m_inter' : 'row inter'}`}>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>
-                        <h2 className="eng">INTER ACTIVE ART</h2>
+                        <h2 className="eng">{isMobile?'INTERACTIVE ART':'INTER ACTIVE ART'}</h2>
                         <div>
                             <p className='titlePJ'>{title}</p>
                             <p className='description'>{desc}</p>

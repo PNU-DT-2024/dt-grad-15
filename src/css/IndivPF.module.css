@@ -1,6 +1,77 @@
-.memberList {
+.memberCard {
+  position: relative;
   display: flex;
-  gap: 2%;
-  flex-wrap: wrap;
+
+}
+
+.imgAction,
+.m_imgAction {
+  position: relative;
+  overflow: hidden;
+}
+
+.imgAction {
+  background-color: white;
+  min-height: 400px;
+}
+
+.imgAction img,
+.m_imgAction img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.imgBase {
+  position: relative;
+  z-index: 3;
+}
+
+.imgTrigger {
+  position: absolute;
+  right: -100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.show {
+  right: -40%;
+  visibility: visible;
+}
+
+.memberInfo {
+  position: absolute;
+  top: 0;
+  padding: 30% 10%;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.memberInfo h2 {
+  margin-bottom: 12px;
+}
+
+.memberInfo p {
+  font-weight: 300;
+  font-size: 1.2vw;
+}
+
+/* 모바일 css----------------------------------------------------- */
+.m_memberInfo {
+margin-top: 12px;
+text-align: center;
+}
+
+.m_memberInfo h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.m_memberInfo p {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 300;
+  /* color: var(--line); */
 }

@@ -12,7 +12,6 @@ export default function Banner({ onBtnClick }) {
     const [locX, setX] = useState({ x: 0 })
     let mouseHandle = (e) => {
         const mouseX = e.clientX
-        console.log(mouseX)
         setX({ x: mouseX });
     }
     return (

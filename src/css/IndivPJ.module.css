@@ -1,32 +1,13 @@
-.listWrap {
-    /* display: flex; */
-    box-sizing: border-box;
-}
-
-.memberList {
-    display: flex;
-    gap: 2%;
-    flex-wrap: wrap;
-    height: 100%;
-}
-
-.pjLink, .t_pjLink {
-    width: 32%;
-}
-
-
-
 .memberCard {
     position: relative;
     display: flex;
-    margin-bottom: 5%;
-}
-
-.imgPj {
+  
+  }
+  
+.imgPj{
     width: 100%;
-}
-.imgPj img{
-    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .memberInfo {
@@ -61,18 +42,14 @@
 
 
 /* 모바일 css---------------------------------------------- */
-.m_pjLink {
-    position: relative;
-    width: 49%;
-}
 
-.m_pjLink .imgPj , .t_pjLink .imgPj{
+.m_card .imgPj{
     filter: brightness(0.6);
 
 }
-.t_pjLink .Info {
+.m_card .Info {
     opacity: 1;
 }
 .m_Info p{
     font-size: 1rem;
-}
+} 

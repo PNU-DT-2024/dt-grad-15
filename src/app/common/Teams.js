@@ -23,9 +23,6 @@ export default function Teams({ type }) {
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
-    useEffect(()=>{
-        console.log(teamName.name);
-    })
     return (
         <div>
             <Menu page={type === 'profile' ? '작가' : '작품'} />

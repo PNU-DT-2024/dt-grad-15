@@ -95,6 +95,7 @@
 .m_subject>h2 {
     font-size: 3rem;
     word-break: keep-all;
+    font-weight: 700;
     line-height: 130%;
 
 }
@@ -112,7 +113,7 @@
 
 .titlePJ {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 12px;
 }
 
@@ -138,6 +139,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
+    border: none;
 }
 
 .btnPoster:hover p {
@@ -179,9 +181,12 @@
 }
 
 .step p {
+    line-height: 150%;
     margin-top: 12px;
 }
-
+.stepNum{
+    font-size: 0.875rem;
+}
 .interVideo {
     width: 100%;
     height: 512px;

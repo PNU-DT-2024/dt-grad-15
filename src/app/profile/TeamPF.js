@@ -11,7 +11,7 @@ function TeamPF({ data }) {
         query: "(max-width:767px)"
     });
     return (
-        <div className={styles.teamCard}>
+        <div className={`${isMobile?styles.m_teamCard:styles.teamCard} column`}>
             <div className={styles.teamTitle}>
                 <h1>{team.name}</h1>
                 <p className="description">{team.role}</p>
@@ -22,7 +22,7 @@ function TeamPF({ data }) {
 
                     {team.member.map((member) => (
                         <Link to={`/profile/indiv/${member}`}>
-                            <div className={styles.memberImg}>
+                            <div className={styles.imgMember}>
                                 <img src="/img/profileImg/박정혜_profile.jpg" alt="#" />
                             </div>
                             <div>{member}</div>
@@ -31,11 +31,11 @@ function TeamPF({ data }) {
                     ))}
                 </div>
             </div>
-            <Link to={`/project/team/${team.name}`}>
-                <div className={styles.moveLink}>
+            <div>
+                <Link to={`/project/team/${team.name}`} className={styles.btnMove} style={{ width: isMobile ? '' : '150px' }}>
                     <span>작품 보러가기</span>
-                </div>
-            </Link>
+                </Link>
+            </div>
         </div>
     )
 }
