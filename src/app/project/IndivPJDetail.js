@@ -36,7 +36,7 @@ function IndivPJDetail() {
     return (
         <div>
             <Menu page='작품' />
-            <main className="pjContainer column">
+            <main className={`${isMobile?'m_pjContainer':'pjContainer'} column`}>
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} email={data.email} />
                 <section className='box'>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>

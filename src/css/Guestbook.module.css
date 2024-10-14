@@ -1,13 +1,21 @@
-input,
 select,
-textarea {
-    border: 1px solid #000000;
-    /* border-radius: 0; */
+input {
+    -o-appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    background: url('/public/img/icon/ic_selectArrow.svg') no-repeat right;
+    background-position: calc(100% - 12px) center;
+    cursor: pointer;
+}
+
+select::-ms-expand,
+input::-ms-expand {
+    display: none;
 }
 
 option {
@@ -21,20 +29,29 @@ option {
 
 .sent {
     flex: 1;
-}
-
-.write {
-    flex: 2;
+    gap: 24px;
 }
 
 .sent .personalInfo {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: left;
-
 }
 
-.personalInfo:first-child {
-    margin-bottom: 24px;
+.personalInfo input,
+.personalInfo select {
+    padding: 24px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    overflow: hidden;
+}
+
+.personalInfo select {
+    width: 100%;
+    line-height: 100%;
 }
 
 .personalInfo label {
@@ -43,23 +60,27 @@ option {
     margin-bottom: 12px;
 }
 
-.personalInfo input,
-.personalInfo select {
-    font-size: 1.25rem;
-    padding: 8px 12px;
+.sentInfo {
+    flex: 1;
+    border-bottom: 1px solid black;
 }
 
+.write {
+    flex: 3;
+}
 
+.comment {
+    border: 1px solid #000000;
+    padding: 12px;
+}
 
 .textarea {
     width: 100%;
     font-size: 1.25rem;
-    /* padding: 10px; */
-    padding-block: 0;
-    padding-inline: 0;
     resize: none;
+    border: none;
+    outline: none;
 }
-
 
 .btnSent {
     display: flex;
@@ -79,6 +100,7 @@ option {
     cursor: pointer;
 }
 
+
 .optionList {
     display: flex;
     margin-bottom: 24px;
@@ -86,27 +108,11 @@ option {
 
 .optionList select {
     font-size: 1.25rem;
-    padding: 4px 12px;
+    padding: 4px 42px 4px 12px;
 }
 
 .messageList {
     gap: 12px;
-}
-
-.messageBox {
-    background: #f5f5f5;
-    padding: 20px;
-    margin-bottom: 12px;
-}
-
-.messageBox p:last-child,
-.messageBox span {
-    font-weight: 700;
-}
-
-.messageBox p:nth-child(2) {
-    min-height: 64px;
-    margin: 16px 0 32px;
 }
 
 .myMasonryGrid {
@@ -126,25 +132,51 @@ option {
     /* background-clip: padding-box; */
 }
 
+.messageBox {
+    background: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 12px;
+}
+
+.messageBox p:last-child,
+.messageBox span {
+    font-weight: 700;
+}
+
+.messageBox p:nth-child(2) {
+    min-height: 64px;
+    margin: 16px 0 32px;
+}
+
+
+
 /* 모바일 css--------------------------------------------- */
+.m_sent {
+    gap: 24px;
+}
+
 .m_sent .personalInfo {
     gap: 12px;
     align-items: center;
     width: 100%;
 }
-.m_sent .personalInfo:first-child{
-    margin-bottom: 24px;
-}
-.m_sent .personalInfo label{
+
+.m_sent .personalInfo label {
     flex: 1;
     display: inline-block;
     margin: 0;
 }
-.m_sent select,
-.m_sent input{
+
+.m_sent>div {
+    flex: 1;
+}
+
+.m_sent .sentInfo {
     flex: 3;
     width: 100%;
 }
+
+
 .m_sent label,
 .m_sent select,
 .m_sent input {

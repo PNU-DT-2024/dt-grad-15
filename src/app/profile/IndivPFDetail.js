@@ -30,7 +30,7 @@ function IndivPFDetail() {
                         <img src="/img/profileImg/박정혜_profile.jpg" alt="작가 사진" />
                         {isMobile &&
                             <div className={styles.m_signImg}>
-                                <img className={styles.signiture} src="#" alt="#" />
+                                <img className={styles.signiture} src="#" alt="" />
                             </div>}
                     </div>
                     <div className={`${isMobile ? styles.m_txtWrap : styles.txtWrap} column`}>

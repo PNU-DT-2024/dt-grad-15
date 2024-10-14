@@ -108,24 +108,28 @@ function Guestbook() {
         </div>
         <section className={`${styles.messageWrap} ${isMobile ? 'column' : 'row'}`}>
           <div className={`${isMobile ? styles.m_sent : styles.sent} column`}>
-            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
+            <div className={`${styles.personalInfo} ${isMobile ? 'row' : 'column'}`}>
               <label>To.</label>
-              <select value={to} onChange={(e) => setTo(e.target.value)}>
-                {names.map((name) => (
-                  <option key={name} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
+              <div className={styles.sentInfo}>
+                <select value={to} onChange={(e) => setTo(e.target.value)}>
+                  {names.map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
-            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
+            <div className={`${styles.personalInfo} ${isMobile ? 'row' : 'column'}`}>
               <label>From.</label>
-              <input
-                type="text"
-                value={from}
-                onChange={(e) => setFrom(e.target.value)}
-                placeholder="보내는 이"
-              />
+              <div className={styles.sentInfo}>
+                <input
+                  type="text"
+                  value={from}
+                  onChange={(e) => setFrom(e.target.value)}
+                  placeholder="보내는 이"
+                />
+              </div>
             </div>
           </div>
           <div className={`${styles.write} column`}>
@@ -135,7 +139,7 @@ function Guestbook() {
                 onChange={(e) => setComment(e.target.value)}
               />
             </div>
-            <div className={`${styles.btnSent} ${isMobile&&styles.m_btnSent}`}>
+            <div className={`${styles.btnSent} ${isMobile && styles.m_btnSent}`}>
               <button onClick={handlePostGuestBook}>보내기</button>
             </div>
           </div>

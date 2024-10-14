@@ -5,8 +5,10 @@
     margin: 32px 0 64px 0;
 }
 
-.listLink, .m_listLink {
-    text-align: center;
+.listLink,
+.m_listLink {
+    flex: 1;
+    align-items: center;
 }
 
 .listLink img {
@@ -16,19 +18,30 @@
 .listLink p {
     font-size: 1.5rem;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .listLinkWrap p:first-child {
     font-size: 2rem;
 }
+
 /* 모바일 css------------------------------------ */
-.m_listLink img{
+.m_listLink img {
     width: 80px;
     margin-bottom: 12px;
 }
-.m_listLink p:first-child{
+
+.m_listLink p:first-child {
     font-size: 1.5rem;
 }
-.listLinkWrap p{
+
+.listLinkWrap .m_listLink p {
+    
     font-weight: 500;
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

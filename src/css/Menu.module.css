@@ -1,7 +1,10 @@
 .gnb {
-    padding: 24px calc(var(--padding) / 2);
+    padding: 8px var(--padding);
+    height: 130px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--black);
+    background-color: white;
 }
 
 .gnbWrap {
@@ -14,7 +17,8 @@
 }
 
 .mainLink p {
-    font-size: 1.75rem;
+    font-size: 2rem;
+
 }
 
 .nav {
@@ -24,10 +28,12 @@
 
 .nav>div {
     margin-left: 80px;
+    color: var(--black);
+    font-weight: 500;
 }
 
 .w_font {
-    font-size: 1.125rem;
+    font-size:1rem;
 }
 
 .nav .active {
@@ -50,7 +56,7 @@
 }
 
 .m_loc {
-    color: white;
+    color: var(--black);
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
@@ -72,6 +78,7 @@
     display: inline-block;
     transition: all .4s;
     box-sizing: border-box;
+
 }
 
 .icMenu {
@@ -85,7 +92,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    /* background-color: #fff; */
+    background-color: var(--black);
     border-radius: 4px;
 }
 

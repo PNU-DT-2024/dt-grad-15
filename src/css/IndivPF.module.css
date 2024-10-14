@@ -60,18 +60,20 @@
 
 /* 모바일 css----------------------------------------------------- */
 .m_memberInfo {
-margin-top: 12px;
+margin-top: 8px;
+line-height: 120%;
 text-align: center;
 }
 
 .m_memberInfo h2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  
   font-weight: 500;
 }
 
 .m_memberInfo p {
-  margin-top: 8px;
-  font-size: 0.875rem;
+  /* margin-top: 4px; */
+  font-size: 0.75rem;
   font-weight: 300;
   /* color: var(--line); */
 }

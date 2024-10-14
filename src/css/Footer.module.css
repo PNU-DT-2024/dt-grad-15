@@ -1,7 +1,8 @@
 .footer {
-    background-color: var(--black);
-    color: white;
+    background-color: white;
+    color: var(--black);
     padding: 20px var(--padding);
+    border-top: 1px solid var(--black);
 }
 
 .footerWrap,

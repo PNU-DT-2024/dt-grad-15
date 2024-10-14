@@ -184,9 +184,11 @@
     line-height: 150%;
     margin-top: 12px;
 }
-.stepNum{
+
+.stepNum {
     font-size: 0.875rem;
 }
+
 .interVideo {
     width: 100%;
     height: 512px;
@@ -197,6 +199,12 @@
 
 
 /* 모바일 css------------------------------------------------- */
+.m_pjContainer .box:not(:first-child, :last-child) {
+    margin-top: 72px;
+}
+.m_pjContainer .box:last-child {
+    margin-top: 84px;
+}
 .m_concept {
     border-left: 1px solid white;
     padding: 0 24px;
@@ -213,16 +221,18 @@
     word-break: break-all;
 }
 
-.m_subject>h2 {
-    font-size: 2rem;
-    margin-bottom: 24px;
-}
+
 
 .m_subject {
     margin-bottom: 32px;
     padding-left: 24px;
     border-left: 4px solid;
     border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
+}
+
+.m_subject>h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
 }
 
 .m_subject .titlePJ {
@@ -232,6 +242,7 @@
 .m_subject .format {
     font-size: 0.75rem;
     margin-top: 8px;
+    color: #a7a7a7;
 }
 
 .m_motionPoster {

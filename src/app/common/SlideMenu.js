@@ -1,10 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "../../css/SlideMenu.module.css";
-export default function SlideMenu({ onBtnClick }) {
+export default function SlideMenu() {
 
     return (
         <div className={`${styles.gnbWrap} column`}>
-            {/* <div className={styles.delMenu} onClick={onBtnClick}>X</div> */}
             <div className={styles.slideNav}>
                 <ul>
                     <li>

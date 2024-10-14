@@ -7,8 +7,8 @@ import styles from "../../css/Menu.module.css"
 function Menu({ page, main }) {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
-    let background = main ? "none" : "var(--black)";
-    let color = main ? "var(--black)" : "white";
+    // let background = main ? "none" : "var(--black)";
+    // let color = main ? "var(--black)" : "white";
     const isMobile = useMediaQuery({
         query: "(max-width:767px)"
     });
@@ -37,31 +37,30 @@ function Menu({ page, main }) {
     }, [lastScrollY, isMobile, isTablet]);
     return (
         <nav
-            className={`${styles.gnb} ${isTablet ? styles.stickyNav : ''}`}
+            className={`${styles.gnb} ${styles.stickyNav}`}
             style={{
-                backgroundColor: background,
                 ...(main ? { position: 'absolute', top: 0, width: '100%', zIndex: 3 } : {}),
                 transition: 'transform 0.3s',
-                transform: isMobile||isTablet? isVisible?'translateY(0)' : 'translateY(-100%)':''
+                transform:isVisible ? 'translateY(0)' : 'translateY(-100%)'
             }}
         >
 
             <div className={`${styles.gnbWrap}`}>
-                {isMobile ? <span className={`ko ${styles.m_loc}`} style={{ color: color }}>{page}</span> :
+                {isMobile ? <span className={`ko ${styles.m_loc}`}>{page}</span> :
                     <div className={styles.mainLink}>
                         <NavLink to={'/'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                            <p className="ko" style={{ color: color }}>버릇</p>
+                            <p className="ko">버릇</p>
                         </NavLink>
                     </div>
                 }
                 {isTablet ?
 
-                    <div className={styles.nav} style={{ color: { color } }}>
+                    <div className={styles.nav}>
                         {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
                         <div onClick={openMenu} className={`${styles.icMenu} ${isMenu ? styles.active : ''}`} >
-                            <span style={{ backgroundColor: color }}></span>
-                            <span style={{ backgroundColor: color }}></span>
-                            <span style={{ backgroundColor: color }}></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                         {isMenu ? <SlideMenu onBtnClick={openMenu} /> : ""}
                     </div>
@@ -70,22 +69,22 @@ function Menu({ page, main }) {
                     <div className={`${styles.nav} ${styles.w_font}`} >
                         <div>
                             <NavLink to={'/profile'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }} >작가</p>
+                                <p>작가</p>
                             </NavLink>
                         </div>
                         <div>
                             <NavLink to={'/project'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }}>작품</p>
+                                <p>작품</p>
                             </NavLink>
                         </div>
                         <div>
                             <NavLink to={'/guestbook'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }}>방명록</p>
+                                <p>방명록</p>
                             </NavLink>
                         </div>
                         <div>
                             <NavLink to={'/about'} className={({ isActive }) => (isActive ? styles.active : "")}>
-                                <p style={{ color: color }}>소개</p>
+                                <p>소개</p>
                             </NavLink>
                         </div>
                     </div>
