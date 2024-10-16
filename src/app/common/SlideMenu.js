@@ -19,7 +19,7 @@ export default function SlideMenu() {
                             to="/profile"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>작가</p>
+                            <p>PROFILE</p>
                         </NavLink>
                     </li>
                     <li>
@@ -27,7 +27,7 @@ export default function SlideMenu() {
                             to="/project"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>작품</p>
+                            <p>PROJECT</p>
                         </NavLink>
                     </li>
                     <li>
@@ -35,7 +35,7 @@ export default function SlideMenu() {
                             to="/guestbook"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>방명록</p>
+                            <p>GUESTBOOK</p>
                         </NavLink>
                     </li>
                     <li>
@@ -43,7 +43,7 @@ export default function SlideMenu() {
                             to="/about"
                             className={({ isActive }) => `${isActive ? styles.m_active : ""} ${styles.btnNav}`}
                         >
-                            <p>소개</p>
+                            <p>INTRODUCTION</p>
                         </NavLink>
                     </li>
 

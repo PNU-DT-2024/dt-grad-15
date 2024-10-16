@@ -1,16 +1,62 @@
-.listWrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px 12px;
+.selectWrap {
+  gap: 24px;
 }
-.listMember{
-  padding: 8px;
-  /* background-color: #f3f3f3; */
-  border:1px solid #e0e0e0;
+
+.selectWrap>article:first-child {
+  flex: 1;
 }
-/* 모바일 css------------------------------------------------------ */
-.m_listWrap{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 12px;
+
+.selectWrap>article:last-child {
+  flex: 2;
+}
+
+.contentList {
+  justify-content: center;
+}
+
+.contentList div {
+  padding: 12px 24px;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  cursor: pointer;
+}
+
+
+.lastList {
+  border-bottom: 1px solid black;
+}
+.contentList a div{
+  align-items: center;
+  text-overflow: ellipsis;
+}
+.contentList a div p:first-child {
+  font-size: 1.25rem;
+}
+
+.contentList a div p:last-child {
+  font-size: 0.875rem;
+  color: #a7a7a7;
+}
+
+.contentList a div:hover p {
+  color: var(--mainColor);
+}
+
+
+.contentThumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.contentThumb div {
+  width: 40%;
+}
+
+.contentThumb div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
 }

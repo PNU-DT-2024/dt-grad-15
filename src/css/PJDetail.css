@@ -95,7 +95,7 @@
 .m_subject>h2 {
     font-size: 3rem;
     word-break: keep-all;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 130%;
 
 }
@@ -112,7 +112,7 @@
 }
 
 .titlePJ {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 500;
     margin-bottom: 12px;
 }

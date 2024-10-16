@@ -1,25 +1,22 @@
-.pfContainer .content:first-child {
-  margin: 32px 0 64px 0;
-}
-
-.pfContainer .content:nth-child(2) {
-  margin-bottom: 92px;
-}
-
 .profile {
-  margin-bottom: 128px;
-  align-items: center;
+  margin: 64px 0 92px;
+  gap: 64px;
+  align-items: stretch;
 }
 
-.profileImg,
-.signImg {
-  /* background-color: #a7a7a7; */
+.profile>div:first-child {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.profile>div:last-child {
+  flex: 3;
 }
 
 .profileImg {
-  flex-shrink: 0;
-  flex-basis: 30%;
-  margin-right: 64px;
+  position: relative;
+  width: 60%;
+  height: 60%;
 }
 
 .profileImg img {
@@ -28,59 +25,75 @@
   object-fit: cover;
 }
 
-.signImg {
-  width: 20%;
+.imgSign {
+  position: absolute;
+  width: 100px;
+  background-color: #a7a7a7;
+  right: 0;
+  top: 0;
 }
 
-.txtWrap {
-  align-self: self-start;
-  /* align-items: center; */
-  padding: 24px 0;
+.infoWrap {
+  justify-content: space-between;
 }
 
+
+/* .infoWrap>div>div:first-child>div {
+  padding: 24px 12px;
+  align-items: center;
+} */
+
+.infoWrap>div:first-child>div:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.infoWrap>div:first-child>div:first-child {
+  padding: 0 12px 24px 12px;
+}
+
+.infoWrap>div:first-child>div:nth-child(2) {
+  padding: 24px 12px;
+}
+
+.infoWrap>div:first-child>div:last-child {
+  padding: 24px 12px;
+}
 
 .nameWrap {
   justify-content: space-between;
-  margin-bottom: 32px;
+}
+
+.name a span {
+  font-size: 0.875rem;
 }
 
 .name>div {
-  align-items: center;
-}
-
-.name>div {
-  margin-top: 8px;
-  gap: 16px;
+  margin-top: 12px;
+  gap: 12px;
+  align-items: end;
 }
 
 .name>div span:first-child {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 12px;
+  border-left: 4px solid;
+  border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
 }
 
 .name>div span:nth-child(2) {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 300;
   color: #a7a7a7;
 
 }
 
-.signiture {
-  flex: 1;
-}
-
-.sns {
-  margin-bottom: 92px;
-
-}
-
-.txtWrap .sns>div {
-  margin-right: 64px;
+.infoWrap .sns {
+  gap: 32px;
 }
 
 .sns div span {
   display: inline-block;
-  /* font-weight: 500; */
-
 }
 
 .sns div:first-child span:last-child {
@@ -95,6 +108,7 @@
 }
 
 .sns>div>span:first-child {
+  font-size: 0.875rem;
   color: #a7a7a7;
   font-weight: 300;
 }
@@ -115,13 +129,14 @@
   color: white;
 }
 
-.linkMove p:first-of-type {
-  margin-bottom: 12px;
+.linkMove p:nth-child(2) {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin-bottom: 8px;
 }
 
 .linkMove p:last-child {
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 /* 모바일 css--------------------------------------- */
@@ -138,20 +153,24 @@
   width: 100%;
 }
 
-.m_signImg {
-  position: absolute;
-  width: 100px;
-  background-color: #a7a7a7;
-  right: 0;
-  top: 0;
-}
-
 .m_txtWrap {
   align-items: center;
 }
 
+.m_txtWrap>div {
+  padding: 16px 8px;
+  /* background-color: red; */
+  /* align-items: center; */
+}
+
+.m_txtWrap>div:not(:last-child) {
+  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+
+}
+
 .m_txtWrap .nameWrap {
-  margin-bottom: 42px;
+  width: 100%;
 }
 
 
@@ -162,7 +181,7 @@
 }
 
 .m_txtWrap .sns div:first-child {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 
 .m_txtWrap .sns div>span:first-child {
@@ -173,6 +192,7 @@
 .m_txtWrap .sns div a {
   flex: 2;
 }
+
 .m_name>div {
   align-items: flex-end;
   gap: 12px;
@@ -191,6 +211,9 @@
 
 }
 
+/* .m_moveLink{
+  width: 100%;
+} */
 .m_moveLink .linkMove p:nth-child(2) {
   font-size: 0.875rem;
   margin-bottom: 8px;

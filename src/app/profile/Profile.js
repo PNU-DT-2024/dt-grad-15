@@ -11,11 +11,11 @@ function Profile() {
       });
     return (
         <div>
-            <Menu page='작가'/>
+            <Menu page='profile'/>
             <main className="contentsContainer">
                 <section>
-                {isMobile?<></>:<Title title="작가" />}
-                    <DualLink link="profile" indiv="개인" team="팀" />
+                {isMobile?<></>:<Title title="profile" />}
+                    <DualLink link="profile" indiv="INDIVIDUAL" team="TEAM" />
                 </section>
             </main>
             <Footer />

@@ -16,9 +16,9 @@ export default function About() {
     });
     return (
         <div>
-            <Menu page='소개' />
+            <Menu page='INTRODUCTION' />
             <main className="contentsContainer">
-                {isMobile ? <></> : <Title title='소개' />}
+                {isMobile ? <></> : <Title title='INTRODUCTION' />}
                 <section className={styles.aboutWrap}>
                     <article className={isMobile ? 'column' : 'row'}>
                         <div className={styles.title}><p>디자인학과</p></div>

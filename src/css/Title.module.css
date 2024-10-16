@@ -1,19 +1,26 @@
-.loc,
-.m_loc {
-
-    white-space: nowrap;
-    align-items: center;
-}
-
 .loc {
+    position: relative;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    padding: 0 0 12px 0 ;
+    white-space: nowrap;
     margin-bottom: 72px;
 }
 
-.m_loc {
-    margin-bottom: 32px;
+.loc p {
+    display: inline-block;
+    font-size: 1rem;
+    /* font-weight: 500; */
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
 }
 
-.loc h1,
-.m_loc h1{
-    margin-right: 24px;
-}
+/* .loc span::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+} */

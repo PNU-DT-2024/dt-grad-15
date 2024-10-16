@@ -99,9 +99,9 @@ function Guestbook() {
 
   return (
     <div>
-      <Menu page='방명록' />
+      <Menu page='GUESTBOOK' />
       <main className="contentsContainer">
-        {isMobile ? <></> : <Title title="방명록" />}
+        {isMobile ? <></> : <Title title="GUESTBOOK" />}
         <div>
           < MessageTxt />
 

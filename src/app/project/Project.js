@@ -11,11 +11,11 @@ function Project() {
     });
     return (
         <div>
-            <Menu page='작품'/>
+            <Menu page='PROJECT'/>
             <main className="contentsContainer">
                 <section>
-                    {isMobile?<></>:<Title title="작품" />}
-                    <DualLink link="project" indiv="개인" team="팀" />
+                    {isMobile?<></>:<Title title="PROJECT" />}
+                    <DualLink link="project" indiv="INDIVIDUAL" team="TEAM" />
                 </section>
             </main>
             <Footer />

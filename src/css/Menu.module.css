@@ -4,7 +4,14 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--black);
-    background-color: white;
+    background-color: var(--bg);
+}
+
+.stickyNav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
 
 .gnbWrap {
@@ -17,7 +24,7 @@
 }
 
 .mainLink p {
-    font-size: 2rem;
+    font-size: 1.5rem;
 
 }
 
@@ -27,13 +34,13 @@
 }
 
 .nav>div {
-    margin-left: 80px;
+    margin-left: 64px;
     color: var(--black);
     font-weight: 500;
 }
 
 .w_font {
-    font-size:1rem;
+    font-size: 0.875rem;
 }
 
 .nav .active {
@@ -42,25 +49,34 @@
 }
 
 .nav p:hover {
-    font-weight: 700;
+    /* font-weight: 700; */
     color: var(--mainColor);
 }
 
-/* 모바일 css------------------------------------------------------------ */
-.stickyNav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    padding: 16px var(--padding);
+.w_font div a p {
+    /* background-color: red; */
 }
 
+.w_font div a p::after {
+    content: 'attr(title)';
+    font-weight: 700;
+    display: block;
+    height: 0px;
+    visibility: hidden;
+
+}
+
+/* 모바일 css------------------------------------------------------------ */
+
+
 .m_loc {
+    text-transform: uppercase;
     color: var(--black);
     position: relative;
     left: 50%;
     transform: translate(-50%, 0%);
-    font-size: 1.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
 }
 
 .m_porfileImg {
