@@ -5,7 +5,7 @@ import Footer from "../common/Footer"
 import styles from "../../css/About.module.css";
 
 export default function About() {
-    // const motionProps = {
+    // const bottom = {
     //     initial: { opacity: 0, y: 50 },
     //     whileInView: { opacity: 1, y: 0 },
     //     viewport: { once: false },

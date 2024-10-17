@@ -117,7 +117,7 @@ nav, main, footer{
 	--line : #dbdbdb;
 	--mainColor : #ea545e;
 	--subColor : #f39a67;
-	--bg : #e2e2e2;
+	--bg : #F5F5F5;
 	--black: #121212;
 	
 }

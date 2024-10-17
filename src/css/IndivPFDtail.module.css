@@ -1,31 +1,34 @@
 .profile {
   margin: 64px 0 92px;
-  gap: 64px;
+  gap: 32px;
   align-items: stretch;
 }
 
 .profile>div:first-child {
   flex: 1;
-  /* border: 1px solid red; */
 }
 
 .profile>div:last-child {
-  flex: 3;
+  flex: 2;
 }
 
-.profileImg {
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left>div {
   position: relative;
-  width: 60%;
-  height: 60%;
 }
 
-.profileImg img {
+.left img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.imgSign {
+.left .imgSign {
   position: absolute;
   width: 100px;
   background-color: #a7a7a7;
@@ -33,47 +36,40 @@
   top: 0;
 }
 
-.infoWrap {
+.right {
   justify-content: space-between;
 }
 
-
-/* .infoWrap>div>div:first-child>div {
-  padding: 24px 12px;
-  align-items: center;
-} */
-
-.infoWrap>div:first-child>div:not(:last-child) {
+/* .top>div:not(:last-child) {
   border-bottom: 1px solid black;
+} */
+.top>div:last-child {
+  border-top: 1px solid black;
 }
 
-.infoWrap>div:first-child>div:first-child {
+.top .name {
   padding: 0 12px 24px 12px;
 }
 
-.infoWrap>div:first-child>div:nth-child(2) {
+.top .sns {
   padding: 24px 12px;
 }
 
-.infoWrap>div:first-child>div:last-child {
+.top .free {
   padding: 24px 12px;
 }
 
-.nameWrap {
-  justify-content: space-between;
-}
-
-.name a span {
-  font-size: 0.875rem;
-}
-
-.name>div {
+.top .name>div>div {
   margin-top: 12px;
   gap: 12px;
   align-items: end;
 }
 
-.name>div span:first-child {
+.top .name a span {
+  font-size: 0.875rem;
+}
+
+.top .name>div div:last-child span:first-child {
   font-size: 2rem;
   font-weight: 700;
   padding-left: 12px;
@@ -81,144 +77,109 @@
   border-image: linear-gradient(to bottom, var(--mainColor), var(--subColor)) 1;
 }
 
-.name>div span:nth-child(2) {
+.top .name>div span:nth-child(2) {
   font-size: 1.125rem;
   font-weight: 300;
   color: #a7a7a7;
 
 }
 
-.infoWrap .sns {
+.top .sns {
   gap: 32px;
 }
 
-.sns div span {
-  display: inline-block;
-}
-
-.sns div:first-child span:last-child {
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
-.sns>div {
+.top .sns>div {
   display: flex;
   gap: 8px;
 
 }
 
-.sns>div>span:first-child {
+.top .sns div span {
+  display: inline-block;
+}
+
+.top .sns>div>span:first-child {
   font-size: 0.875rem;
   color: #a7a7a7;
   font-weight: 300;
 }
 
-.MoveLinkWrap {
+.top .sns div:first-child span:last-child {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.bottom {
   justify-content: space-between;
   gap: 12px;
 }
 
-.MoveLinkWrap>div {
+.bottom>a {
   flex: 1;
-}
-
-.linkMove {
   background-color: rgb(107, 107, 107);
   padding: 12px;
   align-items: center;
   color: white;
 }
 
-.linkMove p:nth-child(2) {
+.bottom>a p:nth-of-type(1) {
   font-size: 0.875rem;
   font-weight: 300;
   margin-bottom: 8px;
 }
 
-.linkMove p:last-child {
+.bottom>a p:nth-of-type(2) {
   font-size: 1.25rem;
 }
 
 /* 모바일 css--------------------------------------- */
-.m_porfileImg {
+.m_profile {
+  margin: 32px 0 92px;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.m_profile .left {
   display: flex;
-  position: relative;
-  width: 70%;
   margin: 12px 0 24px 0;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
 
-.m_porfileImg img {
+.m_profile .left>div {
+  position: relative;
+  width: 70%;
+}
+
+.m_profile .left img {
   width: 100%;
 }
 
-.m_txtWrap {
-  align-items: center;
+.m_profile .right {
+  gap: 32px;
 }
 
-.m_txtWrap>div {
+.m_profile .right .top>div {
   padding: 16px 8px;
-  /* background-color: red; */
-  /* align-items: center; */
-}
-
-.m_txtWrap>div:not(:last-child) {
-  border-bottom: 1px solid black;
-  /* border-bottom: 1px solid black; */
 
 }
 
-.m_txtWrap .nameWrap {
-  width: 100%;
-}
-
-
-
-.m_txtWrap .sns {
-  width: 100%;
-  font-size: 0.875rem;
-}
-
-.m_txtWrap .sns div:first-child {
-  margin-bottom: 12px;
-}
-
-.m_txtWrap .sns div>span:first-child {
-  flex: 1;
-}
-
-.m_txtWrap .sns div span:last-child,
-.m_txtWrap .sns div a {
-  flex: 2;
-}
-
-.m_name>div {
-  align-items: flex-end;
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.m_name>div span:first-child {
-  font-size: 1.75rem;
+.m_profile .right .top .name div div span:first-child {
+  font-size: 2rem;
   font-weight: 500;
 }
 
-.m_name>div span:nth-child(2) {
-  font-size: 1.125rem;
-  font-weight: 300;
-  color: #a7a7a7;
-
-}
-
-/* .m_moveLink{
-  width: 100%;
-} */
-.m_moveLink .linkMove p:nth-child(2) {
+.m_profile .right .top .sns {
   font-size: 0.875rem;
-  margin-bottom: 8px;
+  gap: 12px;
 }
 
-.m_moveLink .linkMove p:last-child {
-  font-size: 1.25rem;
+.m_profile .right .top .sns div span:first-child {
+  flex: 1;
+}
+
+.m_profile .right .top .sns div span:last-child,
+.m_profile .right .top .sns div a {
+  flex: 3;
 }

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import styles from "../../css/IndivSelect.module.css";
 import indivData from "../../components/indiv.json";
+import styles from "../../css/IndivSelect.module.css";
 export default function IndivSelect({ type }) {
     const isTablet = useMediaQuery({
         query: "(max-width: 1280px) and (min-width: 768px)"
@@ -35,30 +35,32 @@ export default function IndivSelect({ type }) {
                     </Link>
                 ))}
             </article>
-            <article className={styles.contentThumb}>
-                {isname != null ? (
-                    type === 'project' ? (
+            {(isTablet || isMobile) ||
+                <article className={styles.contentThumb}>
+                    {isname != null ? (
+                        type === 'project' ? (
+                            <div>
+                                <img src="/img/posterImg/박정혜_poster.png" alt={isname} />
+                            </div>
+                        ) : (
+                            <div>
+                                <img src="/img/profileImg/박정혜_profile.png" alt={isname} />
+                            </div>
+                        )
+                    ) : (type === 'project' ? (
                         <div>
-                            <img src="/img/posterImg/박정혜_poster.png" alt={isname} />
+                            <img src="/img/posterImg/posterImg.png" alt={isname} />
                         </div>
                     ) : (
                         <div>
-                            <img src="/img/profileImg/박정혜_profile.png" alt={isname} />
+                            <img src="/img/profileImg/hoverProfileImg.png" alt={isname} />
                         </div>
                     )
-                ) : (type === 'project' ? (
-                    <div>
-                        <img src="/img/posterImg/posterImg.png" alt={isname} />
-                    </div>
-                ) : (
-                    <div>
-                        <img src="/img/profileImg/hoverProfileImg.png" alt={isname} />
-                    </div>
-                )
-                )}
+                    )}
 
-                {/* hover했을 때 스캐니메이션 애니메이션 */}
-            </article>
+                    {/* hover했을 때 스캐니메이션 애니메이션 */}
+                </article>
+            }
         </section>
     )
 }
