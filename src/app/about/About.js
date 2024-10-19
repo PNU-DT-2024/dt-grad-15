@@ -5,7 +5,7 @@ import Footer from "../common/Footer"
 import styles from "../../css/About.module.css";
 
 export default function About() {
-    // const motionProps = {
+    // const bottom = {
     //     initial: { opacity: 0, y: 50 },
     //     whileInView: { opacity: 1, y: 0 },
     //     viewport: { once: false },
@@ -16,9 +16,9 @@ export default function About() {
     });
     return (
         <div>
-            <Menu page='소개' />
+            <Menu page='INTRODUCTION' />
             <main className="contentsContainer">
-                {isMobile ? <></> : <Title title='소개' />}
+                {isMobile ? <></> : <Title title='INTRODUCTION' />}
                 <section className={styles.aboutWrap}>
                     <article className={isMobile ? 'column' : 'row'}>
                         <div className={styles.title}><p>디자인학과</p></div>

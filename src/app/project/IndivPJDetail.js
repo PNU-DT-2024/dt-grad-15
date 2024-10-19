@@ -35,12 +35,12 @@ function IndivPJDetail() {
     };
     return (
         <div>
-            <Menu page='작품' />
-            <main className="pjContainer column">
+            <Menu page='PROJECT' />
+            <main className={`${isMobile?'m_pjContainer':'pjContainer'} column`}>
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} email={data.email} />
                 <section className='box'>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>
-                        <h2 className="eng">MOTION POSTER</h2>
+                        <h2>MOTION POSTER</h2>
                         <div>
                             <p className='titlePJ'>{data.posterTitle}</p>
                             <p className='description'>{data.posterDesc}</p>
@@ -59,7 +59,7 @@ function IndivPJDetail() {
                 <InterTheme title={data.interTitle} desc={data.interDesc} format={data.interFormat} step={data.interStep} />
 
                 <div className="box">
-                    <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/indiv/${prev.name}`} nextURL={`/project/indiv/${next.name}`} listURL="/project/indiv" />
+                    <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/indiv/${prev.name}`} nextURL={`/project/indiv/${next.name}`} listURL="/project" />
                 </div>
             </main>
 

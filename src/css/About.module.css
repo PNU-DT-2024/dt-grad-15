@@ -1,7 +1,10 @@
 .aboutWrap article {
-    margin-bottom: 72px;
+    padding: 36px 0;
+    /* margin-bottom: 72px; */
 }
-
+.aboutWrap article:not(:last-child){
+    border-bottom: 1px solid black;
+}
 .aboutWrap article:not(:last-child) div:last-child p:not(:last-child) {
     margin-bottom: 12px;
 }

@@ -5,7 +5,6 @@ import Menu from "../common/Menu";
 import Footer from "../common/Footer";
 import guestBookService from "../../api/guestBookService";
 import Title from "../common/Title";
-import MessageTxt from "./MessageTxt";
 import styles from "../../css/Guestbook.module.css"
 
 function Guestbook() {
@@ -14,6 +13,7 @@ function Guestbook() {
   const [comment, setComment] = useState("");
   const [to, setTo] = useState("");
   const [filter, setFilter] = useState(""); // 필터 상태 추가
+  const [click, setClick] = useState(false);
 
   const names = [
     "모두에게",
@@ -99,60 +99,64 @@ function Guestbook() {
 
   return (
     <div>
-      <Menu page='방명록' />
-      <main className="contentsContainer">
-        {isMobile ? <></> : <Title title="방명록" />}
-        <div>
-          < MessageTxt />
-
+      <Menu page='GUESTBOOK' />
+      <main className={`contentsContainer ${isMobile && styles.m_guestBook}`}>
+        {isMobile || <Title title="GUESTBOOK" />}
+        <div className={styles.txtDeco}>
+          <p>학생들에게</p>
+          <p>응원의 한마디를</p>
+          <p>남겨주세요</p>
         </div>
-        <section className={`${styles.messageWrap} ${isMobile ? 'column' : 'row'}`}>
-          <div className={`${isMobile ? styles.m_sent : styles.sent} column`}>
-            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
-              <label>To.</label>
-              <select value={to} onChange={(e) => setTo(e.target.value)}>
-                {names.map((name) => (
-                  <option key={name} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
+        <section className={styles.sent}>
+          <div className={`${styles.write} ${isMobile ? 'column' : 'row'}`}>
+            <div className={`${styles.left} column`}>
+              <div className="row">
+                <label>To.</label>
+                <select value={to} onChange={(e) => setTo(e.target.value)}>
+                  {names.map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="row">
+                <label>From.</label>
+                <input
+                  type="text"
+                  value={from}
+                  onChange={(e) => setFrom(e.target.value)}
+                  placeholder="보내는 이"
+                />
+              </div>
             </div>
-            <div className={`${styles.personalInfo} ${isMobile?'row':'column'}`}>
-              <label>From.</label>
-              <input
-                type="text"
-                value={from}
-                onChange={(e) => setFrom(e.target.value)}
-                placeholder="보내는 이"
-              />
-            </div>
-          </div>
-          <div className={`${styles.write} column`}>
-            <div className={styles.comment}>
+            <div className={styles.right}>
               <textarea className={styles.textarea} rows="10"
                 value={comment}
-                onChange={(e) => setComment(e.target.value)}
+                onChange={(e) => setComment(e.target.value)
+                }
+                placeholder="길동아 수고했어!!"
               />
             </div>
-            <div className={`${styles.btnSent} ${isMobile&&styles.m_btnSent}`}>
-              <button onClick={handlePostGuestBook}>보내기</button>
-            </div>
+          </div>
+          <div className={styles.btnSent}>
+            <button onClick={handlePostGuestBook}>보내기</button>
           </div>
         </section>
-        <section>
-          <div className={styles.optionList}>
-            <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-              {names.map((name) => (
-                <option key={name} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className={styles.messageList}>
-            {renderGuestBookEntries()}
-          </div>
+        <section className={`${styles.message} ${isMobile ? 'column' : 'row'}`}>
+          {isMobile ? <select className={styles.m_optionList} value={filter} onChange={(e) => setFilter(e.target.value)}>
+            {names.map((name) => (
+              <option key={name} value={name}>
+                {name}
+              </option>
+            ))}
+          </select> : <div className={styles.optionList} onChange={(e) => setFilter(e.target.value)}>
+            {names.map((name) => (
+              <option key={name} value={name} onClick={(e) => setFilter(name)}>
+                {name}
+              </option>
+            ))}</div>}
+          <div>{renderGuestBookEntries()}</div>
         </section>
       </main>
       <Footer />

@@ -18,12 +18,12 @@ function TeamPJDetail() {
 
     return (
         <div>
-            <Menu page='작품' />
+            <Menu page='PROJECT' />
             <main className="pjContainer">
                 <MainTheme title={data.mainTitle} desc={data.mainDesc} name={data.name} member={data.member} />
                 <section className='box posterContainer'>
                     <div className={isMobile ? 'm_subject column' : 'subject row'}>
-                        <h2 className="eng">FILM</h2>
+                        <h2>TEAM FILM</h2>
                         <div>
                             <p className='titlePJ'>{data.videoTitle}</p>
                             <p className='description'>{data.videoDesc}</p>
@@ -37,7 +37,7 @@ function TeamPJDetail() {
                 <InterTheme title={data.interTitle} desc={data.interDesc} format={data.interFormat} step={data.interStep} />
 
                 <div className="box">
-                    <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/team/${prev.name}`} nextURL={`/project/team/${next.name}`} listURL="/project/team" />
+                    <ListLink prevName={prev.mainTitle} nextName={next.mainTitle} prevURL={`/project/team/${prev.name}`} nextURL={`/project/team/${next.name}`} listURL="/project" />
                 </div>
             </main>
             <Footer />
