@@ -138,7 +138,7 @@ nav, main, footer{
 		font-size:2.5rem
 	}
 }
-@media all and (max-width: 1280px) and (min-width: 768px) {
+@media all and (max-width: 1080px) and (min-width: 768px) {
 	:root{
 		--padding : 50px;
 	}

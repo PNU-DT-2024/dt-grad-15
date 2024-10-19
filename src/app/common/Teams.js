@@ -5,9 +5,7 @@ import { changeName } from "../../components/store";
 import TeamPF from "../profile/TeamPF";
 import TeamPJ from "../project/TeamPJ";
 
-import SubHeading from "../common/SubHeading";
-import Footer from "../common/Footer";
-import Menu from "../common/Menu";
+
 import styles from "../../css/Teams.module.css";
 
 

@@ -3,7 +3,7 @@
     margin-bottom: 92px;
 }
 
-.typeWrap span {
+.typeWrap span, .m_typeWrap span {
     display: inline-block;
     padding-bottom: 4px;
     margin-bottom: 12px;
@@ -36,3 +36,11 @@
 /* .radioGruop p:last-child {
     color: #a7a7a7;
 } */
+ /* 모바일 css-------------------------------------- */
+ .m_typeWrap{
+    text-transform: uppercase;
+    margin-bottom: 48px;
+ }
+ .m_typeWrap .radioGruop p{
+    font-size: 1.5rem;
+ }

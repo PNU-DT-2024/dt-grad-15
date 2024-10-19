@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrolltoTop";
 import GlobalStyles from "./css/GlobalStyles";
 import Main from "./app/home/Main";
-import Profile from "./app/profile/Profile";
 import Guestbook from "./app/guestbook/Guestbook";
-import Project from "./app/project/Project";
 import TypeSelect from "./app/common/TypeSelect";
 import About from "./app/about/About";
 import Teams from "./app/common/Teams";
@@ -12,8 +10,6 @@ import IndivSelect from "./app/common/IndivLIst";
 import IndivPFDetail from "./app/profile/IndivPFDetail";
 import TeamPJDetail from "./app/project/TeamPJDetail";
 import IndivPJDetail from "./app/project/IndivPJDetail";
-import IndivPF from "./app/profile/IndivPF";
-import IndivPJ from "./app/project/IndivPJ";
 //profile - 브랜딩, dp, 영상, 웹, 개인
 //작품 - 브랜딩, dp, 영상, 웹, 개인
 //방명록

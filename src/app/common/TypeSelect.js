@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux";
 import { saveVisit } from "../../components/store";
+import { useMediaQuery } from "react-responsive";
 import Menu from "./Menu"
 import IndivList from '../common/IndivLIst';
 import Teams from "./Teams";
@@ -8,6 +9,9 @@ import Footer from "./Footer";
 import styles from '../../css/TypeSelect.module.css'
 
 export default function TypeSelect({ type }) {
+    const isMobile = useMediaQuery({
+        query: "(max-width:767px)"
+    });
     let dispatch = useDispatch();
     const lastVisit = useSelector((state) => state.lastVisit).visit; // useSelector를 컴포넌트 상단에서 호출
 
@@ -19,7 +23,7 @@ export default function TypeSelect({ type }) {
         <div>
             <Menu page={type} />
             <main className="contentsContainer">
-                <div className={styles.typeWrap}>
+                <div className={isMobile?styles.m_typeWrap:styles.typeWrap}>
                     <span>{type}</span>
                     <div className={`${styles.radioGruop} row`}>
                         <p onClick={() => dispatch(saveVisit('indiv'))} className={lastVisit === 'indiv' ? styles.activ : styles.disable}>INDIVIDUAL</p>

@@ -16,7 +16,7 @@ function Menu({ page, main }) {
         query: "(max-width:767px)"
     });
     const isTablet = useMediaQuery({
-        query: "(max-width:1280px)"
+        query: "(max-width:1080px)"
     });
 
     const [isMenu, setIsMenu] = useState(false);
@@ -58,7 +58,6 @@ function Menu({ page, main }) {
                 {isTablet ?
 
                     <div className={styles.nav}>
-                        {/* <span onClick={openMenu}><img src="/img/icon/ic_menu.png " alt="메뉴" /></span> */}
                         <div onClick={openMenu} className={`${styles.icMenu} ${isMenu ? styles.active : ''}`} >
                             <span></span>
                             <span></span>
@@ -69,6 +68,11 @@ function Menu({ page, main }) {
                     :
 
                     <div className={`${styles.nav} ${styles.w_font}`} >
+                        <div>
+                            <NavLink to={'/about'} className={({ isActive }) => (isActive ? styles.active : "")} onClick={() => dispatch(saveVisit('indiv'))}>
+                                <p title='INTRODUCTION'>INTRODUCTION</p>
+                            </NavLink>
+                        </div>
                         <div>
                             <NavLink to={'/profile'} className={({ isActive }) => (isActive ? styles.active : "")} onClick={() => dispatch(saveVisit('indiv'))}>
                                 <p title='PROFILE'>PROFILE</p>
@@ -84,11 +88,7 @@ function Menu({ page, main }) {
                                 <p title='GUESTBOOK'>GUESTBOOK</p>
                             </NavLink>
                         </div>
-                        <div>
-                            <NavLink to={'/about'} className={({ isActive }) => (isActive ? styles.active : "")} onClick={() => dispatch(saveVisit('indiv'))}>
-                                <p title='INTRODUCTION'>INTRODUCTION</p>
-                            </NavLink>
-                        </div>
+
                     </div>
                 }
 

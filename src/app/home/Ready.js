@@ -37,14 +37,14 @@ export default function ({isDday, isClose}) {
                     <div className="row">
                         <div>Exhibition</div>
                         <div className={styles.info}>
-                            <p>2024. 11. 01 ~ 11. 04</p>
+                            <p>2024. 11. 02 ~ 11. 04</p>
                             <p>10am ~ 6pm</p>
                         </div>
                     </div>
                     <div className="row">
                         <div>Opening</div>
                         <div className={styles.info}>
-                            <p>10.31</p>
+                            <p>11.01</p>
                             <p>6pm</p>
                         </div>
                     </div>

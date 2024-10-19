@@ -60,3 +60,34 @@
   object-fit: cover;
   
 }
+
+
+.imgAction {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* .imgAction img,
+.m_imgAction img {
+  width: 100%;
+  object-fit: cover;
+} */
+
+.imgBase {
+  position: relative;
+  z-index: 3;
+}
+
+.imgTrigger {
+  position: absolute;
+  right: -100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.show {
+  right: -40%;
+  visibility: visible;
+}
